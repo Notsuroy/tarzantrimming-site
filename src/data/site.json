@@ -9,12 +9,12 @@
     "fullDescription": "Tarzan Trimming is an owner-led tree care business serving south Ontario. Specializing in tree pruning and limb removal for residential properties from Toronto through the Hamilton and Kitchener corridor. Honest quotes, clean work, no high-pressure pitch. By appointment, evenings and weekends.\n\nFull tree removals coming as the business grows. For now, every pruning and limb job gets the same attention to detail that an arborist brings to a commercial crew."
   },
   "contact": {
-    "phone": "(647) 788-8733",
-    "phoneE164": "+16477888733",
-    "phoneDisplay": "(647) 788-8733",
-    "smsEnabled": true,
-    "email": "TODO_EMAIL",
-    "_emailNote": "Set up info@tarzantrimming.ca via Cloudflare Email Routing OR Migadu mailbox once domain is live."
+    "phone": "",
+    "phoneE164": "",
+    "phoneDisplay": "",
+    "smsEnabled": false,
+    "email": "",
+    "_emailNote": "Set up info@tarzantrimming.ca via Migadu once friend confirms. Until then all contact fields are empty and components hide the call/text/email CTAs automatically (see Header / Hero / FinalCTA / Footer / PhoneFloat / contact.astro for the conditional rendering)."
   },
   "location": {
     "city": "Toronto",

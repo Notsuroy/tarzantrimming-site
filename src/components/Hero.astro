@@ -1,9 +1,10 @@
 ---
 import site from '~/data/site.json';
+
+const hasPhone = !!site.contact.phoneE164;
 ---
 
 <section class="relative overflow-hidden bg-forest">
-  <!-- Background: solid forest with subtle grain (will swap for real photo once friend sends hero shot) -->
   <div class="absolute inset-0 z-0 bg-grain opacity-20 pointer-events-none"></div>
   <div class="absolute inset-0 z-0 bg-gradient-to-br from-forest-dark/40 to-transparent"></div>
 
@@ -18,13 +19,25 @@ import site from '~/data/site.json';
       </p>
 
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href={`tel:${site.contact.phoneE164}`} class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-forest rounded-full font-medium hover:bg-cream-dark transition-colors">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path></svg>
-          Call {site.contact.phoneDisplay}
-        </a>
-        <a href="/services/" class="inline-flex items-center px-6 py-3 border border-cream/40 text-cream rounded-full font-medium hover:bg-cream/10 transition-colors">
-          See what we do
-        </a>
+        {hasPhone ? (
+          <a href={`tel:${site.contact.phoneE164}`} class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-forest rounded-full font-medium hover:bg-cream-dark transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path></svg>
+            Call {site.contact.phoneDisplay}
+          </a>
+        ) : (
+          <a href="/services/" class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-forest rounded-full font-medium hover:bg-cream-dark transition-colors">
+            See what we do
+          </a>
+        )}
+        {hasPhone ? (
+          <a href="/services/" class="inline-flex items-center px-6 py-3 border border-cream/40 text-cream rounded-full font-medium hover:bg-cream/10 transition-colors">
+            See what we do
+          </a>
+        ) : (
+          <a href="/about/" class="inline-flex items-center px-6 py-3 border border-cream/40 text-cream rounded-full font-medium hover:bg-cream/10 transition-colors">
+            Read our approach
+          </a>
+        )}
       </div>
 
       <div class="mt-10 text-sm text-cream/60">

@@ -1,14 +1,19 @@
 ---
 import site from '~/data/site.json';
+
+const hasPhone = !!site.contact.phoneE164;
+// Hide the float entirely until phone is set. No CTA = no float.
 ---
 
-<a
-  href={`tel:${site.contact.phoneE164}`}
-  class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 px-5 py-3 bg-forest text-cream rounded-full shadow-soft hover:bg-forest-dark transition-colors font-medium text-sm"
-  aria-label={`Call ${site.brand.name} at ${site.contact.phoneDisplay}`}
->
-  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path>
-  </svg>
-  <span class="hidden sm:inline">Call or text</span>
-</a>
+{hasPhone && (
+  <a
+    href={`tel:${site.contact.phoneE164}`}
+    class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 px-5 py-3 bg-forest text-cream rounded-full shadow-soft hover:bg-forest-dark transition-colors font-medium text-sm"
+    aria-label={`Call ${site.brand.name} at ${site.contact.phoneDisplay}`}
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path>
+    </svg>
+    <span class="hidden sm:inline">Call or text</span>
+  </a>
+)}

@@ -15,6 +15,7 @@ const nav = [
 ];
 
 const isActive = (href: string) => href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+const hasPhone = !!site.contact.phoneE164;
 ---
 
 <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur border-b border-cream-deep">
@@ -31,13 +32,19 @@ const isActive = (href: string) => href === '/' ? currentPath === '/' : currentP
             class={`text-sm font-medium tracking-wide transition-colors ${isActive(item.href) ? 'text-forest' : 'text-ink-muted hover:text-forest'}`}
           >{item.label}</a>
         ))}
-        <a
-          href={`tel:${site.contact.phoneE164}`}
-          class="inline-flex items-center gap-2 px-4 py-2 bg-forest text-cream rounded-full text-sm font-medium hover:bg-forest-dark transition-colors"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path></svg>
-          {site.contact.phoneDisplay}
-        </a>
+        {hasPhone ? (
+          <a
+            href={`tel:${site.contact.phoneE164}`}
+            class="inline-flex items-center gap-2 px-4 py-2 bg-forest text-cream rounded-full text-sm font-medium hover:bg-forest-dark transition-colors"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path></svg>
+            {site.contact.phoneDisplay}
+          </a>
+        ) : (
+          <a href="/contact/" class="inline-flex items-center px-4 py-2 bg-forest text-cream rounded-full text-sm font-medium hover:bg-forest-dark transition-colors">
+            Get in touch
+          </a>
+        )}
       </nav>
 
       <details class="md:hidden relative">
@@ -48,7 +55,6 @@ const isActive = (href: string) => href === '/' ? currentPath === '/' : currentP
           {nav.map((item) => (
             <a href={item.href} class={`block px-4 py-2 text-sm ${isActive(item.href) ? 'text-forest font-medium' : 'text-ink-muted hover:text-forest hover:bg-cream-dark'}`}>{item.label}</a>
           ))}
-          <a href={`tel:${site.contact.phoneE164}`} class="block px-4 py-2 mt-1 mx-3 text-center bg-forest text-cream rounded-full text-sm font-medium hover:bg-forest-dark">{site.contact.phoneDisplay}</a>
         </div>
       </details>
     </div>

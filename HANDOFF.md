@@ -62,15 +62,15 @@ JSON-LD `LocalBusiness` schema on homepage with `areaServed` covering the 7 serv
 
 ## TODOs before launch (blocking on friend's input)
 
-1. **Phone number** — currently using TOA's `(647) 788-8733`. Confirm friend wants to keep it or use a different number.
-2. **Service cities** — currently inheriting TOA's 7-city list. Confirm with friend.
-3. **Pricing strategy** — `services.json` is set to `quote-only` (no public ranges). Friend can switch to `public-ranges` for stronger CTR if comfortable committing to ranges.
-4. **Hours** — currently labeled "By appointment. Evenings and weekends." Confirm exact availability given Davey day-job schedule.
-5. **Tagline** — placeholder is `"Tree pruning and limb removal across south Ontario."` Friend can swap to his own one-liner.
-6. **Insurance claim** — FAQ states "carries commercial general liability insurance". Confirm before publishing. If not yet bound, change the FAQ answer to "Insurance is being bound; certificate available before any job".
-7. **Day-job employer** — copy now says "commercial tree crews" generically. If friend confirms he actually works at a specific named company AND is comfortable naming it, swap "commercial crews" / "a commercial crew" back to the real name. Initial 2026-05-29 draft had Davey Tree by name; removed when Suroy could not confirm whether the friend works there or it was second-hand info.
-8. **Owner photo** — `MiniAbout` has a placeholder block where the owner photo goes. Friend to send.
-9. **Job photos** — `PhotoGallery` has 6 placeholder cards. Friend to send before/after pruning shots.
+1. **Phone number** · currently using TOA's `(647) 788-8733`. Confirm friend wants to keep it or use a different number.
+2. **Service cities** · currently inheriting TOA's 7-city list. Confirm with friend.
+3. **Pricing strategy** · `services.json` is set to `quote-only` (no public ranges). Friend can switch to `public-ranges` for stronger CTR if comfortable committing to ranges.
+4. **Hours** · currently labeled "By appointment. Evenings and weekends." Confirm exact availability given Davey day-job schedule.
+5. **Tagline** · placeholder is `"Tree pruning and limb removal across south Ontario."` Friend can swap to his own one-liner.
+6. **Insurance claim** · FAQ states "carries commercial general liability insurance". Confirm before publishing. If not yet bound, change the FAQ answer to "Insurance is being bound; certificate available before any job".
+7. **Day-job employer** · copy now says "commercial tree crews" generically. If friend confirms he actually works at a specific named company AND is comfortable naming it, swap "commercial crews" / "a commercial crew" back to the real name. Initial 2026-05-29 draft had Davey Tree by name; removed when Suroy could not confirm whether the friend works there or it was second-hand info.
+8. **Owner photo** · `MiniAbout` has a placeholder block where the owner photo goes. Friend to send.
+9. **Job photos** · `PhotoGallery` has 6 placeholder cards. Friend to send before/after pruning shots.
 10. *(Reviews section removed entirely in v1 since friend has no reviews yet. To re-add later: copy `ReviewsWall.astro` and `reviews.json` back from `vicjimassage-site` reference, simplify, and re-import in `pages/index.astro`. Honest path: only re-add when there are at least 3 real customer reviews.)*
 
 ## TODOs Suroy needs to do (infrastructure)

@@ -2,6 +2,9 @@
 import site from '~/data/site.json';
 
 const year = new Date().getFullYear();
+const hasPhone = !!site.contact.phoneE164;
+const hasEmail = !!site.contact.email && !site.contact.email.startsWith('TODO');
+const hasAnyContact = hasPhone || hasEmail;
 ---
 
 <footer class="bg-forest text-cream/90 mt-20">
@@ -14,13 +17,21 @@ const year = new Date().getFullYear();
 
       <div>
         <h3 class="text-xs uppercase tracking-widest2 text-cream/60 mb-3">Get in touch</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href={`tel:${site.contact.phoneE164}`} class="hover:text-cream">{site.contact.phoneDisplay}</a></li>
-          <li><a href={`sms:${site.contact.phoneE164}`} class="hover:text-cream">Send a text</a></li>
-          {site.contact.email && !site.contact.email.startsWith('TODO') && (
-            <li><a href={`mailto:${site.contact.email}`} class="hover:text-cream">{site.contact.email}</a></li>
-          )}
-        </ul>
+        {hasAnyContact ? (
+          <ul class="space-y-2 text-sm">
+            {hasPhone && (
+              <li><a href={`tel:${site.contact.phoneE164}`} class="hover:text-cream">{site.contact.phoneDisplay}</a></li>
+            )}
+            {hasPhone && (
+              <li><a href={`sms:${site.contact.phoneE164}`} class="hover:text-cream">Send a text</a></li>
+            )}
+            {hasEmail && (
+              <li><a href={`mailto:${site.contact.email}`} class="hover:text-cream">{site.contact.email}</a></li>
+            )}
+          </ul>
+        ) : (
+          <p class="text-sm text-cream/70">Booking opens shortly. Check back soon.</p>
+        )}
       </div>
 
       <div>

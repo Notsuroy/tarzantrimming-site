@@ -34,16 +34,16 @@ public/               Static assets (favicons, photos to be added)
 
 Single source of truth files in `src/data/`:
 
-- `site.json` — brand, contact, location, hours, service cities, SEO defaults
-- `services.json` — service catalog with descriptions, process, good-for lists
-- `faq.json` — front-of-funnel FAQ items
-- `reviews.json` — testimonials (gated by `showOnHomepage` flag)
+- `site.json`, brand, contact, location, hours, service cities, SEO defaults
+- `services.json`, service catalog with descriptions, process, good-for lists
+- `faq.json`, front-of-funnel FAQ items
+- `reviews.json`, testimonials (gated by `showOnHomepage` flag)
 
 Edit those, rebuild, deploy. Every component reads from there.
 
 ## Brand voice rules
 
-- **No em dashes (—) or en dashes (–) anywhere.** Use periods, commas, or "to" for ranges. Enforced workspace-wide.
+- **No em dashes (, ) or en dashes (-) anywhere.** Use periods, commas, or "to" for ranges. Enforced workspace-wide.
 - Plain English, owner-led tone, honest by default.
 - Never claim certifications the owner does not have (ISA, etc).
 - Never claim "24/7 service" or "always available". Owner has a Davey day job; evenings and weekends are the actual availability.
@@ -61,6 +61,6 @@ Hosted on Cloudflare Pages (to be connected once GitHub repo is created):
 
 ## See also
 
-- `HANDOFF.md` — full project state, design decisions, friend-input TODOs
-- `../vicjimassage-site/` — sister project this was scaffolded from (architecture reference)
-- `../theontarioarborist-site/` — predecessor brand for the same friend's business (kept live during transition, will 301 redirect later)
+- `HANDOFF.md`, full project state, design decisions, friend-input TODOs
+- `../vicjimassage-site/`, sister project this was scaffolded from (architecture reference)
+- `../theontarioarborist-site/`, predecessor brand for the same friend's business (kept live during transition, will 301 redirect later)

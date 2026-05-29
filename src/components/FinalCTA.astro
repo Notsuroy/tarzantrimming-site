@@ -1,23 +1,42 @@
 ---
 import site from '~/data/site.json';
+
+const hasPhone = !!site.contact.phoneE164;
+const hasEmail = !!site.contact.email && !site.contact.email.startsWith('TODO');
+const hasAnyContact = hasPhone || hasEmail;
 ---
 
 <section class="py-16 md:py-24 bg-forest text-cream">
   <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl leading-tight max-w-3xl mx-auto">Got a tree on your mind? Get a free quote.</h2>
+    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl leading-tight max-w-3xl mx-auto">
+      {hasAnyContact ? 'Got a tree on your mind? Get a free quote.' : 'Launching soon across south Ontario.'}
+    </h2>
     <p class="mt-5 text-lg text-cream/80 max-w-2xl mx-auto leading-relaxed">
-      Phone, text, or send a photo. We will tell you honestly whether it is a simple prune, a real removal job, or something to leave alone. No charge for the conversation.
+      {hasAnyContact
+        ? 'Phone, text, or send a photo. We will tell you honestly whether it is a simple prune, a real removal job, or something to leave alone. No charge for the conversation.'
+        : 'Pruning and limb removal across Toronto, Mississauga, Oakville, Burlington, Hamilton, Kitchener, and Whitby. Booking opens shortly. Check back soon.'}
     </p>
 
-    <div class="mt-9 flex flex-wrap justify-center gap-3">
-      <a href={`tel:${site.contact.phoneE164}`} class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-forest rounded-full font-medium hover:bg-cream-dark transition-colors">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path></svg>
-        Call {site.contact.phoneDisplay}
-      </a>
-      <a href={`sms:${site.contact.phoneE164}`} class="inline-flex items-center gap-2 px-6 py-3 border border-cream/40 text-cream rounded-full font-medium hover:bg-cream/10 transition-colors">
-        Text a photo
-      </a>
-    </div>
+    {hasAnyContact && (
+      <div class="mt-9 flex flex-wrap justify-center gap-3">
+        {hasPhone && (
+          <a href={`tel:${site.contact.phoneE164}`} class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-forest rounded-full font-medium hover:bg-cream-dark transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path></svg>
+            Call {site.contact.phoneDisplay}
+          </a>
+        )}
+        {hasPhone && (
+          <a href={`sms:${site.contact.phoneE164}`} class="inline-flex items-center gap-2 px-6 py-3 border border-cream/40 text-cream rounded-full font-medium hover:bg-cream/10 transition-colors">
+            Text a photo
+          </a>
+        )}
+        {hasEmail && !hasPhone && (
+          <a href={`mailto:${site.contact.email}`} class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-forest rounded-full font-medium hover:bg-cream-dark transition-colors">
+            Email {site.contact.email}
+          </a>
+        )}
+      </div>
+    )}
 
     <p class="mt-7 text-sm text-cream/60">{site.hours.label}</p>
   </div>
