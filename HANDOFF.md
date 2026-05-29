@@ -55,7 +55,6 @@ JSON-LD `LocalBusiness` schema on homepage with `areaServed` covering the 7 serv
 - `MiniAbout` (owner photo placeholder + story)
 - `ServicesGrid` (3 services from `services.json`)
 - `PhotoGallery` (6 photo placeholder slots, awaiting friend's shots)
-- `ReviewsWall` (hidden until at least 3 real reviews exist; controlled by `showOnHomepage` flag in `reviews.json`)
 - `FAQ` (8 front-of-funnel items in `faq.json`)
 - `FinalCTA` (forest section with call + text-photo CTAs)
 - `Footer` (3-column: brand, contact, service area)
@@ -72,7 +71,7 @@ JSON-LD `LocalBusiness` schema on homepage with `areaServed` covering the 7 serv
 7. **Davey reference** — copy mentions Davey Tree by name as the day job. Confirm friend is comfortable with that or wants softer framing.
 8. **Owner photo** — `MiniAbout` has a placeholder block where the owner photo goes. Friend to send.
 9. **Job photos** — `PhotoGallery` has 6 placeholder cards. Friend to send before/after pruning shots.
-10. **Real reviews** — `reviews.json` is empty. Section is hidden until populated. Don't fake reviews.
+10. *(Reviews section removed entirely in v1 since friend has no reviews yet. To re-add later: copy `ReviewsWall.astro` and `reviews.json` back from `vicjimassage-site` reference, simplify, and re-import in `pages/index.astro`. Honest path: only re-add when there are at least 3 real customer reviews.)*
 
 ## TODOs Suroy needs to do (infrastructure)
 
@@ -105,4 +104,5 @@ Intentionally trimmed for v1 scope:
 
 | Date | Action | Notes |
 |---|---|---|
-| 2026-05-29 | Initial scaffold | Cloned vicjimassage architecture, stripped bilingual + blog scope, rebranded palette (forest/bark/sky/moss/cream), wrote new English-only components, built 4 pages (home, services, about, contact), 88K dist, zero em/en dashes. Awaiting friend's input on the 10 TODOs above before launch. |
+| 2026-05-29 | Initial scaffold | Cloned vicjimassage architecture, stripped bilingual + blog scope, rebranded palette (forest/bark/sky/moss/cream), wrote new English-only components, built 4 pages (home, services, about, contact), 88K dist, zero em/en dashes. Awaiting friend's input on the 9 TODOs above before launch. |
+| 2026-05-29 | Removed ReviewsWall + reviews.json | Friend has no real customer reviews yet. Section dropped from homepage rather than left dormant. Will re-add only when there are at least 3 real reviews to show. |
