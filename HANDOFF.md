@@ -6,9 +6,13 @@
 
 Personal-brand website for a friend rebranding his arborist side-business from "The Ontario Arborist" to "Tarzan Trimming". Built as a gift / practice project by Suroy.
 
-- **Domain:** `tarzantrimming.ca` (purchased 2026-05-29 by friend, ~$18/yr)
-- **DNS:** Cloudflare zone (to be connected; friend's account or Suroy's TBD)
-- **Hosting:** Cloudflare Pages (to be connected to GitHub repo)
+- **Domain:** `tarzantrimming.ca` (registered at Porkbun 2026-05-29 by friend, ~$18/yr; nameservers pointed at Cloudflare, zone active)
+- **DNS:** Cloudflare zone `8dccf00d34ed0f68f554bc24a66a54ad` (Suroy's account `d5cadc4c53223e8b3ef7846fdbbffd8e`). Apex + `www` CNAME both proxied at `tarzantrimming.pages.dev`.
+- **Hosting:** Cloudflare Pages project `tarzantrimming`, deployed via direct-upload (wrangler), NOT linked to GitHub yet. To enable auto-deploy on push, connect the repo in the CF dashboard later.
+- **GitHub:** [Notsuroy/tarzantrimming-site](https://github.com/Notsuroy/tarzantrimming-site) (public)
+- **Live URLs:**
+  - https://tarzantrimming.pages.dev (always works, auto-issued cert)
+  - https://tarzantrimming.ca + https://www.tarzantrimming.ca (custom domain, SSL provisioning ~5-30 min after first DNS attachment)
 - **Stack:** Astro 5 + Tailwind 3
 - **Predecessor:** `theontarioarborist.ca` (kept live during transition, will 301 redirect to new domain in 6-12 months once new domain has authority)
 
@@ -106,3 +110,6 @@ Intentionally trimmed for v1 scope:
 |---|---|---|
 | 2026-05-29 | Initial scaffold | Cloned vicjimassage architecture, stripped bilingual + blog scope, rebranded palette (forest/bark/sky/moss/cream), wrote new English-only components, built 4 pages (home, services, about, contact), 88K dist, zero em/en dashes. Awaiting friend's input on the 9 TODOs above before launch. |
 | 2026-05-29 | Removed ReviewsWall + reviews.json | Friend has no real customer reviews yet. Section dropped from homepage rather than left dormant. Will re-add only when there are at least 3 real reviews to show. |
+| 2026-05-29 | Soften day-job copy, no named employer | Suroy could not verify if friend works at Davey Tree or that was second-hand info. Customer-visible copy now says "commercial tree crews" generically. Easy to swap to a named employer once confirmed. |
+| 2026-05-29 | Hide all contact CTAs | Phone fields in site.json blanked; Header/Hero/FinalCTA/Footer/PhoneFloat/contact.astro all conditional-render based on presence. Once friend confirms phone + email, populate src/data/site.json contact block and the whole site lights back up. |
+| 2026-05-29 | First deploy to Cloudflare Pages | Project `tarzantrimming` created via API, dist/ direct-uploaded via wrangler. Apex + www CNAME records created and attached to Pages project. Repo is on GitHub but NOT yet wired to auto-deploy. Live at https://tarzantrimming.pages.dev. Custom domain SSL provisioning. |
