@@ -1,0 +1,54 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+import servicesData from '~/data/services.json';
+import site from '~/data/site.json';
+
+const services = servicesData.services;
+const title = `Services · ${site.brand.name}`;
+---
+<BaseLayout title={title} path="/services/">
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-narrow mb-12">
+        <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Services</div>
+        <h1 class="font-display text-4xl md:text-5xl text-forest leading-tight">Tree pruning and limb removal across south Ontario.</h1>
+        <p class="mt-5 text-lg text-ink-muted leading-relaxed">Two services right now, done properly. Full removals queued for once the rig scales up.</p>
+      </div>
+
+      <div class="space-y-16">
+        {services.map((s) => (
+          <article id={s.slug} class={`grid md:grid-cols-3 gap-8 ${s.comingSoon ? 'opacity-70' : ''}`}>
+            <div class="md:col-span-1">
+              <h2 class="font-display text-3xl text-forest leading-tight">{s.name}</h2>
+              <p class="mt-2 text-bark font-medium">{s.tagline}</p>
+              <div class="mt-4 text-sm text-ink-muted">{s.priceRange}</div>
+              {s.comingSoon && <div class="mt-3 inline-block text-xs uppercase tracking-widest2 px-2 py-1 bg-bark/15 text-bark-dark rounded">Coming soon</div>}
+            </div>
+
+            <div class="md:col-span-2 space-y-6 text-ink leading-relaxed">
+              <p set:html={s.description.replace(/\n\n/g, '</p><p>')}></p>
+              {s.process.length > 0 && (
+                <div>
+                  <h3 class="font-display text-xl text-forest mb-3">How it works</h3>
+                  <ol class="list-decimal pl-5 space-y-1 text-ink-muted">
+                    {s.process.map((step) => <li>{step}</li>)}
+                  </ol>
+                </div>
+              )}
+              {s.goodFor.length > 0 && (
+                <div>
+                  <h3 class="font-display text-xl text-forest mb-3">Good for</h3>
+                  <ul class="list-disc pl-5 space-y-1 text-ink-muted">
+                    {s.goodFor.map((g) => <li>{g}</li>)}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <FinalCTA />
+</BaseLayout>

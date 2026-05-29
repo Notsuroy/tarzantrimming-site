@@ -1,0 +1,41 @@
+---
+import servicesData from '~/data/services.json';
+import site from '~/data/site.json';
+
+const services = servicesData.services;
+---
+
+<section class="py-16 md:py-24 bg-cream">
+  <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-narrow mb-12">
+      <div class="text-xs uppercase tracking-widest2 text-forest mb-3">What we do</div>
+      <h2 class="font-display text-3xl md:text-4xl text-forest leading-tight">Two things, done well.</h2>
+      <p class="mt-4 text-ink-muted leading-relaxed">Pruning and limb removal are the safest, highest-impact tree work for a single-arborist operation. Full tree removal is in the queue once the rig is scaled.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {services.map((s) => (
+        <div class={`relative bg-white border border-cream-deep rounded-2xl p-7 shadow-card flex flex-col ${s.comingSoon ? 'opacity-70' : ''}`}>
+          {s.comingSoon && (
+            <span class="absolute top-4 right-4 text-xs uppercase tracking-widest2 px-2 py-1 bg-bark/15 text-bark-dark rounded">Coming soon</span>
+          )}
+          <h3 class="font-display text-2xl text-forest">{s.name}</h3>
+          <p class="text-sm font-medium text-bark mt-1">{s.tagline}</p>
+          <p class="mt-4 text-ink leading-relaxed">{s.shortDescription}</p>
+          <div class="mt-6 pt-4 border-t border-cream-deep text-sm text-ink-muted">{s.priceRange}</div>
+          {!s.comingSoon && (
+            <a href={`/services/#${s.slug}`} class="mt-4 inline-block text-forest font-medium hover:text-forest-dark transition-colors text-sm">
+              Learn more →
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href={`tel:${site.contact.phoneE164}`} class="inline-flex items-center gap-2 px-6 py-3 bg-forest text-cream rounded-full font-medium hover:bg-forest-dark transition-colors">
+        Get a free quote · {site.contact.phoneDisplay}
+      </a>
+    </div>
+  </div>
+</section>

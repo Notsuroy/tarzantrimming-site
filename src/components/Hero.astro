@@ -1,0 +1,35 @@
+---
+import site from '~/data/site.json';
+---
+
+<section class="relative overflow-hidden bg-forest">
+  <!-- Background: solid forest with subtle grain (will swap for real photo once friend sends hero shot) -->
+  <div class="absolute inset-0 z-0 bg-grain opacity-20 pointer-events-none"></div>
+  <div class="absolute inset-0 z-0 bg-gradient-to-br from-forest-dark/40 to-transparent"></div>
+
+  <div class="relative z-10 max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32">
+    <div class="max-w-3xl">
+      <div class="text-xs uppercase tracking-widest2 text-cream/70 mb-5">Tree Pruning · Limb Removal · South Ontario</div>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-cream leading-tight">
+        Honest tree work, owner-led, across south Ontario.
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-cream/85 leading-relaxed max-w-2xl">
+        Targeted tree pruning and limb removal for homeowners from Toronto through Hamilton and Kitchener. Free quotes, clean work, no high-pressure pitch.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href={`tel:${site.contact.phoneE164}`} class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-forest rounded-full font-medium hover:bg-cream-dark transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path></svg>
+          Call {site.contact.phoneDisplay}
+        </a>
+        <a href="/services/" class="inline-flex items-center px-6 py-3 border border-cream/40 text-cream rounded-full font-medium hover:bg-cream/10 transition-colors">
+          See what we do
+        </a>
+      </div>
+
+      <div class="mt-10 text-sm text-cream/60">
+        {site.location.serviceAreaLabel.charAt(0).toUpperCase() + site.location.serviceAreaLabel.slice(1)} · {site.hours.label}
+      </div>
+    </div>
+  </div>
+</section>

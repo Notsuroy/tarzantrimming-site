@@ -1,0 +1,34 @@
+---
+const points = [
+  {
+    problem: 'A branch is over your roof, deck, or driveway and you cannot tell if it will hold.',
+    promise: 'We assess it free, quote what it would take to remove, and you decide.',
+  },
+  {
+    problem: 'You called a tree company and got a $2,000 quote you cannot tell is fair.',
+    promise: 'Honest pricing from someone whose day job is commercial arborist work. No upsells.',
+  },
+  {
+    problem: 'Your tree has not been pruned in years and the canopy is choking out everything below.',
+    promise: 'Selective pruning that opens the crown without harming the tree. Clean cuts, healed in one season.',
+  },
+];
+---
+
+<section class="py-16 md:py-24 bg-cream">
+  <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-narrow mb-12">
+      <div class="text-xs uppercase tracking-widest2 text-forest mb-3">What we hear most</div>
+      <h2 class="font-display text-3xl md:text-4xl text-forest leading-tight">If any of these sound familiar, you are in the right place.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+      {points.map((p) => (
+        <div class="bg-white border border-cream-deep rounded-2xl p-6 shadow-card">
+          <p class="text-ink leading-relaxed"><span class="font-medium">You:</span> {p.problem}</p>
+          <p class="mt-4 text-ink-muted text-sm leading-relaxed"><span class="font-medium text-forest">Us:</span> {p.promise}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+{
+  "_note": "Single source of truth for brand + contact + location config. Imported by Header, Footer, Hero, FinalCTA, BaseLayout (JSON-LD), etc. Update one field here, every page reflects.",
+  "brand": {
+    "name": "Tarzan Trimming",
+    "shortName": "Tarzan",
+    "wordmark": "Tarzan Trimming",
+    "tagline": "Tree pruning and limb removal across south Ontario.",
+    "shortDescription": "Owner-led tree pruning and limb removal across the Toronto, Mississauga, Oakville, Burlington, Hamilton, Kitchener, and Whitby corridor.",
+    "fullDescription": "Tarzan Trimming is an owner-led tree care business serving south Ontario. Specializing in tree pruning and limb removal for residential properties from Toronto through the Hamilton and Kitchener corridor. Honest quotes, clean work, no high-pressure pitch. By appointment, evenings and weekends.\n\nFull tree removals coming as the business grows. For now, every pruning and limb job gets the same attention to detail that a commercial arborist brings to a Davey crew."
+  },
+  "contact": {
+    "phone": "(647) 788-8733",
+    "phoneE164": "+16477888733",
+    "phoneDisplay": "(647) 788-8733",
+    "smsEnabled": true,
+    "email": "TODO_EMAIL",
+    "_emailNote": "Set up info@tarzantrimming.ca via Cloudflare Email Routing OR Migadu mailbox once domain is live."
+  },
+  "location": {
+    "city": "Toronto",
+    "province": "ON",
+    "country": "Canada",
+    "serviceAreaLabel": "south Ontario",
+    "_serviceAreaNote": "Set to broad regional label, not a specific street address. This is a mobile service business, not a storefront."
+  },
+  "serviceCities": [
+    { "name": "Toronto",      "slug": "toronto" },
+    { "name": "Mississauga",  "slug": "mississauga" },
+    { "name": "Oakville",     "slug": "oakville" },
+    { "name": "Burlington",   "slug": "burlington" },
+    { "name": "Hamilton",     "slug": "hamilton" },
+    { "name": "Kitchener",    "slug": "kitchener" },
+    { "name": "Whitby",       "slug": "whitby" }
+  ],
+  "hours": {
+    "label": "By appointment. Evenings and weekends.",
+    "_note": "Owner works at Davey Tree during the day. Evening and weekend availability for Tarzan Trimming jobs. Confirm exact hours with friend before launch."
+  },
+  "payment": {
+    "methods": ["E-transfer", "Cash", "Cheque"]
+  },
+  "social": {
+    "instagram": "TODO_INSTAGRAM",
+    "instagramUrl": "TODO_INSTAGRAM_URL"
+  },
+  "domain": "tarzantrimming.ca",
+  "url": "https://tarzantrimming.ca",
+  "seo": {
+    "defaultDescription": "Owner-led tree pruning and limb removal across south Ontario. Toronto, Mississauga, Oakville, Burlington, Hamilton, Kitchener, Whitby. Honest quotes, clean work, no high-pressure pitch."
+  },
+  "_todos": [
+    "Confirm phone number with friend (currently using TOA number)",
+    "Confirm service cities list (currently inheriting TOA's 7-city list)",
+    "Confirm pricing approach (public ranges in services.json vs quote-only)",
+    "Confirm hours given Davey day-job schedule",
+    "Get friend's tagline preference (current is placeholder)",
+    "Set up info@ mailbox once domain DNS is connected",
+    "Add Instagram handle if friend has one",
+    "Get real photos for /public/photos/ (before/after pruning shots)",
+    "Get real reviews / testimonials for src/data/reviews.json"
+  ]
+}

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+.cloudflare/
+.wrangler/
+.env
+.env.local
+.DS_Store
+*.log
+.vscode/
+.idea/

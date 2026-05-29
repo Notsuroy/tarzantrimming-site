@@ -1,0 +1,80 @@
+{
+  "_note": "Tarzan Trimming service menu. Two launch services (pruning, limb removal). Full tree removal is queued for once business is established. Pricing strategy is TBD: friend can pick public ranges (better CTR) or quote-only (more flexibility). For now: quote-only as placeholder.",
+  "currency": "CAD",
+  "currencySymbol": "$",
+  "pricingStrategy": "quote-only",
+  "_pricingStrategyOptions": [
+    "quote-only: every job priced after free visit, no ranges shown",
+    "public-ranges: show typical ranges like '$300 to $800 per tree' so customers self-qualify"
+  ],
+  "services": [
+    {
+      "id": "tree-pruning",
+      "slug": "tree-pruning",
+      "highlight": true,
+      "icon": "branch",
+      "name": "Tree Pruning",
+      "tagline": "Clean cuts that keep your tree healthy for decades.",
+      "shortDescription": "Selective pruning to remove dead, diseased, or interfering branches. Improves tree health, shape, and safety without compromising long-term growth.",
+      "description": "Pruning is the difference between a tree that thrives and a tree that becomes a liability. Every cut is intentional: removing what is dead, diseased, or interfering, preserving what is structurally sound. Mature shade trees, young trees that need shaping, fruit trees that need rejuvenation, ornamental trees that have grown into problem zones.\n\nMost residential pruning jobs are completed in a single visit. You get a free quote before any work starts, and a clean yard when we leave (debris hauled or chipped onsite, depending on your preference).",
+      "process": [
+        "Walk the property with you, identify which trees need work",
+        "Quote each tree separately so you can choose scope and budget",
+        "Climb or use a pole saw and pole pruner depending on the cut height",
+        "Three-cut technique on larger limbs to prevent bark tearing",
+        "Chip or haul debris based on your call"
+      ],
+      "goodFor": [
+        "Mature shade trees that have not been pruned in 5+ years",
+        "Branches overhanging the house, driveway, deck, or sidewalk",
+        "Young trees that need structural pruning for long-term shape",
+        "Storm damage cleanup (broken or hanging limbs)",
+        "Crown thinning to let more light through to the lawn or garden"
+      ],
+      "priceRange": "Quote on site"
+    },
+    {
+      "id": "limb-removal",
+      "slug": "limb-removal",
+      "highlight": true,
+      "icon": "saw",
+      "name": "Limb Removal",
+      "tagline": "Hanging, broken, or in the way? Down it goes.",
+      "shortDescription": "Removal of individual large limbs that are dead, broken, hanging, or interfering with structures. The middle ground between light pruning and full tree removal.",
+      "description": "Sometimes a tree is fundamentally healthy but one or two limbs are problems: a hanging branch from a storm, a limb growing into power lines or onto the roof, a dead leader that is about to fall. Removing those specific limbs is faster and cheaper than full tree work, and it solves the immediate hazard.\n\nWe focus on this kind of targeted limb work. Roped descents from the crown for awkward limbs over structures, careful sectioning to control where the wood lands, and clean cuts at the trunk that let the tree heal properly. Most limb removals are a same-day or next-evening job.",
+      "process": [
+        "Assess the limb and identify safe rigging points",
+        "Set rope and lower line for any limb over a structure",
+        "Section the limb (cut from the tip back) to keep wood under control",
+        "Make a final clean cut at the collar to allow the tree to heal",
+        "Chip or haul wood and clean up the site"
+      ],
+      "goodFor": [
+        "Storm-damaged or hanging limbs",
+        "Dead leader branches that are dropping deadwood",
+        "Limbs over the roof, garage, deck, fence, pool, or driveway",
+        "Single problem limb on an otherwise healthy tree"
+      ],
+      "priceRange": "Quote on site"
+    },
+    {
+      "id": "full-removal",
+      "slug": "full-tree-removal",
+      "highlight": false,
+      "comingSoon": true,
+      "icon": "stump",
+      "name": "Full Tree Removal",
+      "tagline": "Coming as the business grows.",
+      "shortDescription": "Full tree removal is in the launch plan but not yet offered. Pruning and limb work first, full removals will be added once the rig and crew are scaled for it.",
+      "description": "Full tree removal requires bucket-truck access (for street trees) or experienced ground crew with rigging gear (for backyard removals). Both are in the plan. For now, we focus on pruning and limb removal jobs that can be done safely with current tools and experience.\n\nIf you need a full tree taken down soon, send a photo of the tree and we will tell you who to call.",
+      "process": [],
+      "goodFor": [],
+      "priceRange": "Not yet offered"
+    }
+  ],
+  "_todos": [
+    "Confirm with friend whether full-tree-removal stays as 'coming soon' or gets removed entirely",
+    "If friend wants public price ranges, swap pricingStrategy to 'public-ranges' and fill in ranges per service",
+    "Confirm 'ISA-aligned' or specific certifications language with friend (avoid implying ISA certification unless he has it). Currently uses generic language."
+  ]
+}
