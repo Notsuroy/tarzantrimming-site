@@ -8,6 +8,7 @@ import PhotoGallery from '~/components/PhotoGallery.astro';
 import FAQ from '~/components/FAQ.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
 import site from '~/data/site.json';
+import faqData from '~/data/faq.json';
 
 const title = `${site.brand.name} · Tree Pruning and Limb Removal in South Ontario`;
 ---
@@ -34,5 +35,18 @@ const title = `${site.brand.name} · Tree Pruning and Limb Removal in South Onta
       "addressCountry": "CA"
     },
     "priceRange": "$$"
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.items.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
   })} />
 </BaseLayout>
