@@ -20,6 +20,7 @@ const ogImage = '/photos/hero.jpg';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2D4A36" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={desc} />
@@ -28,6 +29,7 @@ const ogImage = '/photos/hero.jpg';
     <link rel="canonical" href={new URL(path, Astro.site).toString()} />
 
     <meta property="og:title" content={title} />
+    <meta property="og:url" content={new URL(path, Astro.site).toString()} />
     <meta property="og:description" content={desc} />
     <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
     <meta property="og:type" content="website" />
