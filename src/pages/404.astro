@@ -1,0 +1,48 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import site from '~/data/site.json';
+
+const title = `Page not found · ${site.brand.name}`;
+const description = 'That page could not be found. Here are the tree pruning and limb removal pages most people are looking for.';
+
+const popular = [
+  { href: '/', label: 'Home', note: 'Owner-led tree care across south Ontario' },
+  { href: '/services/tree-pruning/', label: 'Tree Pruning', note: 'Shaping, deadwooding, and crown work' },
+  { href: '/services/limb-removal/', label: 'Limb Removal', note: 'Hazardous and overhanging limbs taken down safely' },
+  { href: '/services/', label: 'All Services', note: 'What we do and how the work is priced' },
+  { href: '/about/', label: 'About', note: 'Who does the work and how we quote' },
+  { href: '/contact/', label: 'Contact', note: 'Get a quote on your job' },
+];
+---
+<BaseLayout title={title} description={description} path="/404/">
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-narrow mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-xs uppercase tracking-widest2 text-forest mb-3">404</div>
+      <h1 class="font-display text-4xl md:text-5xl text-forest leading-tight">This branch leads nowhere.</h1>
+
+      <div class="mt-8 space-y-6 text-ink leading-relaxed">
+        <p>
+          The page you were after is not here. It may have moved, or the link was mistyped. No harm done.
+        </p>
+        <p>
+          Here is where most visitors are headed. Pick the one that fits what you need.
+        </p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 gap-6">
+        {popular.map((item) => (
+          <a href={item.href} class="block bg-white border border-cream-deep rounded-2xl p-6 shadow-card hover:border-forest transition-colors">
+            <h2 class="font-display text-xl text-forest mb-1">{item.label}</h2>
+            <p class="text-sm text-ink-muted">{item.note}</p>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-12">
+        <a href="/" class="inline-flex items-center justify-center rounded-full bg-forest text-cream font-medium px-7 py-3 hover:bg-forest/90 transition-colors">
+          Back to home
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
