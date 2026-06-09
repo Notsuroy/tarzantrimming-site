@@ -8,10 +8,11 @@ export interface Props {
 const { currentPath } = Astro.props;
 
 const nav = [
-  { href: '/',          label: 'Home' },
-  { href: '/services/', label: 'Services' },
-  { href: '/about/',    label: 'About' },
-  { href: '/contact/',  label: 'Contact' },
+  { href: '/',               label: 'Home' },
+  { href: '/services/',      label: 'Services' },
+  { href: '/service-areas/', label: 'Service Areas' },
+  { href: '/about/',         label: 'About' },
+  { href: '/contact/',       label: 'Contact' },
 ];
 
 const isActive = (href: string) => href === '/' ? currentPath === '/' : currentPath.startsWith(href);

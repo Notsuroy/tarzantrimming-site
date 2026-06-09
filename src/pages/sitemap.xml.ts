@@ -9,6 +9,7 @@ const PAGES = [
   'services/',
   'services/tree-pruning/',
   'services/limb-removal/',
+  'service-areas/',
   'about/',
   'contact/',
 ];

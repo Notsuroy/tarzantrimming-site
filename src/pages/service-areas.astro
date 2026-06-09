@@ -1,0 +1,162 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+import site from '~/data/site.json';
+
+const path = '/service-areas/';
+const title = `Service Areas · ${site.brand.name}`;
+const metaDescription =
+  'Owner-led tree pruning and limb removal across Toronto, Mississauga, Oakville, Burlington, Hamilton, Kitchener, and Whitby. Honest quotes, free estimate.';
+
+// Honest, region-accurate context per city. Tree species and property
+// characteristics here are broadly true for southern Ontario municipalities.
+// We deliberately avoid asserting specific municipal bylaw thresholds: the
+// Oakville note is kept general and carries a FRIEND-VERIFY comment so the
+// owner can confirm the framing before any outreach references it.
+const areas = [
+  {
+    name: 'Toronto',
+    blurb:
+      'Older neighbourhoods like the Beaches, Leslieville, and the High Park area carry big mature silver and Norway maples, often on tight lots and ravine edges. The usual reason for a call is a crown crowding a roofline or a limb hanging over a laneway. Tight rear-yard access means most of this work is climbed rather than reached from a bucket.',
+  },
+  {
+    name: 'Mississauga',
+    blurb:
+      'A mix of established areas like Lorne Park and Mineola, where mature trees have grown into problem zones, and newer subdivisions where planted trees are now hitting the size where structural pruning pays off. Getting young trees shaped early saves a much bigger job a decade later.',
+  },
+  {
+    name: 'Oakville',
+    blurb:
+      'Heavy private canopy, with a lot of mature oaks and maples on larger lots. Oakville has one of the stricter private-tree bylaws in the region. If a tree on your property is protected, we will flag it before any cut and help you figure out whether a permit applies.',
+    verify: true,
+  },
+  {
+    name: 'Burlington',
+    blurb:
+      'Burlington sits against the Niagara Escarpment, so mature trees and sloped access are both common. Limb work over decks and pools is a frequent ask through summer, and storm cleanup picks up after the wind events that roll off the lake.',
+  },
+  {
+    name: 'Hamilton',
+    blurb:
+      'The escarpment splits the city, and the older lower-city wards have mature street and yard trees that have not been touched in years. Crown thinning to get light back into a shaded yard and deadwood removal on big maples are the typical jobs here.',
+  },
+  {
+    name: 'Kitchener',
+    blurb:
+      'Kitchener sits at the edge of the Carolinian zone, so there is a wide mix of species and plenty of mature street trees in the older wards. A lot of the work is crown thinning and clearing deadwood before it starts dropping on its own.',
+  },
+  {
+    name: 'Whitby',
+    blurb:
+      'In Durham Region, older Whitby has well-established trees while the newer north-end growth is just reaching maturity. Storm and ice-damage cleanup is a common reason for a limb call, since exposed newer streets take the brunt of the wind.',
+  },
+];
+
+const cities = site.serviceCities.map((c) => c.name);
+const citiesText = `${cities.slice(0, -1).join(', ')}, and ${cities[cities.length - 1]}`;
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Tree Pruning and Limb Removal',
+  serviceType: 'Tree Care',
+  description:
+    'Owner-led tree pruning and limb removal for residential properties across south Ontario.',
+  areaServed: site.serviceCities.map((c) => ({ '@type': 'City', name: c.name })),
+  provider: {
+    '@type': 'LocalBusiness',
+    name: site.brand.name,
+    url: site.url,
+    areaServed: site.location.serviceAreaLabel,
+  },
+  url: new URL(path, Astro.site).toString(),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).toString() },
+    { '@type': 'ListItem', position: 2, name: 'Service Areas', item: new URL(path, Astro.site).toString() },
+  ],
+};
+---
+<BaseLayout title={title} description={metaDescription} path={path}>
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs uppercase tracking-widest2 text-ink-muted mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-forest">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-forest">Service Areas</span>
+      </nav>
+
+      <div class="max-w-narrow mb-12">
+        <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Service Areas</div>
+        <h1 class="font-display text-4xl md:text-5xl text-forest leading-tight">Tree Pruning and Limb Removal Across South Ontario</h1>
+        <p class="mt-4 text-bark font-medium text-lg">One owner, one truck, the same standard on every lot.</p>
+        <p class="mt-4 text-lg text-ink-muted leading-relaxed">
+          Tarzan Trimming is mobile and owner-led, covering {citiesText}. We focus on
+          <a href="/services/tree-pruning/" class="text-forest underline hover:text-forest-dark"> tree pruning</a> and
+          <a href="/services/limb-removal/" class="text-forest underline hover:text-forest-dark"> limb removal</a>,
+          by appointment on evenings and weekends. Every job starts with a free look and an honest quote.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="md:col-span-2 space-y-10 text-ink leading-relaxed">
+          <div class="space-y-8">
+            {areas.map((a) => (
+              <div>
+                <h2 class="font-display text-2xl text-forest mb-3">{a.name}</h2>
+                {a.verify && <Fragment set:html={`<!-- FRIEND-VERIFY: Oakville private-tree bylaw framing (kept general, no specific threshold asserted). Confirm before any outreach cites it. -->`} />}
+                <p class="text-ink-muted">{a.blurb}</p>
+              </div>
+            ))}
+          </div>
+
+          <div>
+            <h2 class="font-display text-2xl text-forest mb-4">Not on the list?</h2>
+            <p class="text-ink-muted">
+              The map above is where most jobs land, but the line is not hard. If you are near the
+              Toronto to Kitchener corridor, send a photo through the
+              <a href="/contact/" class="text-forest underline hover:text-forest-dark"> contact page</a>
+              and we will tell you straight whether it is worth the trip. Bigger or recurring work is easier
+              to justify a longer drive for than a single small limb.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-2xl text-forest mb-4">How the work goes, wherever you are</h2>
+            <p class="text-ink-muted">
+              The city changes the trees and the access, not the standard. We walk the property with you,
+              quote each tree separately, and leave the yard clean (debris chipped onsite or hauled, your call).
+              See the full
+              <a href="/services/" class="text-forest underline hover:text-forest-dark"> service menu</a>
+              for how pruning and limb work differ, or read
+              <a href="/about/" class="text-forest underline hover:text-forest-dark"> who is behind the business</a>
+              if you want to know who shows up.
+            </p>
+          </div>
+        </div>
+
+        <aside class="md:col-span-1">
+          <div class="bg-white rounded-2xl border border-moss/40 p-6 sticky top-24">
+            <div class="text-xs uppercase tracking-widest2 text-forest mb-2">Tarzan Trimming</div>
+            <p class="text-ink-muted text-sm leading-relaxed">
+              Owner-led tree care across south Ontario. By appointment, evenings and weekends. Honest quotes,
+              clean work, no high-pressure pitch.
+            </p>
+            <a href="/contact/" class="mt-5 inline-flex items-center px-4 py-2 bg-forest text-cream rounded-full text-sm font-medium hover:bg-forest-dark transition-colors">
+              Ask for a quote
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA />
+
+  <script type="application/ld+json" set:html={JSON.stringify(serviceLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+</BaseLayout>
