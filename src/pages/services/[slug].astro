@@ -1,0 +1,183 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+import servicesData from '~/data/services.json';
+import site from '~/data/site.json';
+
+// Dedicated, indexable page per offered service. "Coming soon" services
+// (full tree removal) are intentionally excluded: we do not publish a
+// rankable page for work that is not actually offered yet.
+export function getStaticPaths() {
+  return servicesData.services
+    .filter((s) => !s.comingSoon)
+    .map((s) => ({ params: { slug: s.slug }, props: { service: s } }));
+}
+
+const { service } = Astro.props;
+const path = `/services/${service.slug}/`;
+
+// Per-service H1 + meta description. Kept here (not in services.json) so the
+// existing /services/ menu page rendering is untouched. H1 carries the focus
+// keyword; meta descriptions are 140 to 155 chars with keyword plus region.
+const seoMap: Record<string, { h1: string; metaDescription: string }> = {
+  'tree-pruning': {
+    h1: 'Tree Pruning in South Ontario',
+    metaDescription:
+      'Owner-led tree pruning across the Toronto to Kitchener corridor. Clean, intentional cuts that keep trees healthy. Honest quotes, free estimate.',
+  },
+  'limb-removal': {
+    h1: 'Limb Removal in South Ontario',
+    metaDescription:
+      'Hanging or broken limb over your roof or driveway? Owner-led limb removal across south Ontario. Safe roped descents, fast turnaround, free quote.',
+  },
+};
+const seo = seoMap[service.slug] ?? {
+  h1: `${service.name} in South Ontario`,
+  metaDescription: service.shortDescription,
+};
+
+const title = `${service.name} in South Ontario · ${site.brand.name}`;
+
+// Other offered services for cross-linking.
+const related = servicesData.services.filter((s) => !s.comingSoon && s.slug !== service.slug);
+
+const cities = site.serviceCities.map((c) => c.name);
+const citiesText =
+  cities.length > 1
+    ? `${cities.slice(0, -1).join(', ')}, and ${cities[cities.length - 1]}`
+    : cities[0];
+
+const descParas = service.description.split('\n\n');
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.name,
+  serviceType: service.name,
+  description: service.shortDescription,
+  areaServed: site.serviceCities.map((c) => ({ '@type': 'City', name: c.name })),
+  provider: {
+    '@type': 'LocalBusiness',
+    name: site.brand.name,
+    url: site.url,
+    areaServed: site.location.serviceAreaLabel,
+  },
+  url: new URL(path, Astro.site).toString(),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).toString() },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: new URL('/services/', Astro.site).toString() },
+    { '@type': 'ListItem', position: 3, name: service.name, item: new URL(path, Astro.site).toString() },
+  ],
+};
+---
+<BaseLayout title={title} description={seo.metaDescription} path={path}>
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs uppercase tracking-widest2 text-ink-muted mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-forest">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/services/" class="hover:text-forest">Services</a>
+        <span class="mx-2">/</span>
+        <span class="text-forest">{service.name}</span>
+      </nav>
+
+      <div class="max-w-narrow mb-12">
+        <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Service</div>
+        <h1 class="font-display text-4xl md:text-5xl text-forest leading-tight">{seo.h1}</h1>
+        <p class="mt-4 text-bark font-medium text-lg">{service.tagline}</p>
+        <p class="mt-4 text-lg text-ink-muted leading-relaxed">{service.shortDescription}</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="md:col-span-2 space-y-10 text-ink leading-relaxed">
+          <div class="space-y-5">
+            {descParas.map((p) => <p>{p}</p>)}
+          </div>
+
+          {service.process.length > 0 && (
+            <div>
+              <h2 class="font-display text-2xl text-forest mb-4">How it works</h2>
+              <ol class="list-decimal pl-5 space-y-2 text-ink-muted">
+                {service.process.map((step) => <li>{step}</li>)}
+              </ol>
+            </div>
+          )}
+
+          {service.goodFor.length > 0 && (
+            <div>
+              <h2 class="font-display text-2xl text-forest mb-4">Good for</h2>
+              <ul class="list-disc pl-5 space-y-2 text-ink-muted">
+                {service.goodFor.map((g) => <li>{g}</li>)}
+              </ul>
+            </div>
+          )}
+
+          <div>
+            <h2 class="font-display text-2xl text-forest mb-4">Where we work</h2>
+            <p class="text-ink-muted">
+              Tarzan Trimming is mobile and owner-led, covering {citiesText}. We are
+              <a href="/about/" class="text-forest underline hover:text-forest-dark"> a small operation by design</a>,
+              so every job gets the same attention. See the full
+              <a href="/services/" class="text-forest underline hover:text-forest-dark"> service menu</a>
+              if you are weighing options.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-2xl text-forest mb-4">What it costs</h2>
+            <p class="text-ink-muted">
+              <strong class="text-ink">{service.priceRange}.</strong> Pricing is per tree and per job,
+              quoted after a free look at the work. No deposit to get a number, and no pressure to book on
+              the spot. If the honest answer is that the work can wait, we will tell you that too.
+            </p>
+          </div>
+
+          {related.length > 0 && (
+            <div class="pt-2">
+              <h2 class="font-display text-2xl text-forest mb-4">Related service</h2>
+              <ul class="space-y-2">
+                {related.map((r) => (
+                  <li>
+                    <a href={`/services/${r.slug}/`} class="text-forest underline hover:text-forest-dark font-medium">{r.name}</a>
+                    <span class="text-ink-muted"> {r.tagline}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <p class="text-ink-muted">
+            Not sure whether you need {service.name.toLowerCase()} or something else? Send a photo through the
+            <a href="/contact/" class="text-forest underline hover:text-forest-dark"> contact page</a>
+            and we will tell you straight. You can also start back at the
+            <a href="/" class="text-forest underline hover:text-forest-dark"> home page</a>
+            for an overview of how Tarzan Trimming works.
+          </p>
+        </div>
+
+        <aside class="md:col-span-1">
+          <div class="bg-white rounded-2xl border border-moss/40 p-6 sticky top-24">
+            <div class="text-xs uppercase tracking-widest2 text-forest mb-2">Tarzan Trimming</div>
+            <p class="text-ink-muted text-sm leading-relaxed">
+              Owner-led tree care across south Ontario. By appointment, evenings and weekends. Honest quotes,
+              clean work, no high-pressure pitch.
+            </p>
+            <a href="/contact/" class="mt-5 inline-flex items-center px-4 py-2 bg-forest text-cream rounded-full text-sm font-medium hover:bg-forest-dark transition-colors">
+              Ask for a quote
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA />
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+</BaseLayout>

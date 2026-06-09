@@ -20,10 +20,16 @@ const title = `Services · ${site.brand.name}`;
         {services.map((s) => (
           <article id={s.slug} class={`grid md:grid-cols-3 gap-8 ${s.comingSoon ? 'opacity-70' : ''}`}>
             <div class="md:col-span-1">
-              <h2 class="font-display text-3xl text-forest leading-tight">{s.name}</h2>
+              <h2 class="font-display text-3xl text-forest leading-tight">
+                {s.comingSoon
+                  ? s.name
+                  : <a href={`/services/${s.slug}/`} class="hover:text-forest-dark underline decoration-moss/50 underline-offset-4">{s.name}</a>}
+              </h2>
               <p class="mt-2 text-bark font-medium">{s.tagline}</p>
               <div class="mt-4 text-sm text-ink-muted">{s.priceRange}</div>
-              {s.comingSoon && <div class="mt-3 inline-block text-xs uppercase tracking-widest2 px-2 py-1 bg-bark/15 text-bark-dark rounded">Coming soon</div>}
+              {s.comingSoon
+                ? <div class="mt-3 inline-block text-xs uppercase tracking-widest2 px-2 py-1 bg-bark/15 text-bark-dark rounded">Coming soon</div>
+                : <a href={`/services/${s.slug}/`} class="mt-3 inline-block text-sm font-medium text-forest underline hover:text-forest-dark">Full details</a>}
             </div>
 
             <div class="md:col-span-2 space-y-6 text-ink leading-relaxed">

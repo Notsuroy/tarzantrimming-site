@@ -4,7 +4,14 @@ import type { APIRoute } from 'astro';
 // so the page list is enumerated here. Add a route below if a new page ships.
 // lastmod is a fixed honest build date, not new Date(), to avoid inflating the
 // freshness signal Google reads from sitemaps.
-const PAGES = ['', 'services/', 'about/', 'contact/'];
+const PAGES = [
+  '',
+  'services/',
+  'services/tree-pruning/',
+  'services/limb-removal/',
+  'about/',
+  'contact/',
+];
 const LASTMOD = '2026-06-09';
 
 export const GET: APIRoute = ({ site }) => {
