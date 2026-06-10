@@ -6,10 +6,24 @@ const title = `Contact · ${site.brand.name}`;
 const hasPhone = !!site.contact.phoneE164;
 const hasEmail = !!site.contact.email && !site.contact.email.startsWith('TODO');
 const hasAnyContact = hasPhone || hasEmail;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).toString() },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: new URL('/contact/', Astro.site).toString() },
+  ],
+};
 ---
 <BaseLayout title={title} description="Reach Tarzan Trimming for owner-led tree pruning and limb removal in south Ontario. Get in touch for a free, no-pressure on-site quote today." path="/contact/">
   <section class="py-16 md:py-24 bg-cream">
     <div class="max-w-narrow mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs uppercase tracking-widest2 text-ink-muted mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-forest">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-forest">Contact</span>
+      </nav>
       <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Contact</div>
       <h1 class="font-display text-4xl md:text-5xl text-forest leading-tight">
         {hasAnyContact ? 'Phone, text, or email. Pick whichever is easiest.' : 'Contact details going live shortly.'}
@@ -55,4 +69,5 @@ const hasAnyContact = hasPhone || hasEmail;
       </div>
     </div>
   </section>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
 </BaseLayout>
