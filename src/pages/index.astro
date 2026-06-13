@@ -8,7 +8,10 @@ import PhotoGallery from '~/components/PhotoGallery.astro';
 import FAQ from '~/components/FAQ.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
 import site from '~/data/site.json';
+import services from '~/data/services.json';
 import faqData from '~/data/faq.json';
+
+const offeredServices = services.services.filter(s => !s.comingSoon);
 
 const title = `${site.brand.name} · Tree Pruning and Limb Removal in South Ontario`;
 ---
@@ -24,9 +27,12 @@ const title = `${site.brand.name} · Tree Pruning and Limb Removal in South Onta
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": new URL('/#business', Astro.site).toString(),
     "name": site.brand.name,
     "description": site.brand.fullDescription,
     "url": Astro.site?.toString(),
+    "image": new URL('/photos/og-default.png', Astro.site).toString(),
+    "logo": new URL('/photos/og-default.png', Astro.site).toString(),
     ...(site.contact.phoneE164 ? { "telephone": site.contact.phoneE164 } : {}),
     "areaServed": site.serviceCities.map(c => ({ "@type": "City", "name": c.name })),
     "address": {
@@ -34,7 +40,21 @@ const title = `${site.brand.name} · Tree Pruning and Limb Removal in South Onta
       "addressRegion": site.location.province,
       "addressCountry": "CA"
     },
-    "priceRange": "$$"
+    "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Tree care services",
+      "itemListElement": offeredServices.map(s => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": s.name,
+          "serviceType": s.name,
+          "url": new URL('/services/' + s.slug + '/', Astro.site).toString(),
+          "areaServed": site.serviceCities.map(c => ({ "@type": "City", "name": c.name }))
+        }
+      }))
+    }
   })} />
 
   <script type="application/ld+json" set:html={JSON.stringify({
