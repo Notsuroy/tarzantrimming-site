@@ -80,6 +80,47 @@ const breadcrumbLd = {
     { '@type': 'ListItem', position: 2, name: 'Service Areas', item: new URL(path, Astro.site).toString() },
   ],
 };
+
+// Area-focused FAQs. One array drives BOTH the visible accordion and the
+// FAQPage JSON-LD, so schema and visible text never drift (Google requires the
+// answer text to be present on the page). These are deliberately about WHERE we
+// work (coverage, travel, timing, permits), distinct from the service-technique
+// FAQs on the two service detail pages. Honest and owner-led: no certification
+// claims, no 24/7 framing, quote-only pricing, and the permit answer stays
+// general (no specific bylaw threshold asserted), matching the published Oakville
+// blurb above. Copy mirrors language already on this page.
+const faqs = [
+  {
+    q: 'Which areas does Tarzan Trimming serve?',
+    a: `Tarzan Trimming is mobile and owner-led, covering ${citiesText}. Most jobs land along the Toronto to Kitchener corridor, with regular work through the west GTA and into Durham Region. The trees and the access change from city to city, but the standard on every lot stays the same.`,
+  },
+  {
+    q: 'Do you charge extra to travel outside Toronto?',
+    a: 'There is no separate travel fee built into the quote. Every job is priced per tree after a free on-site look, and distance only really matters at the edges. A single small limb a long drive away is harder to justify than bigger or recurring work, so for anything substantial the location rarely changes the number.',
+  },
+  {
+    q: 'What if I am just outside your service area?',
+    a: 'The map is where most jobs land, but the line is not hard. If you are anywhere near the Toronto to Kitchener corridor, send a photo through the contact page and you will get a straight answer on whether it is worth the trip. Larger or repeat work is easier to come out for than a single small job.',
+  },
+  {
+    q: 'How soon can you get out to my area for a quote?',
+    a: 'The free on-site look is by appointment, usually on evenings and weekends, since the business runs around a weekday schedule. Send a photo first and we will line up a time that works. This is planned tree care, not a middle-of-the-night emergency service, so for a limb actively on a house or a power line, call your local hydro provider or emergency services first.',
+  },
+  {
+    q: 'Do I need a permit to prune or remove a limb on my property?',
+    a: 'It depends on the municipality. Some, like Oakville, have stricter private-tree bylaws than others, and a larger or protected tree can fall under municipal rules. If a tree on your property looks like it might be regulated, we will flag it before any cut and help you figure out whether a permit applies, rather than just taking it down.',
+  },
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 ---
 <BaseLayout title={title} description={metaDescription} path={path}>
   <section class="py-16 md:py-24 bg-cream">
@@ -155,8 +196,30 @@ const breadcrumbLd = {
     </div>
   </section>
 
+  <section class="py-16 md:py-24 bg-white" id="faq">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-narrow mx-auto text-center mb-12">
+        <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Common questions</div>
+        <h2 class="font-display text-3xl md:text-4xl text-forest leading-tight">Questions about where we work.</h2>
+      </div>
+
+      <div class="max-w-narrow mx-auto space-y-3">
+        {faqs.map((item) => (
+          <details class="group bg-cream border border-cream-deep rounded-xl open:shadow-card transition-shadow">
+            <summary class="cursor-pointer list-none px-6 py-5 flex items-start justify-between gap-4 font-medium text-ink">
+              <span>{item.q}</span>
+              <span class="text-forest text-2xl leading-none group-open:rotate-45 transition-transform shrink-0">+</span>
+            </summary>
+            <div class="px-6 pb-5 text-ink-muted leading-relaxed">{item.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <FinalCTA />
 
   <script type="application/ld+json" set:html={JSON.stringify(serviceLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
 </BaseLayout>

@@ -23,7 +23,7 @@ const PAGE_LASTMOD: Record<string, string> = {
   'services/': '2026-06-13',
   'services/tree-pruning/': '2026-06-13',
   'services/limb-removal/': '2026-06-13',
-  'service-areas/': '2026-06-09',
+  'service-areas/': '2026-06-13',
   'about/': '2026-06-10',
   'contact/': '2026-06-10',
 };
