@@ -50,6 +50,13 @@ const citiesText =
 const descParas = service.description.split('\n\n');
 const seasonalNote = (service as any).seasonalNote as string | undefined;
 
+// Contextual link into the pruning-timing guide. The guide previously had no
+// in-content inbound links (it was reachable only from the global nav), which
+// dilutes its internal ranking signal. The anchor below is slug-specific so it
+// honestly matches the guide section each service relates to: pruning timing
+// for tree-pruning, storm damage and hazard limbs for limb-removal.
+const guideHref = '/guide/when-to-prune-trees-southern-ontario/';
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -188,6 +195,20 @@ const faqLd = faqs.length
             <div>
               <h2 class="font-display text-2xl text-forest mb-4">When to do this work</h2>
               <p class="text-ink-muted">{seasonalNote}</p>
+              {service.slug === 'tree-pruning' && (
+                <p class="text-ink-muted mt-3">
+                  For the full seasonal breakdown, see our
+                  <a href={guideHref} class="text-forest underline hover:text-forest-dark"> guide on when to prune trees in southern Ontario</a>,
+                  which covers the dormant season, sap bleeders like maple and birch, and oak wilt timing.
+                </p>
+              )}
+              {service.slug === 'limb-removal' && (
+                <p class="text-ink-muted mt-3">
+                  Dealing with a limb after a storm? Our
+                  <a href={guideHref} class="text-forest underline hover:text-forest-dark"> guide on when to prune trees in southern Ontario</a>
+                  also walks through storm damage and the signs a limb may need to come down.
+                </p>
+              )}
             </div>
           )}
 
