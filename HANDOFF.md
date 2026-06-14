@@ -186,3 +186,19 @@ Migadu email fully set up and verified. The address is now on the site.
 - **End-to-end test PASSED:** SMTP send from nathan@ (smtp.migadu.com:465) delivered a test to suroy10@gmail.com AND a self-test; IMAP (imap.migadu.com:993) confirmed the self-test landed in the inbox. No new-mailbox send throttle hit. The earlier `535 authentication failed` was purely the domain being inactive (can_send=false), not a credential problem.
 - **Site:** `site.contact.email` set to `nathan@tarzantrimming.ca`; email CTAs now render on FinalCTA, Footer, contact page. Built + deployed to CF Pages (production deployment, latest). CF cache purged.
 - **Nathan's Gmail hookup (settings):** Send mail as -> smtp.migadu.com:465 SSL, user `nathan@tarzantrimming.ca` + password; Receive -> pop.migadu.com:995 SSL (or imap.migadu.com:993); verification code retrievable at webmail.migadu.com. He can change the password in webmail.
+
+---
+
+## 2026-06-14 (T04:14 cron): independent P0 health audit of the overnight buildout — CLEAN, no changes
+
+First autonomous-routine pass after the Suroy+Claude overnight buildout (`9bc97ff` + email-live deploy). Run as a read-only health audit to independently verify the big manual change set shipped clean to production. **No site files changed** (nothing to fix; also avoids colliding with the active manual session, last commit 03:12 ~1h prior).
+
+- **All 8 sitemap URLs HTTP 200** under a Chrome UA, each with a unique descriptive `<title>` and healthy byte size (home 38KB, /services/ 17KB, /services/tree-pruning/ 23KB, /services/limb-removal/ 23KB, /service-areas/ 22KB, /guide/when-to-prune-trees-southern-ontario/ 18KB, /about/ 13KB, /contact/ 11KB). Unmatched route `/nope-xyz123/` correctly returns **404** (custom 404 page working).
+- **Head + brand markers:** `theme-color #2D4A36` present, `favicon.svg` linked, `og:image` -> `/photos/og-default.png` resolves 200, H1 "Honest tree work, owner-led, across south Ontario" carries niche + region.
+- **Contact wiring verified live:** phone `tel:+16472161874` consistent sitewide (the newly-wired (647) 216-1874). Email `nathan@tarzantrimming.ca` now live per the section above.
+- **Honesty sweep CLEAN:** em-dash (U+2014) = 0, en-dash (U+2013) = 0, banned 24/7-family = 0 across all 8 pages via a Python unicode scan (important because the buildout added the ~1060-word guide plus heavily expanded faq/about/services prose).
+- **Image audit:** 6 `<img>` tags sitewide (first real photos on the site, previously SVG/CSS only). Only flag was homepage `hero-canopy.webp` with `alt=""`, which is **correct** for a decorative background image under a dark overlay (screen readers skip it); the other 5 (about-trees, work-climb, work-limb, work-rigging + one more) all carry descriptive alt + width + height (no CLS risk).
+- **New `/guide/` page audit:** clean. 4 in-content internal links (home + both /services/ pages + /contact/), `Article` + `BreadcrumbList` + `Organization` JSON-LD, meta-description 153 chars (in the 140-155 SERP band), sitemap `lastmod` correctly 2026-06-14, ~1060 words.
+- **GSC / cannibalization sub-checks intentionally skipped:** domain is ~16 days old and not GSC-verified, so NULL `seo_*_daily_kpi` = no-data-yet (expected), not a stale-pipeline failure. No false flag raised.
+- **Cascade below P0** all N/A or blocked: P-PIPELINE skip (5 candidates all `[ ] approve`, no blog system yet), P-EXPAND/P-REFRESH N/A (no GSC data on unverified domain), P1 friend/Suroy-gated. No structural-gap P2.
+- **Drift corrected in MORNING_TASKS:** the L64 caveat claiming the site "converts zero leads / contact blank in site.json" is now stale (phone + email are live); fixed in place. Residual: the published phone number still needs Suroy's final confirmation (see the 2026-06-14 buildout section).
