@@ -13,9 +13,9 @@
     "phoneE164": "+16472161874",
     "phoneDisplay": "(647) 216-1874",
     "smsEnabled": true,
-    "email": "",
+    "email": "nathan@tarzantrimming.ca",
     "_phoneNote": "Wired 2026-06-13 to Nathan's cell (647) 216-1874 (the number TOA's tracked line forwarded to). Suroy to confirm this is the right number to publish. Setting phoneE164 lights up call + text CTAs sitewide.",
-    "_emailNote": "Email intentionally still empty: nathan@tarzantrimming.ca Migadu mailbox NOT live (zero MX records as of 2026-06-13). Once Suroy adds tarzantrimming.ca in the Migadu dashboard and the MX records resolve, set email to 'nathan@tarzantrimming.ca' and the email CTAs light up automatically."
+    "_emailNote": "LIVE 2026-06-14: nathan@tarzantrimming.ca Migadu mailbox active (domain verified + activated). Email CTAs now show across FinalCTA / Footer / contact page. Mailbox password held by Suroy; Nathan connects via Gmail Send-As (smtp.migadu.com:465) + receive (pop.migadu.com:995) or webmail.migadu.com."
   },
   "location": {
     "city": "Toronto",

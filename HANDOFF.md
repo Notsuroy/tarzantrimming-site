@@ -173,3 +173,16 @@ Commit `9bc97ff`, deployed to CF Pages (direct-upload wrangler, `--branch=main` 
 **Research sources (for the seasonal/permit/EAB claims):** Ontario.ca oak wilt; City of Toronto oak wilt (no-prune Apr 1 to Oct 31); Invasive Species Centre; CFIA emerald ash borer; MSU/Wisconsin extension pruning timing; RHS bleeding cuts; ISA storm-damage guidance.
 
 **Still TODO (Nathan / Suroy):** confirm the published phone number; set up Migadu + flip email live; send real owner photo + real before/after job photos (then swap the decorative gallery); confirm insurance status if the FAQ should ever mention it again; confirm whether full-tree-removal stays listed as "coming soon".
+
+---
+
+## 2026-06-14 (later): nathan@tarzantrimming.ca email LIVE end-to-end
+
+Migadu email fully set up and verified. The address is now on the site.
+
+- **Mailbox:** `nathan@tarzantrimming.ca` created via Migadu API (sender name "Tarzan Trimming"). Password held by Suroy (generated, 22 chars). Account: Migadu "Suroy Holdings Inc." Micro plan, auth username `suroy10@gmail.com`. Added `MIGADU_ACCOUNT_EMAIL` to `.env` (key was `migadu_API_Key`).
+- **DNS (Cloudflare zone `8dccf00d34ed0f68f554bc24a66a54ad`), all green in Migadu Diagnostics:** MX aspmx1/aspmx2.migadu.com; SPF `v=spf1 include:spf.migadu.com -all`; 3 DKIM CNAMEs key1/2/3._domainkey -> keyN.tarzantrimming.ca._domainkey.migadu.com; DMARC `v=DMARC1; p=quarantine;`; **ownership-verify TXT `hosted-email-verify=mp1zhzjn`** (this was the one blocker; the token is dashboard-only, not exposed by the API, Suroy read it off the Migadu Verification Instructions page and Claude added it via CF API).
+- **Activation:** domain stayed `inactive` ~30+ min on Migadu's auto-check; flipped to active within seconds once Suroy clicked **Rerun Checks** after the verify TXT was added. `can_receive` + `can_send` both true.
+- **End-to-end test PASSED:** SMTP send from nathan@ (smtp.migadu.com:465) delivered a test to suroy10@gmail.com AND a self-test; IMAP (imap.migadu.com:993) confirmed the self-test landed in the inbox. No new-mailbox send throttle hit. The earlier `535 authentication failed` was purely the domain being inactive (can_send=false), not a credential problem.
+- **Site:** `site.contact.email` set to `nathan@tarzantrimming.ca`; email CTAs now render on FinalCTA, Footer, contact page. Built + deployed to CF Pages (production deployment, latest). CF cache purged.
+- **Nathan's Gmail hookup (settings):** Send mail as -> smtp.migadu.com:465 SSL, user `nathan@tarzantrimming.ca` + password; Receive -> pop.migadu.com:995 SSL (or imap.migadu.com:993); verification code retrievable at webmail.migadu.com. He can change the password in webmail.
