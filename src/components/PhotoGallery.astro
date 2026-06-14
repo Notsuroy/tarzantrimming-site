@@ -1,21 +1,28 @@
 ---
-// Placeholder gallery. Friend to send before/after pruning shots.
-// Once photos land in /public/photos/, replace the placeholder grid with real <picture> tags.
-const placeholders = Array.from({ length: 6 });
+// Decorative "kind of work" band. These are representative stock photos of tree
+// pruning and limb work (Unsplash, free commercial license), NOT photos of
+// Tarzan Trimming's own completed jobs. The copy is framed honestly to say so.
+// When Nathan sends real before/after shots from local jobs, drop them in
+// /public/photos/ and update the `shots` array (and soften the caption line).
+const shots = [
+  { src: '/photos/work-climb.webp',   alt: 'Arborist climbing into a tree canopy on rope and harness' },
+  { src: '/photos/work-limb.webp',    alt: 'Arborist sectioning a large limb with a chainsaw' },
+  { src: '/photos/work-rigging.webp', alt: 'Arborist rigging a limb for a controlled lower over a hard surface' },
+];
 ---
 
 <section class="py-16 md:py-24 bg-cream-dark">
   <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-narrow mb-12">
-      <div class="text-xs uppercase tracking-widest2 text-bark mb-3">Recent work</div>
-      <h2 class="font-display text-3xl md:text-4xl text-forest leading-tight">Before-and-after from the south Ontario service area.</h2>
-      <p class="mt-4 text-ink-muted">Photos coming as the first jobs land. If your tree is in here, that means we did the work.</p>
+    <div class="max-w-narrow mb-10">
+      <div class="text-xs uppercase tracking-widest2 text-bark mb-3">The work</div>
+      <h2 class="font-display text-3xl md:text-4xl text-forest leading-tight">Careful climbing, rigging, and clean cuts.</h2>
+      <p class="mt-4 text-ink-muted">A look at the kind of pruning and limb work we focus on. These are representative photos of the trade. Real before-and-after shots from local jobs will go here as the first projects wrap up.</p>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-      {placeholders.map((_, i) => (
-        <div class="aspect-square bg-gradient-to-br from-forest/30 via-moss/30 to-bark/30 rounded-xl flex items-center justify-center text-cream/60 text-sm">
-          [photo {i + 1}]
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+      {shots.map((s) => (
+        <div class="aspect-[4/5] sm:aspect-square rounded-xl overflow-hidden bg-forest shadow-card">
+          <img src={s.src} alt={s.alt} loading="lazy" width="800" height="800" class="h-full w-full object-cover hover:scale-105 transition-transform duration-500" />
         </div>
       ))}
     </div>

@@ -1,5 +1,5 @@
 {
-  "_note": "Tarzan Trimming service menu. Two launch services (pruning, limb removal). Full tree removal is queued for once business is established. Pricing strategy is TBD: friend can pick public ranges (better CTR) or quote-only (more flexibility). For now: quote-only as placeholder.",
+  "_note": "Tarzan Trimming service menu. Two launch services (pruning, limb removal). Full tree removal is 'coming soon / not yet offered'. Pricing is QUOTE-ONLY (no public price ranges). seasonalNote fields added 2026-06-13 from verified southern Ontario tree-care research (dormant-season pruning, oak wilt timing, sap bleeders); rendered on services/[slug].astro. No insurance/certification claims, no price comparisons.",
   "currency": "CAD",
   "currencySymbol": "$",
   "pricingStrategy": "quote-only",
@@ -16,21 +16,25 @@
       "name": "Tree Pruning",
       "tagline": "Clean cuts that keep your tree healthy for decades.",
       "shortDescription": "Selective pruning to remove dead, diseased, or interfering branches. Improves tree health, shape, and safety without compromising long-term growth.",
-      "description": "Pruning is the difference between a tree that thrives and a tree that becomes a liability. Every cut is intentional: removing what is dead, diseased, or interfering, preserving what is structurally sound. Mature shade trees, young trees that need shaping, fruit trees that need rejuvenation, ornamental trees that have grown into problem zones.\n\nMost residential pruning jobs are completed in a single visit. You get a free quote before any work starts, and a clean yard when we leave (debris hauled or chipped onsite, depending on your preference).",
+      "description": "Pruning is the difference between a tree that thrives and a tree that becomes a liability. Every cut is intentional. We remove what is dead, diseased, broken, or growing into the wrong place, and we leave what is structurally sound. Mature shade trees, young trees that need shaping for the long haul, fruit trees that have stopped producing well, and ornamental trees that have crept over the roof or driveway all benefit from a proper pruning.\n\nGood pruning is about restraint as much as removal. Cutting too much at once stresses a tree and forces weak, fast regrowth. We make targeted cuts at the right points, respect the branch collar so the wound can close on its own, and never top a tree to reduce its size. The goal is a tree that looks better now and holds better structure for years.\n\nMost residential pruning jobs are done in a single visit. You get a free quote before any work starts and a clean yard when we leave, with debris chipped onsite or hauled away depending on what you prefer.",
       "process": [
-        "Walk the property with you, identify which trees need work",
-        "Quote each tree separately so you can choose scope and budget",
-        "Climb or use a pole saw and pole pruner depending on the cut height",
-        "Three-cut technique on larger limbs to prevent bark tearing",
-        "Chip or haul debris based on your call"
+        "Walk the property with you and identify which trees need work and why",
+        "Quote each tree separately so you can choose the scope and budget that fits",
+        "Climb or use a pole saw and pole pruner depending on the height and reach of the cut",
+        "Prioritize dead, diseased, broken, and crossing branches, then shape and thin as needed",
+        "Use the three-cut method on larger limbs to prevent bark tearing, and cut back to the branch collar so the tree heals cleanly",
+        "Chip or haul the debris based on your call and leave the site clean"
       ],
       "goodFor": [
-        "Mature shade trees that have not been pruned in 5+ years",
-        "Branches overhanging the house, driveway, deck, or sidewalk",
-        "Young trees that need structural pruning for long-term shape",
-        "Storm damage cleanup (broken or hanging limbs)",
-        "Crown thinning to let more light through to the lawn or garden"
+        "Mature shade trees that have not been pruned in 5 or more years",
+        "Branches overhanging the house, driveway, deck, sidewalk, or pool",
+        "Young trees that need structural pruning to set up good long-term shape",
+        "Dead, diseased, or broken wood that should come out before it falls",
+        "Crown thinning to let more light through to the lawn or garden below",
+        "Fruit and ornamental trees that have grown dense and need opening up",
+        "Trees that have outgrown their space and are crowding a fence or structure"
       ],
+      "seasonalNote": "For most deciduous trees in southern Ontario, the dormant season from late fall through winter (roughly November to March) is the best time to prune. With the leaves down the branch structure is easy to read, and most insects and disease organisms are inactive, which lowers the risk of infection through fresh cuts. Dead, broken, or diseased wood can be taken out at any time of year and does not have to wait for dormancy. A few exceptions matter: maple, birch, and other heavy sap producers will bleed if cut in late winter or early spring, which looks messy but does not harm the tree, and they can be pruned in early summer instead if you want to avoid it. Spring-flowering trees like lilac, magnolia, and crabapple are best pruned right after they finish blooming, since they set next year's buds the previous summer. Oaks are the strict one: to reduce the risk of oak wilt, oaks should not be pruned during the growing season, so we keep oak work to the dormant window (roughly November through March) unless a branch is broken and has to be dealt with for safety.",
       "priceRange": "Quote on site"
     },
     {
@@ -39,22 +43,27 @@
       "highlight": true,
       "icon": "saw",
       "name": "Limb Removal",
-      "tagline": "Hanging, broken, or in the way? Down it goes.",
-      "shortDescription": "Removal of individual large limbs that are dead, broken, hanging, or interfering with structures. The middle ground between light pruning and full tree removal.",
-      "description": "Sometimes a tree is fundamentally healthy but one or two limbs are problems: a hanging branch from a storm, a limb growing into power lines or onto the roof, a dead leader that is about to fall. Removing those specific limbs is faster and cheaper than full tree work, and it solves the immediate hazard.\n\nWe focus on this kind of targeted limb work. Roped descents from the crown for awkward limbs over structures, careful sectioning to control where the wood lands, and clean cuts at the trunk that let the tree heal properly. Most limb removals are a same-day or next-evening job.",
+      "tagline": "Hanging, broken, or in the way? Down it comes.",
+      "shortDescription": "Removal of individual large limbs that are dead, broken, hanging, or interfering with structures. The step up from light pruning when a single limb is the problem.",
+      "description": "Sometimes a tree is fundamentally healthy but one or two limbs have become a problem. A branch left hanging after a storm, a limb growing onto the roof or into the lines, a heavy dead leader that is shedding wood over the driveway. Taking out those specific limbs is less involved than taking down a whole tree, and it solves the immediate hazard without removing a tree that is otherwise fine.\n\nThis is targeted, careful work. For limbs over a structure we set rope and a lower line and bring the wood down in controlled sections, so nothing drops where it should not. The final cut is made clean at the branch collar so the tree can close the wound and heal properly. A limb that is torn off or cut badly leaves an open wound that invites decay, which is exactly what good removal avoids.\n\nA quick safety note. If a limb is touching or near a power line, leave it alone and call your utility. The same goes for limbs that are under tension or partly suspended in the canopy. Those are dangerous to approach, so let us assess them rather than risk it yourself. Most limb removals are a same-day or next-evening job once we have looked at it.",
       "process": [
-        "Assess the limb and identify safe rigging points",
-        "Set rope and lower line for any limb over a structure",
-        "Section the limb (cut from the tip back) to keep wood under control",
-        "Make a final clean cut at the collar to allow the tree to heal",
-        "Chip or haul wood and clean up the site"
+        "Look at the limb, the tree, and what is underneath, then identify safe rigging points",
+        "Confirm nothing is in or near a power line before any cutting starts",
+        "Set rope and a lower line for any limb hanging over a structure or target",
+        "Section the limb from the tip back so the wood stays under control the whole way down",
+        "Make a final clean cut at the branch collar so the tree can heal and resist decay",
+        "Chip or haul the wood, then clean up the site so the yard is left tidy"
       ],
       "goodFor": [
-        "Storm-damaged or hanging limbs",
-        "Dead leader branches that are dropping deadwood",
+        "Storm-damaged, broken, or hanging limbs (often called widow-makers when suspended in the canopy)",
+        "Dead leader branches and deadwood that are dropping pieces below",
         "Limbs over the roof, garage, deck, fence, pool, or driveway",
-        "Single problem limb on an otherwise healthy tree"
+        "A single problem limb on an otherwise healthy tree",
+        "Branches rubbing against the house, a wall, or another structure",
+        "Limbs that have developed a crack or a weak V-shaped union and could fail",
+        "Low or awkward branches blocking access, a path, or a sightline"
       ],
+      "seasonalNote": "Dead, broken, hanging, and storm-damaged limbs can be removed at any time of year. You do not have to wait for the dormant season when a limb is a hazard, since leaving a cracked or suspended branch in the canopy is the bigger risk. The one species to flag is oak. To reduce the risk of oak wilt, oaks should not be pruned or wounded during the growing season, so for non-urgent oak limb work we schedule it for the dormant window (roughly November through March). If an oak limb breaks in a storm during the warm months and has to come down for safety, that is the recognized exception, and the fresh wound can be treated to make it less attractive to the sap beetles that spread the disease. After a storm, the safest move is to clear small fallen branches from the ground, photograph the damage for your insurance, stay well clear of anything near a power line or under tension, and let us handle the limbs that are up in the tree.",
       "priceRange": "Quote on site"
     },
     {

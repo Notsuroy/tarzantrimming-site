@@ -48,6 +48,7 @@ const citiesText =
     : cities[0];
 
 const descParas = service.description.split('\n\n');
+const seasonalNote = (service as any).seasonalNote as string | undefined;
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -107,7 +108,7 @@ const faqMap: Record<string, { q: string; a: string }[]> = {
   'limb-removal': [
     {
       q: 'What is the difference between limb removal and full tree removal?',
-      a: 'Limb removal takes off one or a few problem branches while the tree stays standing. Full tree removal takes the whole tree down. If the tree is fundamentally healthy and only a limb or two is the issue, limb removal is faster and cheaper. Full tree removal is not something we offer yet.',
+      a: 'Limb removal takes off one or a few problem branches while the tree stays standing. Full tree removal takes the whole tree down. If the tree is fundamentally healthy and only a limb or two is the issue, limb removal is the lighter job, since the tree stays put and only the problem branches come off. Full tree removal is not something we offer yet.',
     },
     {
       q: 'How quickly can you remove a hanging or broken limb?',
@@ -180,6 +181,13 @@ const faqLd = faqs.length
               <ul class="list-disc pl-5 space-y-2 text-ink-muted">
                 {service.goodFor.map((g) => <li>{g}</li>)}
               </ul>
+            </div>
+          )}
+
+          {seasonalNote && (
+            <div>
+              <h2 class="font-display text-2xl text-forest mb-4">When to do this work</h2>
+              <p class="text-ink-muted">{seasonalNote}</p>
             </div>
           )}
 

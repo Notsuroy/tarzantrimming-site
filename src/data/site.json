@@ -9,12 +9,13 @@
     "fullDescription": "Tarzan Trimming is an owner-led tree care business serving south Ontario. Specializing in tree pruning and limb removal for residential properties from Toronto through the Hamilton and Kitchener corridor. Honest quotes, clean work, no high-pressure pitch. By appointment, evenings and weekends.\n\nFull tree removals coming as the business grows. For now, every pruning and limb job gets the same attention to detail that an arborist brings to a commercial crew."
   },
   "contact": {
-    "phone": "",
-    "phoneE164": "",
-    "phoneDisplay": "",
-    "smsEnabled": false,
+    "phone": "+16472161874",
+    "phoneE164": "+16472161874",
+    "phoneDisplay": "(647) 216-1874",
+    "smsEnabled": true,
     "email": "",
-    "_emailNote": "Set up info@tarzantrimming.ca via Migadu once friend confirms. Until then all contact fields are empty and components hide the call/text/email CTAs automatically (see Header / Hero / FinalCTA / Footer / PhoneFloat / contact.astro for the conditional rendering)."
+    "_phoneNote": "Wired 2026-06-13 to Nathan's cell (647) 216-1874 (the number TOA's tracked line forwarded to). Suroy to confirm this is the right number to publish. Setting phoneE164 lights up call + text CTAs sitewide.",
+    "_emailNote": "Email intentionally still empty: nathan@tarzantrimming.ca Migadu mailbox NOT live (zero MX records as of 2026-06-13). Once Suroy adds tarzantrimming.ca in the Migadu dashboard and the MX records resolve, set email to 'nathan@tarzantrimming.ca' and the email CTAs light up automatically."
   },
   "location": {
     "city": "Toronto",

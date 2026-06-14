@@ -1,0 +1,148 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+import site from '~/data/site.json';
+
+// Flagship educational guide. Content is grounded in verified sources (Ontario.ca
+// oak wilt, City of Toronto oak no-prune window Apr 1 to Oct 31, CFIA emerald ash
+// borer, ISA storm-damage guidance, MSU/extension pruning timing). Sources logged
+// in HANDOFF. No prices, no insurance/certification claims, no dashes.
+const path = '/guide/when-to-prune-trees-southern-ontario/';
+const title = 'When to Prune Trees in Southern Ontario · Tarzan Trimming';
+const metaDescription =
+  'A plain, honest guide to the best time to prune trees in southern Ontario, including the dormant season, sap bleeders, oak wilt timing, and storm damage.';
+const datePublished = '2026-06-14';
+
+const intro =
+  'Timing matters more than most people think when it comes to pruning. Get the season right and your trees heal cleanly and stay healthier. This guide covers the general rules for the Toronto-to-Kitchener corridor, the species that need special handling, and the few cases where you should not wait at all.';
+
+const sections = [
+  {
+    h2: 'The Short Answer: Dormant Season Is Best',
+    paragraphs: [
+      'For most deciduous trees in southern Ontario, the best time to prune is during the dormant season, roughly late fall through winter, or about November to March. With the leaves down, the branch structure is easy to read, so it is simpler to make the right cuts.',
+      'There is a health reason too. Most insects and disease-causing organisms are inactive in the cold months, which lowers the risk of infection through fresh cuts. Wounds also start closing efficiently once spring growth begins. Late spring and summer are a poorer choice because pathogens are active and wounds close more slowly.',
+    ],
+  },
+  {
+    h2: 'Dead, Broken, or Diseased Wood: Cut It Anytime',
+    paragraphs: [
+      'You do not have to wait for winter to deal with dead, dying, broken, or diseased branches. Those can be removed at any time of year, and it is generally good to clear them out before new growth pushes in spring.',
+      'The one important exception to this is oak trees during the warm-season oak wilt risk window, covered further down.',
+    ],
+  },
+  {
+    h2: 'Maple, Birch, and Other Sap Bleeders',
+    paragraphs: [
+      'Some trees ooze sap heavily when pruned in late winter or early spring. Maple, birch, walnut, elm, beech, willow, and hornbeam all do this as root pressure pushes sap upward.',
+      'Here is the part people worry about for no reason: the bleeding is cosmetic. It looks dramatic, but it does not harm the tree, and the tree will not bleed to death. If you would rather avoid the mess, maple and birch can be pruned in early summer, around June to July, when sap pressure is lower, or right after the leaves drop in autumn.',
+    ],
+  },
+  {
+    h2: 'Spring-Flowering Trees: Prune Right After They Bloom',
+    paragraphs: [
+      'Trees and shrubs that flower in spring on old wood, such as lilac, magnolia, serviceberry, crabapple, and forsythia, follow a different rule. They set next year\'s flower buds the previous summer.',
+      'That means dormant or early-spring pruning cuts off the coming season\'s flowers before they ever open. The fix is simple: prune these right after they finish blooming, and you keep the show for next year.',
+    ],
+  },
+  {
+    h2: 'Oaks Are the Big Exception: Watch the Calendar',
+    paragraphs: [
+      'Oaks need their own rule because of oak wilt, a fungal disease spread by sap-feeding beetles that are drawn to fresh wounds during the growing season. A fresh pruning cut in warm weather can invite a beetle carrying spores.',
+      'To stay safe, prune oaks only in the dormant window, roughly November through March, and avoid pruning them from April through October. The City of Toronto sets the no-pruning window for oaks as April 1 to October 31. Oak wilt was first confirmed in Canada in 2023 in the Niagara area and remains a recent, localized problem in southern Ontario rather than a widespread one, but the safe timing is worth following regardless.',
+      'If an oak branch breaks in a storm or has to be cut during the risk window, apply wound paint to the cut right away to make it less attractive to beetles. This is the one situation where wound paint is recommended; for most pruning it is not. Also, do not move oak firewood, since the fungus can travel on infected wood.',
+    ],
+  },
+  {
+    h2: 'Storm Damage: Safety First, Then a Real Look',
+    paragraphs: [
+      'After a storm or ice load, your safety comes before the tree. Do not cut limbs near power lines or overhead utilities, do not climb a damaged tree, and do not run a chainsaw without training and proper gear. Any limb touching or near an electrical line should be left alone and reported to the utility.',
+      'What you can safely do is clear small fallen branches off the ground and photograph the damage. Call a professional for limbs hanging over the house, cracks in the trunk or large branches, a new lean, or several big broken branches up in the crown.',
+      'A damaged tree is not automatically a write-off. Clean breaks on secondary branches and partial canopy damage with the trunk intact often recover with corrective pruning. Removal is the right call for multiple trunk cracks, major crown loss, a severe lean, or root damage.',
+    ],
+  },
+  {
+    h2: 'Quick Signs a Limb May Need to Come Down',
+    paragraphs: [
+      'A branch or tree may be hazardous if you see large hanging or broken limbs caught in the canopy, V-shaped cracks where branches join, cracks in the trunk or major limbs, torn or stripped bark, a new or worsening lean, or roots lifting out of the ground.',
+      'The risk goes up when a questionable limb sits over something it could land on, like a roof, driveway, play area, or power line. If you are not sure, it is worth having someone look before it decides for you.',
+    ],
+  },
+  {
+    h2: 'Get an Honest Quote',
+    paragraphs: [
+      'Tarzan Trimming offers tree pruning and limb removal across the Toronto-to-Kitchener corridor, including Toronto, Mississauga, Oakville, Burlington, Hamilton, Kitchener, and Whitby. Work is done evenings and weekends, by appointment.',
+      'If you have a tree you want pruned at the right time of year, or a limb you are not sure about, reach out for a free, no-pressure quote. Honest assessment, clean work, and a straight answer about what your tree actually needs.',
+    ],
+  },
+];
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'When to Prune Trees in Southern Ontario',
+  description: metaDescription,
+  datePublished,
+  dateModified: datePublished,
+  author: { '@type': 'Organization', name: site.brand.name },
+  publisher: { '@type': 'Organization', name: site.brand.name, url: site.url },
+  mainEntityOfPage: new URL(path, Astro.site).toString(),
+  about: 'Tree pruning timing in southern Ontario',
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).toString() },
+    { '@type': 'ListItem', position: 2, name: 'Pruning Guide', item: new URL(path, Astro.site).toString() },
+  ],
+};
+---
+<BaseLayout title={title} description={metaDescription} path={path}>
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-narrow mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs uppercase tracking-widest2 text-ink-muted mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-forest">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-forest">Pruning Guide</span>
+      </nav>
+      <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Tree care guide</div>
+      <h1 class="font-display text-4xl md:text-5xl text-forest leading-tight">When to Prune Trees in Southern Ontario</h1>
+      <p class="mt-4 text-bark font-medium text-lg">Timing the cut so your trees heal cleanly and stay healthy.</p>
+      <p class="mt-6 text-lg text-ink leading-relaxed">{intro}</p>
+
+      <div class="mt-10 rounded-2xl overflow-hidden shadow-soft bg-forest">
+        <img src="/photos/accent-branches.webp" alt="Branches reaching across a bright canopy" width="1200" height="675" loading="lazy" class="w-full h-56 md:h-72 object-cover" />
+      </div>
+
+      <div class="mt-12 space-y-10">
+        {sections.map((s) => (
+          <div>
+            <h2 class="font-display text-2xl md:text-3xl text-forest leading-tight mb-4">{s.h2}</h2>
+            <div class="space-y-4 text-ink leading-relaxed">
+              {s.paragraphs.map((p) => <p>{p}</p>)}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 bg-white border border-moss/40 rounded-2xl p-6 md:p-8">
+        <h2 class="font-display text-2xl text-forest mb-3">Want it done at the right time?</h2>
+        <p class="text-ink-muted leading-relaxed">
+          Tarzan Trimming handles
+          <a href="/services/tree-pruning/" class="text-forest underline hover:text-forest-dark"> tree pruning</a> and
+          <a href="/services/limb-removal/" class="text-forest underline hover:text-forest-dark"> limb removal</a>
+          across south Ontario, by appointment on evenings and weekends. Send a photo through the
+          <a href="/contact/" class="text-forest underline hover:text-forest-dark"> contact page</a>
+          for a free, no-pressure quote.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA />
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+</BaseLayout>

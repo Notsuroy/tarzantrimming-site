@@ -1,33 +1,49 @@
 {
-  "_note": "Front-of-funnel FAQ targeting the most common pre-booking objections for a one-person arborist business in south Ontario. Update with friend's actual answers once we discuss.",
+  "_note": "Front-of-funnel FAQ for the homepage. Honest, owner-led answers grounded in verified southern Ontario tree-care facts (dormant-season pruning, oak wilt timing, sap bleeders, EAB ash-wood movement, storm safety). NO insurance or certification claims (Nathan's status unconfirmed). NO prices. NO 24/7. Sources logged in HANDOFF. Distinct from the per-service FAQs in services/[slug].astro and the coverage FAQs in service-areas.astro.",
   "items": [
     {
-      "q": "Are you insured?",
-      "a": "Yes. Tarzan Trimming carries commercial general liability insurance for all tree work. Certificate available on request before any job."
+      "q": "When is the best time to prune trees in southern Ontario?",
+      "a": "For most deciduous trees, the dormant season from late fall through winter, roughly November to March, is the best window. With the leaves down the branch structure is easy to read, most insects and diseases are inactive so there is less infection risk, and the cuts close cleanly as spring growth begins. A few exceptions: maple, birch, walnut, elm and beech ooze sap heavily if cut in late winter or early spring, which looks messy but does not harm the tree. If the bleeding bothers you we can prune those in early summer instead. Oaks are a special case because of oak wilt, so we keep oak pruning to the dormant months and avoid April through October. Dead, broken or diseased wood can come off any time of year, oaks aside. Spring-flowering trees like lilac, magnolia and crabapple are best pruned right after they finish blooming so you do not lose next year's flowers."
     },
     {
-      "q": "Why are your prices reasonable?",
-      "a": "This is owner-led work done outside of regular day-job hours. No overhead from a large crew, no salesperson on commission, no franchise fee structure. The savings get passed to you."
+      "q": "Do I need a permit to prune or remove a tree on my property?",
+      "a": "It depends on your city and usually on the trunk's diameter, so there is no single answer across our service area. Several municipalities here protect private trees once the trunk passes a certain size, and the threshold and process differ from city to city. Routine maintenance, like taking small branches off a healthy tree, is usually exempt, but larger work on a bigger tree can need a permit. We check the rule that applies to your specific property and flag it before we start any work, so you are never caught off guard. If a permit is required we will tell you plainly rather than cutting first and dealing with it later."
+    },
+    {
+      "q": "How do I know if a limb is dangerous?",
+      "a": "A few signs are worth taking seriously: a large broken or hanging limb caught up in the canopy (sometimes called a widow-maker), cracks where a branch meets the trunk, a split or crack in the trunk itself, torn or hanging bark, a new or worsening lean, or roots lifting out of the ground. Risk goes up when the limb hangs over something it could damage, like a roof, driveway, walkway or power line. If you can spot any of these from the ground, it is worth a look. Never try to cut a limb that is touching or near a power line, do not climb a damaged tree, and stay clear of branches that are under tension or partly suspended. Call the limb in and we will tell you what we see."
+    },
+    {
+      "q": "What happens on a quote visit?",
+      "a": "We come to the property, look at the tree up close, and talk through what you are hoping to get done. We assess the tree's health and structure, check access for equipment and debris, note anything like a permit requirement or a power line that affects the plan, and explain what we would do and why. You get a clear, honest quote with no obligation and no high-pressure pitch. Quote visits are free, and most happen within 3 to 5 business days of you reaching out."
+    },
+    {
+      "q": "Do you prune in winter?",
+      "a": "Yes, and for most trees winter is actually the ideal time. During the dormant season the branch structure is easy to read with the leaves down, insects and disease organisms are inactive so cuts are less likely to invite infection, and the wounds close cleanly once spring growth starts. Oaks in particular are best pruned in the dormant months to avoid oak wilt. Work happens by appointment in the evenings and on weekends, and winter conditions are factored into the plan."
+    },
+    {
+      "q": "How is your pricing structured?",
+      "a": "This is owner-led work done outside of regular day-job hours, so there is no large crew, no salesperson on commission, and no franchise fee structure behind the price. Every job is quoted on site after a free visit, so you only pay for the actual work in front of us, with nothing added on. You see the number before any work starts, and there is no obligation to go ahead."
     },
     {
       "q": "Do you do emergency tree work?",
-      "a": "For active hazards like a limb on a roof or vehicle, call us and we will tell you how fast we can get there. For genuinely urgent same-day situations during business hours, a commercial crew may be a faster option, and we will tell you who to call if so."
+      "a": "For an active hazard like a limb on a roof or a vehicle, call and we will tell you honestly how fast we can get there. This is an evenings-and-weekends business, so for a genuinely urgent same-day situation during business hours a full daytime crew may reach you faster, and if so we will tell you who to call. Whatever you do, stay clear of any limb near a power line and do not climb or cut a damaged tree yourself. Report anything touching an electrical line to the utility."
     },
     {
       "q": "Will you remove a tree entirely?",
-      "a": "Not yet. Tarzan Trimming focuses on pruning and limb removal right now. Full tree removal will be added as the business grows. If you need a full tree taken down, send a photo and we will point you to a vetted local crew."
+      "a": "Not yet. Tarzan Trimming focuses on pruning and limb removal right now. Full tree removal will be added as the business grows. If you need a whole tree taken down, send a photo and we will point you to a vetted local crew."
     },
     {
       "q": "What about cleanup?",
-      "a": "All debris is chipped onsite or hauled away at the end of the visit, your call. Final cleanup is included in the quote, no surprise fees."
+      "a": "All debris is chipped on site or hauled away at the end of the visit, your call. Final cleanup is included in the quote with no surprise fees. One note for ash wood and firewood: moving it out of the area is restricted because of the emerald ash borer, so we handle disposal the right way rather than hauling material somewhere it should not go."
     },
     {
       "q": "How fast can you come quote?",
-      "a": "Most quote visits happen within 3 to 5 business days. Quote visits are free with no obligation."
+      "a": "Most quote visits happen within 3 to 5 business days. Quote visits are free with no obligation, and they run in the evenings and on weekends by appointment."
     },
     {
       "q": "What payment methods do you accept?",
-      "a": "E-transfer, cash, or cheque. Payment due on completion of the job, not upfront."
+      "a": "E-transfer, cash, or cheque. Payment is due on completion of the job, not upfront."
     },
     {
       "q": "What cities do you cover?",

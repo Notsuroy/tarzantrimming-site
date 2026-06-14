@@ -19,12 +19,13 @@ import type { APIRoute } from 'astro';
 // bump that page's date here in the same commit, or the freshness signal decays
 // to a stale fixed date.
 const PAGE_LASTMOD: Record<string, string> = {
-  '': '2026-06-13',
-  'services/': '2026-06-13',
-  'services/tree-pruning/': '2026-06-13',
-  'services/limb-removal/': '2026-06-13',
+  '': '2026-06-14',
+  'services/': '2026-06-14',
+  'services/tree-pruning/': '2026-06-14',
+  'services/limb-removal/': '2026-06-14',
   'service-areas/': '2026-06-13',
-  'about/': '2026-06-10',
+  'guide/when-to-prune-trees-southern-ontario/': '2026-06-14',
+  'about/': '2026-06-14',
   'contact/': '2026-06-10',
 };
 
