@@ -26,7 +26,9 @@ const breadcrumbLd = {
       </nav>
       <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Contact</div>
       <h1 class="font-display text-4xl md:text-5xl text-forest leading-tight">
-        {hasAnyContact ? 'Phone, text, or email. Pick whichever is easiest.' : 'Contact details going live shortly.'}
+        {hasAnyContact ? (
+          <Fragment>Phone, text, or email.<span class="block">Pick whichever is easiest.</span></Fragment>
+        ) : 'Contact details going live shortly.'}
       </h1>
 
       {hasAnyContact ? (
@@ -48,10 +50,17 @@ const breadcrumbLd = {
           )}
 
           {hasEmail && (
-            <a href={`mailto:${site.contact.email}`} class={`block bg-white border border-cream-deep rounded-2xl p-6 shadow-card hover:shadow-soft transition-shadow ${hasPhone ? 'sm:col-span-2' : ''}`}>
+            <div class={`bg-white border border-cream-deep rounded-2xl p-6 shadow-card ${hasPhone ? 'sm:col-span-2' : ''}`}>
               <div class="text-xs uppercase tracking-widest2 text-bark">Email</div>
-              <div class="mt-2 font-display text-2xl text-forest">{site.contact.email}</div>
-            </a>
+              <div class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-3">
+                <a href={`mailto:${site.contact.email}`} class="font-display text-2xl text-forest hover:text-forest-dark transition-colors break-all">{site.contact.email}</a>
+                <button type="button" id="copy-email" data-email={site.contact.email} aria-label="Copy email address to clipboard"
+                  class="copy-email-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-moss/60 text-sm font-medium text-forest hover:bg-cream-dark transition-colors shrink-0">
+                  <svg class="copy-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                  <span class="copy-label">Copy</span>
+                </button>
+              </div>
+            </div>
           )}
         </div>
       ) : (
@@ -70,4 +79,37 @@ const breadcrumbLd = {
     </div>
   </section>
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+
+  <script>
+    const copyBtn = document.getElementById('copy-email');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async () => {
+        const email = copyBtn.getAttribute('data-email') || '';
+        try {
+          await navigator.clipboard.writeText(email);
+        } catch (e) {
+          const ta = document.createElement('textarea');
+          ta.value = email;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          try { document.execCommand('copy'); } catch (_) { /* no-op */ }
+          ta.remove();
+        }
+        const label = copyBtn.querySelector('.copy-label');
+        if (!label) return;
+        const original = label.textContent;
+        label.textContent = 'Copied!';
+        copyBtn.classList.add('bg-forest', 'text-cream', 'border-forest');
+        copyBtn.classList.remove('text-forest');
+        window.setTimeout(() => {
+          label.textContent = original;
+          copyBtn.classList.remove('bg-forest', 'text-cream', 'border-forest');
+          copyBtn.classList.add('text-forest');
+        }, 1800);
+      });
+    }
+  </script>
 </BaseLayout>
