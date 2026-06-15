@@ -246,3 +246,56 @@ removal. Candidates 3 to 5 follow.
   the utility or city for anything actively dangerous." Confirm this matches
   what Nathan can realistically commit to around the Davey day job.
 - **Notes:**
+
+---
+
+## Phase 0 keyword validation (cron, 2026-06-15)
+
+The autonomous P-PIPELINE-AUTO run on 2026-06-15 put all five seeded
+candidates through the mandatory Phase 0 (`seo-keyword-qualifier`,
+DataForSEO, location_code 2124 Canada) before drafting, because the file was
+authored 2026-06-10 without keyword data. Result: **no candidate is
+auto-publishable as written.** Recording the data here so future runs do not
+re-spend DataForSEO budget re-validating the same dead ends. None of this
+ticks a box; the approve and skip decisions stay with Nathan and Suroy.
+
+- **Candidate 1 (when to prune trees in Ontario):** keyword quality is
+  strong (parent "when to prune trees" 260/mo LOW comp, top SERP is small
+  arborist blogs we can win, best-matching competitor page measures etv ~339
+  across 34 keywords, no AI Overview). BUT it **duplicates the live flagship
+  guide** `/guide/when-to-prune-trees-southern-ontario/`, which already
+  covers the exact topic (dormant-season answer, sap bleeders, spring
+  bloomers, the oak exception, storm damage, a month-by-month guide).
+  Publishing a near-identical `/blog/` post would split equity and
+  cannibalize the guide. **Recommend: skip (covered by the guide).** The
+  guide is the asset to keep refreshing instead.
+- **Candidate 2 (signs a tree branch is dangerous):** exact keyword and
+  variants return **NULL volume** in Canada and the top three competitor
+  pages measure **etv 0.3 / 0 / 0** (essentially no Canadian organic
+  traffic). The topic earns US traffic, not Canadian. **Low value as a
+  Canadian local post.**
+- **Candidate 3 (do not prune oak trees in summer / oak wilt):** two-headed
+  and both heads lose. "oak wilt Ontario" has measurable demand (90/mo LOW)
+  but the SERP is a **government and authority wall** (CFIA and
+  inspection.canada.ca, Invasive Species Centre, ISA Ontario, ontario.ca,
+  City of Toronto, conservation authorities), which a young arborist site
+  cannot win. The pruning-timing head ("when to prune oak trees" 50/mo) is
+  **already fully covered by the guide's oak section** (Toronto's Apr 1 to
+  Oct 31 window, wound paint, do not move oak firewood). **Skip both
+  angles.**
+- **Candidate 4 (tree pruning cost in south Ontario):** the **only candidate
+  with real demand** ("tree pruning cost" and "tree trimming cost" both
+  210/mo MEDIUM comp; cost SERPs reliably reward blog posts). It is held out
+  of auto-publish because tarzantrimming's hardened honesty gate routes any
+  draft that needs a price to a human decision. **This is the topic worth
+  Nathan's call.** See MORNING_TASKS.
+- **Candidate 5 (storm cleanup / hanging limbs):** keyword and variants
+  return **NULL volume** in Canada (same profile as Candidate 2). **Low
+  value as a Canadian local post.**
+
+**Bottom line:** the highest-leverage next move for tarzantrimming blog
+content is a decision on Candidate 4 (cost), plus a re-seed of this pipeline
+with keyword-validated topics once the domain is verified in Google Search
+Console and starts producing real impression data (the same GSC-self-feed
+loop the rank-and-rent sites use). Until then, the live guide remains the
+strongest single content asset.
