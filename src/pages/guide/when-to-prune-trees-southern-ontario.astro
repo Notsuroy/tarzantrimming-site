@@ -12,6 +12,7 @@ const title = 'When to Prune Trees in Southern Ontario · Tarzan Trimming';
 const metaDescription =
   'A plain, honest guide to the best time to prune trees in southern Ontario, including the dormant season, sap bleeders, oak wilt timing, and storm damage.';
 const datePublished = '2026-06-14';
+const dateModified = '2026-06-15';
 
 const intro =
   'Timing matters more than most people think when it comes to pruning. Get the season right and your trees heal cleanly and stay healthier. This guide covers the general rules for the Toronto-to-Kitchener corridor, the species that need special handling, and the few cases where you should not wait at all.';
@@ -83,7 +84,7 @@ const articleLd = {
   headline: 'When to Prune Trees in Southern Ontario',
   description: metaDescription,
   datePublished,
-  dateModified: datePublished,
+  dateModified,
   author: { '@type': 'Organization', name: site.brand.name },
   publisher: { '@type': 'Organization', name: site.brand.name, url: site.url },
   mainEntityOfPage: new URL(path, Astro.site).toString(),
@@ -97,6 +98,47 @@ const breadcrumbLd = {
     { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).toString() },
     { '@type': 'ListItem', position: 2, name: 'Pruning Guide', item: new URL(path, Astro.site).toString() },
   ],
+};
+
+// Timing-focused FAQs for this guide. One array drives BOTH the visible accordion
+// and the FAQPage JSON-LD, so schema and visible text never drift (Google requires
+// the answer to be present on the page). These are deliberately about WHEN to prune
+// (month, winter, summer, oak timing, frequency), matching this page's topic and
+// distinct from the service-technique FAQs on the two service detail pages and the
+// coverage FAQs on /service-areas/. Question 5 (frequency) adds information not in
+// the body above. Honest and owner-led: no certification claims, no 24/7 framing,
+// quote-only pricing, grounded in the same verified sources as the guide body.
+const faqs = [
+  {
+    q: 'What is the best month to prune trees in southern Ontario?',
+    a: 'For most deciduous trees the dormant months are best, roughly November through March. The leaves are down so the branch structure is easy to read, disease pressure is low, and cuts heal cleanly once spring growth starts. A few species are exceptions: prune spring-flowering trees like lilac and magnolia right after they bloom, and prune oaks only in the dormant window to avoid oak wilt.',
+  },
+  {
+    q: 'Is it safe to prune trees in winter?',
+    a: 'Yes. Winter is actually the preferred time for most trees here. With the canopy bare the structure is clear, and most insects and disease organisms are inactive, so fresh cuts are less likely to get infected. The wood is dormant, not dead, and the tree heals once it wakes up in spring. Winter mainly changes access and footing, which is a crew concern, not a tree-health one.',
+  },
+  {
+    q: 'Can you prune trees in the summer?',
+    a: 'Some, with care. Dead, broken, or diseased branches can come off any time of year. Maple and birch are easier in early summer, around June to July, when they bleed less sap. But summer pruning carries higher disease pressure overall, and oaks should not be pruned from April through October because of oak wilt. If it is not a hazard, most routine pruning is better left for the dormant season.',
+  },
+  {
+    q: 'When should you avoid pruning oak trees in Ontario?',
+    a: 'Avoid pruning oaks during the growing season. The City of Toronto sets the no-pruning window for oaks as April 1 to October 31, because the beetles that spread oak wilt are drawn to fresh cuts in warm weather. Prune oaks only in the dormant window, roughly November through March. If a storm forces a cut during the risk window, seal it with wound paint right away.',
+  },
+  {
+    q: 'How often do trees need pruning?',
+    a: 'There is no fixed schedule. Young trees benefit from light structural pruning every few years to build a strong shape, while established healthy trees often go several years between prunings. Dead or hazardous wood is the exception and should be dealt with whenever you spot it. The honest answer for any specific tree comes from looking at it, which is what the free on-site quote is for.',
+  },
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 ---
 <BaseLayout title={title} description={metaDescription} path={path}>
@@ -141,8 +183,30 @@ const breadcrumbLd = {
     </div>
   </section>
 
+  <section class="py-16 md:py-24 bg-white" id="faq">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-narrow mx-auto text-center mb-12">
+        <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Common questions</div>
+        <h2 class="font-display text-3xl md:text-4xl text-forest leading-tight">Questions about pruning timing.</h2>
+      </div>
+
+      <div class="max-w-narrow mx-auto space-y-3">
+        {faqs.map((item) => (
+          <details class="group bg-cream border border-cream-deep rounded-xl open:shadow-card transition-shadow">
+            <summary class="cursor-pointer list-none px-6 py-5 flex items-start justify-between gap-4 font-medium text-ink">
+              <span>{item.q}</span>
+              <span class="text-forest text-2xl leading-none group-open:rotate-45 transition-transform shrink-0">+</span>
+            </summary>
+            <div class="px-6 pb-5 text-ink-muted leading-relaxed">{item.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <FinalCTA />
 
   <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
 </BaseLayout>
