@@ -12,15 +12,17 @@ candidates should be GSC-discovered the same way the rank-and-rent sites do.
 
 ## Blog system status (read first)
 
-**There is no blog yet.** `src/pages/blog/` does not exist and the Astro
-content collection was deliberately stripped at v1 scaffold. Per the cron
-SKILL.md P-PIPELINE rule, the first approved topic does NOT get drafted
-immediately: the first eligible P-PIPELINE run BUILDS the blog system
-(hub `index.astro` + `[slug].astro` post template + `BlogPosting` JSON-LD +
-brand-coherent forest/bark/cream layout, niche-swapped for arborist), wires
-`/blog/` into `sitemap.xml.ts` and the Header nav, and logs that as
-`P-PIPELINE infra`. The run AFTER that drafts the first approved post. So
-approving a topic here kicks off a two-run sequence, not a one-run draft.
+**The blog system is BUILT (2026-06-15, commit `015a805`).** `src/pages/blog/`
+now has the hub `index.astro` + `[slug].astro` post template (`BlogPosting` +
+`BreadcrumbList` + optional `FAQPage` JSON-LD, forest/cream brand-coherent),
+`src/data/blog.json` exists as an empty array `[]`, and `/blog/` is wired into
+both `sitemap.xml.ts` (per-post lastmod) and the Header nav. So the two-run
+sequence is now on its SECOND leg: the next eligible P-PIPELINE / P-PIPELINE-AUTO
+run DRAFTS the first post (no more infra build needed) into `blog.json` through
+Phase 0 keyword qualifier + the 3-phase protocol + Phase 4 on-page audit. The
+hub currently features the standalone `/guide/when-to-prune-trees-southern-ontario/`
+as its flagship resource and shows a "more guides on the way" empty state; the
+first drafted post replaces that empty state with a real grid card automatically.
 
 ## How to approve
 
