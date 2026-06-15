@@ -1,0 +1,159 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+import site from '~/data/site.json';
+import blog from '~/data/blog.json';
+
+const path = '/blog/';
+const title = `Tree Care Guides | ${site.brand.name}`;
+const description =
+  'Practical tree pruning and limb removal guides for south Ontario homeowners. When to prune, signs a limb is dangerous, storm cleanup, and what tree work costs.';
+
+const sortedPosts = [...blog].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+
+// The seasonal pruning-timing guide predates the blog system and lives at
+// /guide/. It is the flagship long-form resource on the site, so it is
+// featured here even though it is not a blog.json entry. As real blog posts
+// land they render in the grid below and this stops being the only resource.
+const featuredGuide = {
+  href: '/guide/when-to-prune-trees-southern-ontario/',
+  title: 'When to Prune Trees in Southern Ontario',
+  blurb:
+    'The full seasonal breakdown: the dormant-season window, sap bleeders like maple and birch, spring-flowering trees, and the oak wilt timing every Ontario homeowner should know.',
+};
+
+const blogLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: `${site.brand.name} Tree Care Guides`,
+  url: new URL(path, Astro.site).toString(),
+  description,
+  inLanguage: 'en-CA',
+  publisher: {
+    '@type': 'LocalBusiness',
+    name: site.brand.name,
+    url: site.url,
+    areaServed: site.location.serviceAreaLabel,
+  },
+  blogPost: sortedPosts.map((p) => ({
+    '@type': 'BlogPosting',
+    headline: p.h1 || p.title,
+    url: new URL(`/blog/${p.slug}/`, Astro.site).toString(),
+    datePublished: p.publishedAt,
+    dateModified: p.updatedAt || p.publishedAt,
+  })),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).toString() },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: new URL(path, Astro.site).toString() },
+  ],
+};
+---
+<BaseLayout title={title} description={description} path={path}>
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs uppercase tracking-widest2 text-ink-muted mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-forest">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-forest">Guides</span>
+      </nav>
+
+      <div class="max-w-narrow mb-12">
+        <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Tree care guides</div>
+        <h1 class="font-display text-4xl md:text-5xl text-forest leading-tight">
+          Practical tree care guides for south Ontario
+        </h1>
+        <p class="mt-4 text-lg text-ink-muted leading-relaxed">
+          Honest, no-jargon answers to the questions homeowners actually ask before they call. When to prune,
+          how to spot a limb that should come down, what storm cleanup involves, and what the work costs. Written
+          for the Toronto to Kitchener corridor, the way an owner-led crew explains it on site.
+        </p>
+      </div>
+
+      <article class="bg-white rounded-2xl border border-moss/40 p-6 md:p-8">
+        <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Start here</div>
+        <h2 class="font-display text-2xl md:text-3xl text-forest leading-tight">
+          <a href={featuredGuide.href} class="hover:text-forest-dark transition-colors">{featuredGuide.title}</a>
+        </h2>
+        <p class="mt-3 text-ink-muted leading-relaxed">{featuredGuide.blurb}</p>
+        <a
+          href={featuredGuide.href}
+          class="mt-5 inline-flex items-center px-4 py-2 bg-forest text-cream rounded-full text-sm font-medium hover:bg-forest-dark transition-colors"
+        >Read the guide</a>
+      </article>
+    </div>
+  </section>
+
+  {sortedPosts.length > 0 && (
+    <section class="py-16 md:py-20 bg-white border-t border-cream-deep">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-3xl md:text-4xl text-forest leading-tight mb-10">More guides</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sortedPosts.map((p) => (
+            <a
+              href={`/blog/${p.slug}/`}
+              class="group block bg-cream border border-cream-deep rounded-xl p-6 hover:shadow-card hover:border-moss/60 transition-all"
+            >
+              <div class="text-xs text-ink-muted mb-2">{p.readTime} read</div>
+              <h3 class="font-display text-xl text-forest group-hover:text-forest-dark">{p.h1}</h3>
+              <p class="text-ink-muted mt-3 text-sm leading-relaxed">{p.description}</p>
+              <div class="mt-4 text-forest font-medium text-sm group-hover:underline">Read more →</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {sortedPosts.length === 0 && (
+    <section class="py-16 md:py-20 bg-white border-t border-cream-deep">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-narrow">
+          <h2 class="font-display text-3xl md:text-4xl text-forest leading-tight">More guides are on the way</h2>
+          <p class="mt-4 text-ink-muted leading-relaxed">
+            We are adding new guides on dangerous limbs, storm cleanup, oak care, and pruning costs. In the
+            meantime, the seasonal pruning guide above covers the question we get asked most. If there is
+            something you want explained, ask us on the
+            <a href="/contact/" class="text-forest underline hover:text-forest-dark"> contact page</a> and
+            it will likely become the next guide.
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="py-16 md:py-20 bg-cream border-t border-cream-deep">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-narrow">
+        <div class="text-xs uppercase tracking-widest2 text-forest mb-3">Rather just book it?</div>
+        <h2 class="font-display text-2xl md:text-3xl text-forest leading-tight">Skip to the service you need</h2>
+        <p class="mt-3 text-ink-muted leading-relaxed">
+          Most calls are one of these two. Tap through to see how we work, then send a photo for a free quote.
+        </p>
+      </div>
+      <ul class="mt-8 grid sm:grid-cols-2 gap-3 max-w-narrow">
+        <li>
+          <a href="/services/tree-pruning/" class="block bg-white border border-moss/40 rounded-xl px-5 py-4 font-medium text-forest hover:border-moss/60 hover:shadow-card transition">Tree Pruning →</a>
+        </li>
+        <li>
+          <a href="/services/limb-removal/" class="block bg-white border border-moss/40 rounded-xl px-5 py-4 font-medium text-forest hover:border-moss/60 hover:shadow-card transition">Limb Removal →</a>
+        </li>
+        <li>
+          <a href="/services/" class="block bg-white border border-moss/40 rounded-xl px-5 py-4 font-medium text-forest hover:border-moss/60 hover:shadow-card transition">All services →</a>
+        </li>
+        <li>
+          <a href="/service-areas/" class="block bg-white border border-moss/40 rounded-xl px-5 py-4 font-medium text-forest hover:border-moss/60 hover:shadow-card transition">Where we work →</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <FinalCTA />
+
+  <script type="application/ld+json" set:html={JSON.stringify(blogLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+</BaseLayout>

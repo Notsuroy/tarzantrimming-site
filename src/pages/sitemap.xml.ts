@@ -1,7 +1,9 @@
 import type { APIRoute } from 'astro';
+import blog from '~/data/blog.json';
 
-// Static-page sitemap. This site has no blog or dynamic routes (see HANDOFF),
-// so the page list is enumerated here. Add a route below if a new page ships.
+// Static-page sitemap PLUS the /blog/ system (hub + per-post dynamic routes).
+// Static pages are enumerated below; blog posts are derived from blog.json so a
+// new post appears here automatically when it is added to that file.
 //
 // lastmod is a PER-PAGE honest last-content-change date, NOT a single shared
 // build date. A uniform sitemap lastmod (the old `LASTMOD` constant) misreports
@@ -29,12 +31,37 @@ const PAGE_LASTMOD: Record<string, string> = {
   'contact/': '2026-06-10',
 };
 
+// Date the /blog/ system shipped. The hub's lastmod is the max of this and the
+// newest post (hub-from-leaf rule), so the hub is never reported staler than a
+// post it links to. Bump only if the hub layout itself changes.
+const BLOG_HUB_BASE = '2026-06-15';
+
 export const GET: APIRoute = ({ site }) => {
   const base = (site?.toString() ?? 'https://tarzantrimming.ca/').replace(/\/$/, '');
-  const urls = Object.entries(PAGE_LASTMOD)
+
+  // Per-post entries with honest per-post lastmod (updatedAt falls back to
+  // publishedAt). Never a shared build date.
+  const posts = (blog as { slug: string; publishedAt: string; updatedAt?: string }[]).map((p) => ({
+    path: `blog/${p.slug}/`,
+    lastmod: p.updatedAt || p.publishedAt,
+  }));
+
+  // Hub date = max(base, newest post date).
+  const blogHubLastmod = posts.reduce(
+    (max, p) => (p.lastmod > max ? p.lastmod : max),
+    BLOG_HUB_BASE,
+  );
+
+  const entries = [
+    ...Object.entries(PAGE_LASTMOD).map(([p, lastmod]) => ({ path: p, lastmod })),
+    { path: 'blog/', lastmod: blogHubLastmod },
+    ...posts,
+  ];
+
+  const urls = entries
     .map(
-      ([p, lastmod]) =>
-        `  <url>\n    <loc>${base}/${p}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`,
+      ({ path, lastmod }) =>
+        `  <url>\n    <loc>${base}/${path}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`,
     )
     .join('\n');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
