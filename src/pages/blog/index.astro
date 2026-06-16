@@ -5,9 +5,9 @@ import site from '~/data/site.json';
 import blog from '~/data/blog.json';
 
 const path = '/blog/';
-const title = `Tree Care Guides | ${site.brand.name}`;
+const title = `Tree Care Guides · ${site.brand.name}`;
 const description =
-  'Practical tree pruning and limb removal guides for south Ontario homeowners. When to prune, signs a limb is dangerous, storm cleanup, and what tree work costs.';
+  'Practical tree pruning and limb removal guides for south Ontario homeowners. When to prune, dangerous limbs, storm cleanup, and what tree work costs.';
 
 const sortedPosts = [...blog].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
