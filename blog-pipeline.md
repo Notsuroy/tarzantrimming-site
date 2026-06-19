@@ -299,3 +299,31 @@ with keyword-validated topics once the domain is verified in Google Search
 Console and starts producing real impression data (the same GSC-self-feed
 loop the rank-and-rent sites use). Until then, the live guide remains the
 strongest single content asset.
+
+---
+
+## Auto-approved + drafted (competitor-gap self-feed)
+
+Topics the cron auto-approved and published under P-PIPELINE-AUTO that were
+NOT in the seeded 5 above. Sourced from the site's own `competitor-gaps.md`
+analysis (the GSC self-feed is empty until the domain is GSC-verified). Each
+went through the same mandatory Phase 0 keyword qualifier + 3-phase draft +
+Phase 4 on-page audit as a human-approved topic. 60-day per-topic cooldown
+anchored on the draft date below.
+
+- **[x] approve [x] drafted (auto), Toronto tree removal permit explainer.**
+  Focus keyword `Toronto tree removal permit` (260/mo LOW comp, $6.16 CPC,
+  Canada). Drafted + published 2026-06-18, commit `8cbd5b3`, live at
+  `/blog/tree-removal-permit-toronto/`. Source: `competitor-gaps.md` Gap 1
+  (per-city tree-permit/bylaw content, the highest claim-free autonomous
+  lever). Phase 0 qualifier = **GO** (SERP positions 3 to 12 are small
+  arborist blog explainers, gov owns only #1-2, no AI Overview, Reddit only
+  #14; top small-site competitors etv 44 to 175, 19 to 50 keywords each).
+  Phase 4 on-page audit = 16 PASS / 2 WARN (inbound links limited as the
+  first post; org byline on a borderline-regulatory topic) / 0 FAIL.
+  Honesty: funnels the pruning + limb-removal subset only, states full
+  removal is not yet offered, no pricing/credential claim, all bylaw facts
+  attributed to City of Toronto Municipal Code Chapter 813. This is the
+  FIRST post on the site (blog system built 06-15 had been empty). Next
+  permit-content candidate per Gap 1: Mississauga or Oakville, once this one
+  beds in (stagger to avoid a thin-content spike on a young domain).
