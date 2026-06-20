@@ -327,3 +327,26 @@ anchored on the draft date below.
   FIRST post on the site (blog system built 06-15 had been empty). Next
   permit-content candidate per Gap 1: Mississauga or Oakville, once this one
   beds in (stagger to avoid a thin-content spike on a young domain).
+- **[x] approve [x] drafted (auto), Mississauga tree removal permit explainer.**
+  Focus keyword `Mississauga tree removal permit` (40/mo focus + ~120/mo
+  permit/bylaw cluster, LOW comp, high CPC $6.24 to $10.76, Canada). Drafted +
+  published 2026-06-19, commit `2cf6fdc`, live at
+  `/blog/tree-removal-permit-mississauga/`. Source: `competitor-gaps.md` Gap 1
+  (per-city tree-permit content), the staggered follow-on to the 06-18 Toronto
+  post. Phase 0 qualifier = **GO WITH MODIFIER** (SERP = City owns #1-2, then
+  positions 4 to 14 are small arborist blog explainers we can match,
+  torontotreeservices / toarborist / tree-care.ca; no AI Overview; 1 Reddit at
+  #5; measured small-site competitor etv only ~3 because the City absorbs the
+  head-term clicks, so the modifier is: target the permit/bylaw CLUSTER not the
+  head term, lead with the conversion angle, carry FAQPage schema). Phase 4
+  on-page audit = 16 PASS / 2 WARN (E-E-A-T org byline on a regulatory topic;
+  inbound links limited as a 2-post corpus) / 0 FAIL. Honesty: all bylaw facts
+  primary-source verified + attributed to City of Mississauga By-law 0021-2022
+  (15 cm DBH threshold, $399.77 / $139.72 incl-HST 2026 fees, one replacement
+  per 15 cm removed, 30-business-day review, no fee for dead/dying); funnels
+  pruning + limb-removal only, states full removal is not yet offered, no
+  pricing-as-our-rate / credential / insurance claim. Cross-links the Toronto
+  permit post (bidirectional). **Fee figures are time-sensitive (City revises
+  annually) — re-verify against mississauga.ca before any external campaign
+  points at this post.** Next per-city permit candidate per Gap 1: Oakville (or
+  Hamilton / Burlington), staggered again.
