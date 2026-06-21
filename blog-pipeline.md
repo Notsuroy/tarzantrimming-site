@@ -350,3 +350,35 @@ anchored on the draft date below.
   annually) — re-verify against mississauga.ca before any external campaign
   points at this post.** Next per-city permit candidate per Gap 1: Oakville (or
   Hamilton / Burlington), staggered again.
+- **[x] approve [x] drafted (auto), Oakville tree removal permit explainer.**
+  Focus keyword `Oakville tree removal permit` (70/mo focus, higher than
+  Mississauga's 40, plus a ~210/mo permit/bylaw cluster, LOW comp, $5.12 CPC,
+  Canada). Drafted and published 2026-06-21, commit `5c0db4d`, live at
+  `/blog/tree-removal-permit-oakville/`. Source: `competitor-gaps.md` Gap 1
+  (per-city tree-permit content), the staggered 3rd Gap-1 post (after Toronto
+  and Mississauga, ~30h after the Mississauga post, inside the 1/24h and 3/7d
+  auto velocity caps). Phase 0 qualifier = **GO WITH MODIFIER** (City of Oakville
+  and the Town GIS own SERP positions 1 to 5; positions 6 and 8 are small
+  arborist blog explainers we can match, almileytree.com and
+  torontotreeservices.ca; no AI Overview; 1 Reddit at #7, under the 2+ concern
+  threshold; measured small-site competitor etv only ~5 / 0 because the City
+  absorbs the head-term clicks, so the modifier is target the permit/bylaw
+  CLUSTER not the head term, lead with the conversion angle, carry FAQPage
+  schema; the HIGH-comp commercial head "tree removal oakville" 110/mo stays on
+  the service pages, not the blog). Phase 4 on-page audit = 18 PASS / 1 WARN
+  (org byline on a regulatory topic, consistent with Toronto and Mississauga) /
+  0 FAIL. 1,308 body words. Honesty: all bylaw facts primary-source verified on
+  oakville.ca and attributed to the Private Tree Protection By-law (By-law
+  2017-38, updated 2024). 15 cm DBH threshold measured at 137 cm (stricter than
+  Toronto's 30 cm); fees $65 first tree (15 to 24 cm), $425 each additional or
+  over 24 cm, no fee for dead, high-risk, ash, or buckthorn; one replacement
+  tree per 10 cm of healthy DBH removed plus a $300 deposit each; inspector
+  contact within 5 business days; non-compliance handled under Administrative
+  Penalty By-law 2021-038. Funnels pruning and limb-removal only, states full
+  removal is not yet offered, no pricing-as-our-rate, credential, or insurance
+  claim. Cross-links the Toronto and Mississauga permit posts (the 15 cm
+  threshold comparison is the contextual hook). **Fee and replacement figures
+  are time-sensitive (the Town revises them), re-verify against oakville.ca
+  before any external campaign points at this post.** Next per-city permit
+  candidate per Gap 1: Hamilton or Burlington, staggered again; watch the 3/7d
+  auto velocity cap (3 GTA permit posts now live on a ~23-day domain).
