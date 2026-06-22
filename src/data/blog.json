@@ -1,6 +1,7 @@
 [
  {
   "slug": "tree-removal-permit-oakville",
+  "heroImage": { "src": "/photos/hero-canopy.webp", "alt": "Mature maple canopy over a residential property", "width": 1366, "height": 911 },
   "title": "Oakville Tree Removal Permit · Tarzan Trimming",
   "h1": "Oakville Tree Removal Permit: The 15 cm Rule, the Fees, and When Pruning Skips It",
   "description": "A plain guide to the Oakville tree removal permit: the strict 15 cm rule, the fees, the replacement-tree deposit, and when pruning skips it entirely.",
@@ -90,6 +91,7 @@
  },
  {
   "slug": "tree-removal-permit-mississauga",
+  "heroImage": { "src": "/photos/accent-branches.webp", "alt": "Tree branches and green leaves against an overcast sky", "width": 1200, "height": 675 },
   "title": "Mississauga Tree Removal Permit · Tarzan Trimming",
   "h1": "Mississauga Tree Removal Permit: When You Need One, What It Costs, and When Pruning Skips It",
   "description": "A plain guide to the Mississauga tree removal permit: the 15 cm rule, what it costs, replacement trees, the fines, and when pruning avoids it entirely.",
@@ -177,6 +179,7 @@
  },
  {
   "slug": "tree-removal-permit-toronto",
+  "heroImage": { "src": "/photos/accent-forest.webp", "alt": "Forest canopy of mature hardwood trees", "width": 1200, "height": 799 },
   "title": "Toronto Tree Removal Permit · Tarzan Trimming",
   "h1": "Toronto Tree Removal Permit: The Rules, the Fines, and When Pruning Is the Smarter Fix",
   "description": "A plain guide to the Toronto tree removal permit rules: when you need one, what it costs, the fines for skipping it, and why pruning often beats removal.",
