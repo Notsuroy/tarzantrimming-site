@@ -347,7 +347,7 @@ anchored on the draft date below.
   pruning + limb-removal only, states full removal is not yet offered, no
   pricing-as-our-rate / credential / insurance claim. Cross-links the Toronto
   permit post (bidirectional). **Fee figures are time-sensitive (City revises
-  annually) — re-verify against mississauga.ca before any external campaign
+  annually), re-verify against mississauga.ca before any external campaign
   points at this post.** Next per-city permit candidate per Gap 1: Oakville (or
   Hamilton / Burlington), staggered again.
 - **[x] approve [x] drafted (auto), Oakville tree removal permit explainer.**
@@ -382,3 +382,64 @@ anchored on the draft date below.
   before any external campaign points at this post.** Next per-city permit
   candidate per Gap 1: Hamilton or Burlington, staggered again; watch the 3/7d
   auto velocity cap (3 GTA permit posts now live on a ~23-day domain).
+
+---
+
+## On-deck: next Gap-1 per-city permit post (cron pre-validated 2026-06-24)
+
+The 2026-06-24 T19:08 cron run resolved the open "Hamilton or Burlington"
+question for the 4th Gap-1 permit post by running the mandatory Phase 0
+`seo-keyword-qualifier` on both candidates ahead of time (DataForSEO,
+location_code 2124 Canada, ~$0.09 spend, well under the $1/run cap). Recording
+the verdicts here so the next eligible run drafts the winner immediately and
+does not re-spend budget re-deciding. **The 3/7d auto velocity cap was HIT on
+this run (Toronto 06-18, Mississauga 06-19, Oakville 06-21 = 3 posts inside the
+rolling 7 days), so no post could ship; the cap frees on 2026-06-25 when the
+Toronto post ages out of the window.** No box is ticked: drafting still happens
+under P-PIPELINE-AUTO on the next non-capped run.
+
+**Winner: Burlington.** The a-priori "bigger city wins" assumption was wrong.
+
+- **`Burlington tree removal permit`: 50/mo, LOW comp (index 5),** bid
+  $1.89 to $6.74, 12-month trend 10 to 90 (spring-weighted, healthy seasonal
+  shape). Higher focus volume than Mississauga (40) and close to Oakville (70).
+  SERP (33 results, no AI Overview, only 1 Reddit at #6, under the 2+ threshold):
+  City of Burlington owns #1-2 (`burlington.ca` tree-permit pages, absorbs the
+  bare head-term clicks as expected), then the **winnable small-arborist
+  explainer band** at #4-11: landscapeontario.com #4, hudsontree.ca #5,
+  beswicktreeservice.com #7, mcfarlantree.ca #9, treeserviceburlington.ca #11.
+  This is the exact pattern that GO'd Toronto / Mississauga / Oakville. Traffic
+  estimation: the thin single-purpose permit pages measure etv 0 individually
+  (DfS Labs has no keyword footprint on them yet), while a full small-arborist
+  site in the set (mcfarlantree.ca) pulls etv 274 across 65 keywords, confirming
+  the same read as the prior 3 posts: the bare head term is low-traffic because
+  the City absorbs it, but a well-built permit-cluster post that links into the
+  services is the conversion play.
+- **Verdict: GO WITH MODIFIER** (identical to Mississauga + Oakville). Target the
+  permit/bylaw CLUSTER, not the bare head term; lead with the conversion angle;
+  carry FAQPage schema; route the HIGH-comp commercial head "tree removal
+  burlington" to the service pages, not the blog.
+- **`Hamilton tree removal permit`: only 10/mo, LOW comp (index 26)** with no bid
+  data. Deprioritized. Despite Hamilton being the far larger city, focus-keyword
+  demand is one fifth of Burlington's, likely because Hamilton's private-tree
+  by-law historically applied only to the urban former-Hamilton boundary, so
+  searches fragment and per-capita intent is lower. Hold Hamilton as a later
+  candidate, do not re-spend DfS on it before then.
+
+**Draft brief for the next run (use verbatim):**
+- Slug `tree-removal-permit-burlington`, focus keyword `Burlington tree removal
+  permit`, 1,200 to 1,400 words, 3-phase protocol + Phase 4 on-page audit.
+- Internal links: cross-link the Toronto, Mississauga, and Oakville permit posts
+  (the DBH-threshold comparison is the contextual hook), plus
+  `/services/tree-pruning/`, `/services/limb-removal/`, `/service-areas/`,
+  `/contact/`. Add the reciprocal link back from the 3 live posts in the same
+  commit so the 4-city cluster stays a full mesh.
+- **DRAFT-TIME VERIFY (primary source, real-business honesty gate):** pull the
+  current Burlington Private Tree By-law facts from `burlington.ca` before
+  drafting (the bylaw is By-law 02-2020 / Forest Protection, updated since).
+  Confirm the DBH threshold, permit fees, and replacement requirement against the
+  live page, attribute every figure to the by-law, and add an inline
+  `<!-- FRIEND-VERIFY -->` note plus a MORNING_TASKS flag for the fee figures
+  (time-sensitive, the City revises them). Same honesty discipline as the live 3:
+  funnel pruning + limb-removal only, state full removal is not yet offered, no
+  pricing-as-our-rate / credential / insurance claim, no 24/7 / always-available.
