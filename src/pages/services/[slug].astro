@@ -57,6 +57,19 @@ const seasonalNote = (service as any).seasonalNote as string | undefined;
 // for tree-pruning, storm damage and hazard limbs for limb-removal.
 const guideHref = '/guide/when-to-prune-trees-southern-ontario/';
 
+// Reciprocal link edge into the per-city tree-permit guides. The three permit
+// posts already link INTO the service pages; this closes the loop so the
+// cluster links both ways (and routes removal-intent visitors who land on a
+// service page to the bylaw explainer for their city). Honest framing only:
+// Tarzan does pruning and limb removal, not full removal, and permits apply to
+// REMOVING a protected tree, so the copy points there without claiming we do
+// removals. Keep this list in lockstep with the live /blog/ permit posts.
+const permitGuides = [
+  { city: 'Toronto', href: '/blog/tree-removal-permit-toronto/' },
+  { city: 'Mississauga', href: '/blog/tree-removal-permit-mississauga/' },
+  { city: 'Oakville', href: '/blog/tree-removal-permit-oakville/' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -220,6 +233,23 @@ const faqLd = faqs.length
               so every job gets the same attention. See the full
               <a href="/services/" class="text-forest underline hover:text-forest-dark"> service menu</a>
               if you are weighing options.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display text-2xl text-forest mb-4">Removing a protected tree? Check the permit rules first</h2>
+            <p class="text-ink-muted">
+              Across the GTA corridor most cities protect larger private trees, and you usually need a
+              permit, often with an arborist report, before a protected tree comes down. We focus on
+              pruning and limb removal rather than full removals, but if you are weighing whether a tree
+              should come out, it pays to know your city's bylaw before you start. We have written
+              plain-language guides for
+              {permitGuides.map((g, i) => (
+                <>
+                  {i > 0 && (i === permitGuides.length - 1 ? ', and ' : ', ')}
+                  <a href={g.href} class="text-forest underline hover:text-forest-dark">{g.city}</a>
+                </>
+              ))}.
             </p>
           </div>
 
