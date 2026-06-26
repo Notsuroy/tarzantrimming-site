@@ -1,274 +1,390 @@
 [
- {
-  "slug": "tree-removal-permit-oakville",
-  "heroImage": { "src": "/photos/hero-canopy.webp", "alt": "Mature maple canopy over a residential property", "width": 1366, "height": 911 },
-  "title": "Oakville Tree Removal Permit · Tarzan Trimming",
-  "h1": "Oakville Tree Removal Permit: The 15 cm Rule, the Fees, and When Pruning Skips It",
-  "description": "A plain guide to the Oakville tree removal permit: the strict 15 cm rule, the fees, the replacement-tree deposit, and when pruning skips it entirely.",
-  "focusKeyword": "Oakville tree removal permit",
-  "publishedAt": "2026-06-21",
-  "updatedAt": "2026-06-21",
-  "readTime": "7 min",
-  "relatedServices": [
-   "tree-pruning",
-   "limb-removal"
-  ],
-  "ctaHeading": "Not sure if your Oakville tree needs a permit?",
-  "ctaCopy": "Send a photo of the tree and your address through the <a href='/contact/' class='text-forest underline hover:text-forest-dark'>contact page</a>. We will tell you whether the work needs an Oakville permit, whether pruning solves it instead, and what the job involves. No deposit, no pressure.",
-  "intro": "Thinking about taking down a tree in Oakville? Before you book anyone, the first real question is not which contractor. It is whether the town will even let you touch the tree. An <strong>Oakville tree removal permit</strong> is required for almost any mature private tree, and Oakville's rule is stricter than most of its neighbours.\n\nHere is the honest version. The 15 cm rule, the fees, the replacement-tree catch, and the part most homeowners miss. A lot of the time you do not need a removal at all. The right pruning, or one heavy limb taken down, solves the problem and keeps you onside with the bylaw.\n\nWe run an owner-led shop that does pruning and limb removal across south Ontario, so that is the lens we read these rules through. We are not lawyers, bylaws change, and we confirm the current rule for your specific tree before any cut. But this is the map.",
-  "sections": [
-   {
-    "heading": "When you actually need a permit in Oakville",
-    "paragraphs": [
-     "Oakville protects private trees under its Private Tree Protection By-law (By-law 2017-38, updated in 2024). The trigger is size. Any privately owned tree measuring <strong>15 cm or more across the trunk</strong> (about 6 inches), measured at 137 cm off the ground, needs a permit before it comes down.",
-     "That threshold is low, and it is the whole story in Oakville. For comparison, <a href='/blog/tree-removal-permit-toronto/' class='text-forest underline hover:text-forest-dark'>Toronto's private-tree rule</a> only kicks in at 30 cm. Oakville catches trees at half that size, and it has been tightening the rules, not loosening them. The 2024 update made the bylaw harder to work around, which tells you how seriously the town takes its tree canopy. A backyard maple, a front-yard spruce, most things a homeowner pictures when they say \"a real tree\" clear 15 cm easily.",
-     "Oakville is not alone in setting the bar at 15 cm. Neighbouring <a href='/blog/tree-removal-permit-mississauga/' class='text-forest underline hover:text-forest-dark'>Mississauga uses the same 15 cm threshold</a>, so if you own property in both towns the rule of thumb is the same. What sets Oakville apart is the replacement obligation, which we get to below.",
-     "Want to check your own tree before you call anyone? Wrap a tape measure around the trunk at chest height, then divide that number by about 3.14. That is your diameter. If it lands at 15 cm or more, plan on needing a permit.",
-     "The bylaw also covers trees you were required to plant or keep as a condition of a development or site plan, no matter their size. Quick way to read it:",
-     "<ul class='list-disc pl-6 space-y-1 mb-4'><li><strong>Permit needed:</strong> any private tree 15 cm or more across the trunk, plus trees tied to a site-plan or development condition.</li><li><strong>Usually no permit:</strong> a tree under 15 cm across, measured at chest height (still worth confirming).</li><li><strong>Special cases:</strong> dead, high-risk, ash, and buckthorn trees still need a permit, but the fee is waived (more on that below).</li></ul>"
+  {
+    "slug": "tree-removal-permit-burlington",
+    "heroImage": {
+      "src": "/photos/hero-canopy.webp",
+      "alt": "Mature maple canopy over a residential property",
+      "width": 1366,
+      "height": 911
+    },
+    "title": "Burlington Tree Removal Permit · Tarzan Trimming",
+    "h1": "Burlington Tree Removal Permit: The 20 cm Rule, the Urban Boundary Catch, and the Fees",
+    "description": "The Burlington tree removal permit explained: the 20 cm rule, the urban-boundary catch, the $54 fee, and when a prune skips it entirely.",
+    "focusKeyword": "Burlington tree removal permit",
+    "publishedAt": "2026-06-25",
+    "updatedAt": "2026-06-25",
+    "readTime": "7 min",
+    "relatedServices": [
+      "tree-pruning",
+      "limb-removal"
+    ],
+    "ctaHeading": "Not sure if your Burlington tree needs a permit?",
+    "ctaCopy": "Send a photo of the tree and your address through the <a href='/contact/' class='text-forest underline hover:text-forest-dark'>contact page</a>. We will tell you whether the work needs a Burlington permit, whether pruning solves it instead, and what the job involves. No deposit, no pressure.",
+    "intro": "Planning to take down a tree in Burlington? The first question is not who you hire. It is whether the city will let you touch the tree at all. A <strong>Burlington tree removal permit</strong> is required for most mature private trees inside the urban boundary, and the rule that decides it is trunk size, not how the tree looks.\n\nHere is the honest version. The 20 cm rule, the urban-boundary catch that quietly exempts part of the city, the fee, the replacement-tree math, and the part most homeowners miss. Plenty of the time you do not need a removal at all. The right pruning, or one heavy limb off, fixes the problem and keeps you onside with the bylaw.\n\nWe run an owner-led shop that does pruning and limb removal across south Ontario, so that is the lens we read these rules through. We are not lawyers, bylaws change, and we confirm the current rule for your specific tree before any cut. But this is the map.",
+    "sections": [
+      {
+        "heading": "When you actually need a permit in Burlington",
+        "paragraphs": [
+          "Burlington protects private trees under its Private Tree By-law (By-law 040-2022), in effect since April 2022. The trigger is size. Any privately owned tree measuring <strong>20 cm or more across the trunk</strong> (about 8 inches), measured at 1.37 m off the ground, needs a permit before it comes down.",
+          "That 20 cm line sits right in the middle of the western GTA. <a href='/blog/tree-removal-permit-toronto/' class='text-forest underline hover:text-forest-dark'>Toronto's rule</a> only starts at 30 cm, while <a href='/blog/tree-removal-permit-oakville/' class='text-forest underline hover:text-forest-dark'>Oakville</a> and <a href='/blog/tree-removal-permit-mississauga/' class='text-forest underline hover:text-forest-dark'>Mississauga</a> both catch trees at 15 cm. Burlington lands between them. So do not carry a number across a municipal line. A tree that is fair game in one town can be protected the moment you cross into the next.",
+          "Want to check your own tree before you call anyone? Wrap a tape measure around the trunk at chest height, then divide that number by about 3.14. That is your diameter. If it lands anywhere near 20 cm, treat it as protected until the city tells you otherwise.",
+          "<ul class='list-disc pl-6 space-y-1 mb-4'><li><strong>Permit needed:</strong> any private tree 20 cm or more across the trunk, inside Burlington's urban boundary.</li><li><strong>Usually no permit:</strong> a tree under 20 cm across, measured at 1.37 m up the trunk (still worth confirming).</li><li><strong>Protected at any size:</strong> heritage trees and endangered, threatened, or at-risk species.</li></ul>"
+        ]
+      },
+      {
+        "heading": "The urban-boundary catch most guides skip",
+        "paragraphs": [
+          "Here is the Burlington wrinkle the other GTA bylaws do not have. The Private Tree By-law <strong>only applies inside the city's urban boundary</strong>. Burlington is a large municipality, and a real chunk of it sits north of that line in rural and Greenbelt land, up around Lowville, Kilbride, and the escarpment.",
+          "If your property is outside the urban boundary, the city's private-tree permit does not govern your backyard trees the same way. That does not mean anything goes. Other rules can still apply: conservation authority regulations near valleys and the escarpment, woodland rules at the Region of Halton level, and species-at-risk protections. The point is that the city tree permit is not automatically the rule for your tree.",
+          "Quick check before you assume: a Burlington address alone does not tell you which side of the line you are on. Lots near the QEW and the lake are clearly urban. Properties up near the escarpment often are not. When the boundary is in question, we confirm it against the city map before reading you the bylaw, because the wrong assumption here changes the whole answer."
+        ]
+      },
+      {
+        "heading": "What the permit costs you, in money and in time",
+        "paragraphs": [
+          "The application itself is cheap. The <strong>tree permit application processing fee is $54 plus HST</strong>, per application. That part rarely scares anyone off.",
+          "The replacement obligation is where it adds up. Burlington uses a size-based compensation ratio. The bigger the tree you remove, the more trees you owe back:",
+          "<ul class='list-disc pl-6 space-y-1 mb-4'><li><strong>20 to 35 cm trunk:</strong> 2 replacement trees for every 1 removed.</li><li><strong>36 to 74 cm trunk:</strong> 3 replacement trees for every 1 removed.</li><li><strong>75 cm and up:</strong> 4 replacement trees for every 1 removed.</li></ul>",
+          "Take down one mature 80 cm maple and the city can ask for four trees back, or cash in lieu where there is no room to plant them. That is the real cost of a removal in Burlington, and it is the strongest argument for asking whether you need one at all.",
+          "Time is the other cost. The city has been working through high volumes of tree permit requests, so this is not a same-week approval. Budget several weeks from application to decision, and longer through the busy spring stretch. If a closing or a build depends on the work, plan the wait into your timeline rather than against it."
+        ]
+      },
+      {
+        "heading": "What happens if you skip it",
+        "paragraphs": [
+          "Removing a protected tree without a permit is an offence under By-law 040-2022. Burlington enforces it through its administrative penalty system, so a quiet weekend removal can turn into a penalty per tree plus an order to replant what you took down.",
+          "The bigger exposure is the replacement order. The city can require the same 2 to 1, 3 to 1, or 4 to 1 trees back after the fact, on a tree you have already removed, with no say from you on where they go. Skipping the permit does not skip the replanting. It just removes your input on it.",
+          "Most homeowners miss this: a neighbour complaint is the usual trigger. Tree work is loud and visible. By the time a chipper is running in the driveway, everyone nearby knows a tree came down, and a protected-tree removal in plain sight is an easy call for someone to make."
+        ]
+      },
+      {
+        "heading": "The part most homeowners miss: you might not need a removal at all",
+        "paragraphs": [
+          "Here is what the search hides. People look up the Burlington tree removal permit because they have a problem they want gone. A limb over the roof. Mess on the deck. Roots lifting the patio. Too much shade on the garden.",
+          "Removal is the biggest, slowest, most regulated answer to all of those. Often it is the wrong one.",
+          "<a href='/services/tree-pruning/' class='text-forest underline hover:text-forest-dark'>Pruning is not a removal</a>. Cutting back, thinning, or shaping a tree you are keeping does not trigger the removal permit at all. Burlington's own bylaw lets you prune up to a third of a tree's live crown without a permit. A good prune fixes most \"this tree is a problem\" complaints without the permit, the fee, or the replacement obligation. One bad branch is a <a href='/services/limb-removal/' class='text-forest underline hover:text-forest-dark'>limb removal</a>, not a tree removal.",
+          "A real example of how this plays out: a homeowner calls about a big silver maple shading the whole backyard and dropping seeds everywhere, sure it has to go. Nine times out of ten the fix is a crown thin and a couple of low limbs off. Light comes through, the mess stops, no permit, no replacement trees owed. The tree stays and the bill is a fraction of a removal plus four replanted trees.",
+          "Sometimes removal really is the answer. A dead tree, a failing trunk, a species planted in the wrong spot. When that is the case you need the permit, and we will tell you so plainly rather than talk you into a prune that will not hold."
+        ]
+      },
+      {
+        "heading": "How we handle protected trees on a Burlington job",
+        "paragraphs": [
+          "We do two things: <a href='/services/tree-pruning/' class='text-forest underline hover:text-forest-dark'>tree pruning</a> and <a href='/services/limb-removal/' class='text-forest underline hover:text-forest-dark'>limb removal</a>. For most problem trees, one of those is the fix, and it keeps you clear of the removal permit, the fee, and the replanting altogether.",
+          "We do not do full tree removals yet, and we say so up front. If your tree genuinely has to come down, you need the Burlington permit, and we will point you toward who can handle that part rather than pretend it is something we offer.",
+          "What you get from us is a straight read. We will tell you whether pruning solves it, whether you are looking at a permit, and what the job actually involves before any work starts. No deposit to find out, no pressure either way.",
+          "Owner-led, by appointment, evenings and weekends, across Burlington and the wider <a href='/service-areas/' class='text-forest underline hover:text-forest-dark'>south Ontario service area</a>. Send a photo and your address through the <a href='/contact/' class='text-forest underline hover:text-forest-dark'>contact page</a> and we will read your tree against the bylaw and tell you straight whether a <strong>Burlington tree removal permit</strong> is even in play."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need a permit to remove a tree on my own property in Burlington?",
+        "a": "Usually yes, if it is a mature tree inside the urban boundary. Burlington's Private Tree By-law (040-2022) protects any private tree 20 cm or more in diameter, measured at 1.37 m up the trunk. Smaller trees are generally exempt, and properties outside the urban boundary are not covered the same way. Measure at chest height before you assume."
+      },
+      {
+        "q": "How much does a Burlington tree removal permit cost?",
+        "a": "The application processing fee is $54 plus HST per application. The larger cost is replacement: Burlington requires 2 trees back for a 20 to 35 cm removal, 3 for 36 to 74 cm, and 4 for anything 75 cm and over, or cash in lieu where there is no room to plant. Fees change, so confirm the current figure with the city before you budget."
+      },
+      {
+        "q": "Does the Burlington tree bylaw apply everywhere in the city?",
+        "a": "No. The Private Tree By-law only applies inside Burlington's urban boundary. A large rural and Greenbelt area to the north, near Lowville, Kilbride, and the escarpment, sits outside it. Other rules can still apply there, like conservation authority and woodland regulations, so outside the boundary does not mean no rules. Confirm which side of the line you are on first."
+      },
+      {
+        "q": "Do I need a permit to prune a tree in Burlington?",
+        "a": "No. The permit is for removing or injuring a protected tree. Burlington's bylaw lets you prune up to a third of a tree's live crown without a permit, and pruning a tree you are keeping does not trigger the removal permit at all. It is often the cheapest fix for a problem tree. Get in touch and we will tell you whether a prune solves it."
+      },
+      {
+        "q": "What if the tree is dead or dangerous?",
+        "a": "Dead trees, trees with a terminal condition, and high-risk trees are exempt from the Burlington permit. For an immediate hazard, contact the city directly. We handle hazardous limbs by appointment, and we never touch anything on or near a hydro line, that is the utility's job."
+      }
     ]
-   },
-   {
-    "heading": "What the permit costs you, in money and in time",
-    "paragraphs": [
-     "There are two costs here, and both sit on top of the tree work itself. There is the town application fee, and there is your time waiting on the inspection.",
-     "<ul class='list-disc pl-6 space-y-1 mb-4'><li><strong>$65</strong> for the first tree, if it measures 15 to 24 cm across.</li><li><strong>$425</strong> for each additional tree, and for any tree larger than 24 cm across.</li><li><strong>No fee</strong> for dead, high-risk, ash, or buckthorn trees. They still need a permit, but the application fee is waived.</li></ul>",
-     "Then there is the Oakville catch most people do not see coming: <strong>replacement trees</strong>. One new tree has to be planted for every 10 cm of healthy trunk you remove, with a $300 security deposit for each replacement tree. Take down a healthy 40 cm maple and you are on the hook for four new trees plus the deposits. The 2024 update also pulled cedar off the list of acceptable replacements and limited the option of paying cash instead of replanting, so the town really does want trees back in the ground.",
-     "On timing: a town tree inspector contacts you <strong>within five business days</strong> to set up an on-site visit. Realistically, plan for a couple of weeks start to finish, and longer through the busy spring season when the forestry section is buried. If a home sale or a build is riding on the work, build that wait into your schedule.",
-     "<em>Fees and rules here are set by the town and do change. Confirm the current numbers on oakville.ca, or tell us the tree and we will help you read it.</em>"
+  },
+  {
+    "slug": "tree-removal-permit-oakville",
+    "heroImage": {
+      "src": "/photos/hero-canopy.webp",
+      "alt": "Mature maple canopy over a residential property",
+      "width": 1366,
+      "height": 911
+    },
+    "title": "Oakville Tree Removal Permit · Tarzan Trimming",
+    "h1": "Oakville Tree Removal Permit: The 15 cm Rule, the Fees, and When Pruning Skips It",
+    "description": "A plain guide to the Oakville tree removal permit: the strict 15 cm rule, the fees, the replacement-tree deposit, and when pruning skips it entirely.",
+    "focusKeyword": "Oakville tree removal permit",
+    "publishedAt": "2026-06-21",
+    "updatedAt": "2026-06-21",
+    "readTime": "7 min",
+    "relatedServices": [
+      "tree-pruning",
+      "limb-removal"
+    ],
+    "ctaHeading": "Not sure if your Oakville tree needs a permit?",
+    "ctaCopy": "Send a photo of the tree and your address through the <a href='/contact/' class='text-forest underline hover:text-forest-dark'>contact page</a>. We will tell you whether the work needs an Oakville permit, whether pruning solves it instead, and what the job involves. No deposit, no pressure.",
+    "intro": "Thinking about taking down a tree in Oakville? Before you book anyone, the first real question is not which contractor. It is whether the town will even let you touch the tree. An <strong>Oakville tree removal permit</strong> is required for almost any mature private tree, and Oakville's rule is stricter than most of its neighbours.\n\nHere is the honest version. The 15 cm rule, the fees, the replacement-tree catch, and the part most homeowners miss. A lot of the time you do not need a removal at all. The right pruning, or one heavy limb taken down, solves the problem and keeps you onside with the bylaw.\n\nWe run an owner-led shop that does pruning and limb removal across south Ontario, so that is the lens we read these rules through. We are not lawyers, bylaws change, and we confirm the current rule for your specific tree before any cut. But this is the map.",
+    "sections": [
+      {
+        "heading": "When you actually need a permit in Oakville",
+        "paragraphs": [
+          "Oakville protects private trees under its Private Tree Protection By-law (By-law 2017-38, updated in 2024). The trigger is size. Any privately owned tree measuring <strong>15 cm or more across the trunk</strong> (about 6 inches), measured at 137 cm off the ground, needs a permit before it comes down.",
+          "That threshold is low, and it is the whole story in Oakville. For comparison, <a href='/blog/tree-removal-permit-toronto/' class='text-forest underline hover:text-forest-dark'>Toronto's private-tree rule</a> only kicks in at 30 cm. Oakville catches trees at half that size, and it has been tightening the rules, not loosening them. The 2024 update made the bylaw harder to work around, which tells you how seriously the town takes its tree canopy. A backyard maple, a front-yard spruce, most things a homeowner pictures when they say \"a real tree\" clear 15 cm easily.",
+          "Oakville is not alone in setting the bar at 15 cm. Neighbouring <a href='/blog/tree-removal-permit-mississauga/' class='text-forest underline hover:text-forest-dark'>Mississauga uses the same 15 cm threshold</a>, so if you own property in both towns the rule of thumb is the same. Just east, <a href='/blog/tree-removal-permit-burlington/' class='text-forest underline hover:text-forest-dark'>Burlington sets its bar at 20 cm</a>, between Oakville's 15 and Toronto's 30. What sets Oakville apart is the replacement obligation, which we get to below.",
+          "Want to check your own tree before you call anyone? Wrap a tape measure around the trunk at chest height, then divide that number by about 3.14. That is your diameter. If it lands at 15 cm or more, plan on needing a permit.",
+          "The bylaw also covers trees you were required to plant or keep as a condition of a development or site plan, no matter their size. Quick way to read it:",
+          "<ul class='list-disc pl-6 space-y-1 mb-4'><li><strong>Permit needed:</strong> any private tree 15 cm or more across the trunk, plus trees tied to a site-plan or development condition.</li><li><strong>Usually no permit:</strong> a tree under 15 cm across, measured at chest height (still worth confirming).</li><li><strong>Special cases:</strong> dead, high-risk, ash, and buckthorn trees still need a permit, but the fee is waived (more on that below).</li></ul>"
+        ]
+      },
+      {
+        "heading": "What the permit costs you, in money and in time",
+        "paragraphs": [
+          "There are two costs here, and both sit on top of the tree work itself. There is the town application fee, and there is your time waiting on the inspection.",
+          "<ul class='list-disc pl-6 space-y-1 mb-4'><li><strong>$65</strong> for the first tree, if it measures 15 to 24 cm across.</li><li><strong>$425</strong> for each additional tree, and for any tree larger than 24 cm across.</li><li><strong>No fee</strong> for dead, high-risk, ash, or buckthorn trees. They still need a permit, but the application fee is waived.</li></ul>",
+          "Then there is the Oakville catch most people do not see coming: <strong>replacement trees</strong>. One new tree has to be planted for every 10 cm of healthy trunk you remove, with a $300 security deposit for each replacement tree. Take down a healthy 40 cm maple and you are on the hook for four new trees plus the deposits. The 2024 update also pulled cedar off the list of acceptable replacements and limited the option of paying cash instead of replanting, so the town really does want trees back in the ground.",
+          "On timing: a town tree inspector contacts you <strong>within five business days</strong> to set up an on-site visit. Realistically, plan for a couple of weeks start to finish, and longer through the busy spring season when the forestry section is buried. If a home sale or a build is riding on the work, build that wait into your schedule.",
+          "<em>Fees and rules here are set by the town and do change. Confirm the current numbers on oakville.ca, or tell us the tree and we will help you read it.</em>"
+        ]
+      },
+      {
+        "heading": "What happens if you skip it",
+        "paragraphs": [
+          "Removing a protected tree without a permit is a bylaw offence in Oakville. The town handles non-compliance through its Administrative Penalty system, and it can require restoration and replanting on top of any penalty. This is not a town that looks the other way on trees.",
+          "The real cost is bigger than the penalty. The town can order replacement trees, and an unpermitted removal has a way of surfacing later, during a property sale or a building-permit review, which is an expensive surprise at the worst possible moment.",
+          "Do not count on nobody noticing, either. Neighbours report removals, and a sudden bare patch where a mature canopy used to stand is about as easy to spot as it gets."
+        ]
+      },
+      {
+        "heading": "The part most homeowners miss: you might not need a removal at all",
+        "paragraphs": [
+          "Here is the thing the search query hides. People look up the Oakville tree removal permit because they have a problem they want gone. A limb hanging over the roof. A tree dropping mess on the deck. Roots crowding the patio. Too much shade on the garden.",
+          "Removal is the biggest, slowest, most regulated answer to all of those. Often it is the wrong one.",
+          "<a href='/services/tree-pruning/' class='text-forest underline hover:text-forest-dark'>Pruning is not a removal</a>. Cutting back, thinning, or shaping a tree you are keeping does not trigger the removal permit at all. A good prune fixes most \"this tree is a problem\" complaints without the permit, the fee, or the replacement obligation. One bad branch is a <a href='/services/limb-removal/' class='text-forest underline hover:text-forest-dark'>limb-removal job</a>, not a tree removal. And a young tree under 15 cm across usually is not protected in the first place, so it can often come out without a permit (confirm the measurement first).",
+          "A real example of how this plays out: a homeowner calls about a big silver maple shading the whole backyard and dropping seeds everywhere, convinced it has to go. Nine times out of ten the fix is a crown thin and a couple of low limbs off, which lets light through and stops the mess, with no permit and no replacement trees owed. The tree stays, the problem is gone, and the bill is a fraction of a permitted removal. And if pruning is the route you take, the season you cut in still affects how cleanly the tree heals, which our guide on <a href='/guide/when-to-prune-trees-southern-ontario/' class='underline text-forest hover:text-forest-dark'>when to prune trees in southern Ontario</a> covers.",
+          "Sometimes removal really is the answer. A dead tree, a failing trunk, a species planted in the wrong spot. When that is the case you need the permit and an arborist report, and we will tell you so plainly rather than talk you into a prune that will not hold."
+        ]
+      },
+      {
+        "heading": "How we handle protected trees on an Oakville job",
+        "paragraphs": [
+          "We do two things: <a href='/services/tree-pruning/' class='text-forest underline hover:text-forest-dark'>tree pruning</a> and <a href='/services/limb-removal/' class='text-forest underline hover:text-forest-dark'>limb removal</a>. For most problem trees, one of those is the fix, and it keeps you clear of the removal permit, the fee, and the replanting altogether.",
+          "We do not do full tree removals yet, and we say so up front. If your tree genuinely has to come down, you need the Oakville permit and an arborist report, and we will point you toward who can handle that part rather than pretend it is something we offer.",
+          "What you get from us is a straight read. We will tell you whether pruning solves it, whether you are looking at a permit, and what the job actually involves before any work starts. No deposit to find out, no pressure either way.",
+          "Owner-led, by appointment, evenings and weekends, across Oakville and the wider <a href='/service-areas/' class='text-forest underline hover:text-forest-dark'>south Ontario service area</a>. Send a photo and your address through the <a href='/contact/' class='text-forest underline hover:text-forest-dark'>contact page</a> and we will read your tree against the bylaw and tell you straight whether you actually need an Oakville tree removal permit, or whether a good prune settles the whole thing."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need a permit to remove a small tree in Oakville?",
+        "a": "It depends on the trunk size. Oakville protects any private tree measuring 15 cm or more across the trunk, taken at chest height (137 cm off the ground). Under 15 cm, it is generally not protected and can usually come out without a permit. At or over 15 cm, assume you need one. Measure before you assume, because 15 cm is smaller than most people guess."
+      },
+      {
+        "q": "How much does an Oakville tree removal permit cost?",
+        "a": "It is $65 for the first tree if it measures 15 to 24 cm across, and $425 for each additional tree and any tree larger than 24 cm. Dead, high-risk, ash, and buckthorn trees still need a permit but are exempt from the fee. You may also owe replacement trees, one per 10 cm of healthy trunk removed, with a $300 deposit each. Town fees change, so confirm current rates on oakville.ca."
+      },
+      {
+        "q": "How long does it take to get a tree permit in Oakville?",
+        "a": "A town tree inspector contacts you within five business days to arrange an on-site visit. Start to finish usually runs a couple of weeks, and longer through the busy spring season. If you have a closing or a build depending on the work, plan the wait into your timeline."
+      },
+      {
+        "q": "Do I need a permit to prune a tree in Oakville?",
+        "a": "No. The permit is for removing a protected tree. Pruning, thinning, or shaping a tree you are keeping does not trigger the removal permit, and it is often the cheapest fix for a problem tree. Get in touch and we will tell you whether a prune solves it."
+      },
+      {
+        "q": "What if the tree is dead or dangerous?",
+        "a": "Dead and high-risk trees still need a permit in Oakville, but they are exempt from the application fee. For an immediate hazard, contact the town directly, they run an emergency process. We handle hazardous limbs by appointment, and we never touch anything on or near a hydro line, that is the utility's job, not ours."
+      }
     ]
-   },
-   {
-    "heading": "What happens if you skip it",
-    "paragraphs": [
-     "Removing a protected tree without a permit is a bylaw offence in Oakville. The town handles non-compliance through its Administrative Penalty system, and it can require restoration and replanting on top of any penalty. This is not a town that looks the other way on trees.",
-     "The real cost is bigger than the penalty. The town can order replacement trees, and an unpermitted removal has a way of surfacing later, during a property sale or a building-permit review, which is an expensive surprise at the worst possible moment.",
-     "Do not count on nobody noticing, either. Neighbours report removals, and a sudden bare patch where a mature canopy used to stand is about as easy to spot as it gets."
+  },
+  {
+    "slug": "tree-removal-permit-mississauga",
+    "heroImage": {
+      "src": "/photos/accent-branches.webp",
+      "alt": "Tree branches and green leaves against an overcast sky",
+      "width": 1200,
+      "height": 675
+    },
+    "title": "Mississauga Tree Removal Permit · Tarzan Trimming",
+    "h1": "Mississauga Tree Removal Permit: When You Need One, What It Costs, and When Pruning Skips It",
+    "description": "A plain guide to the Mississauga tree removal permit: the 15 cm rule, what it costs, replacement trees, the fines, and when pruning avoids it entirely.",
+    "focusKeyword": "Mississauga tree removal permit",
+    "publishedAt": "2026-06-19",
+    "updatedAt": "2026-06-21",
+    "readTime": "7 min",
+    "relatedServices": [
+      "tree-pruning",
+      "limb-removal"
+    ],
+    "ctaHeading": "Not sure if your Mississauga tree needs a permit?",
+    "ctaCopy": "Send a photo of the tree and your address through the <a href='/contact/' class='underline text-forest hover:text-forest-dark'>contact page</a>. We will tell you whether the work needs a City of Mississauga permit, whether pruning solves it instead, and what the job involves. No deposit, no pressure.",
+    "intro": "Planning tree work in Mississauga? Before you call anyone, the real first question is not which contractor. It is whether the city will let you touch the tree at all. A <strong>Mississauga tree removal permit</strong> is required for most mature private trees, and taking one down without it can cost you far more than the job itself.\n\nHere is the honest version. The rules, the fees, the catch that trips people up, and the part most homeowners miss. A lot of the time you do not need a removal at all. The right pruning, or one heavy limb taken down, fixes the problem and keeps you onside with the bylaw.\n\nWe run an owner-led shop that does pruning and limb removal across south Ontario, so that is the lens we read these rules through. We are not lawyers, bylaws change, and we confirm the current rule for your specific tree before any cut. But this is the map.",
+    "sections": [
+      {
+        "heading": "When you actually need a permit in Mississauga",
+        "paragraphs": [
+          "Mississauga protects private trees under its Private Tree Protection By-law, By-law 0021-2022. The trigger is size. Any privately owned tree measuring 15 cm (about 6 inches) or more across the trunk is protected, and you need a permit before you remove it.",
+          "That number matters more than people expect. Mississauga's 15 cm line is half of Toronto's 30 cm threshold, so a tree that would be fair game one city over is protected here. If you are coming from our <a href='/blog/tree-removal-permit-toronto/' class='text-forest underline hover:text-forest-dark'>Toronto permit guide</a>, do not carry the 30 cm number across the border. Neighbouring <a href='/blog/tree-removal-permit-oakville/' class='text-forest underline hover:text-forest-dark'>Oakville sets the same 15 cm bar</a>, and stacks a stricter replacement-tree rule on top, so the line is consistent across the western GTA even though Toronto's runs higher. Nearby <a href='/blog/tree-removal-permit-burlington/' class='text-forest underline hover:text-forest-dark'>Burlington lands at 20 cm</a>, just above the 15 cm towns. Measure your own tree first.",
+          "If a tree clears 15 cm, the process looks like this:",
+          "<ul class='list-disc pl-5 space-y-2'><li><strong>You need a permit to remove or injure it.</strong> The bylaw does not only cover cutting a tree down. Heavy work that damages a protected tree counts too.</li><li><strong>The city reviews your application.</strong> Routine residential removals do not always need a full arborist report, but the city decides what it needs to see.</li><li><strong>A replacement condition usually applies.</strong> Take one down and you plant one or more back.</li><li><strong>It takes time.</strong> Budget several weeks, not several days.</li></ul>",
+          "Quick check before you book anyone: wrap a tape measure around the trunk. If the diameter is anywhere near 15 cm, assume it is protected until the city tells you otherwise. Guessing low is how people end up on the wrong side of a fine."
+        ]
+      },
+      {
+        "heading": "What the permit costs you, in money and in time",
+        "paragraphs": [
+          "There are two costs here, and both sit on top of the tree work itself. There is the city application fee, and there is your time waiting on the review.",
+          "The fees are public. The City of Mississauga charges <strong>$399.77 (including HST) for the first tree</strong> on an application, and <strong>$139.72 (including HST) for each additional healthy tree</strong>. Those are the 2026 figures off the city's own permit page, and they tend to nudge up each year, so confirm the current number when you apply.",
+          "<strong>One thing in your favour:</strong> if the tree is genuinely dead or dying, there is no application fee. You still have to apply and let the city confirm it, but you are not paying the fee for a tree that is already gone.",
+          "Then there is the replacement rule. The city generally wants <strong>one replacement tree for every 15 cm of trunk diameter you remove</strong>, planted as a native, shade-bearing species (at least 1.8 m tall for an evergreen, or at least 6 cm in diameter for a deciduous tree). On a big mature tree that can mean several new trees on your lot, so factor that in before you commit to a removal.",
+          "On time: the city gives itself <strong>30 business days to review a complete application</strong>. That is the floor, not a promise. In busy season, or if the file comes back needing more detail, it stretches. If you are hoping to have a tree down by next weekend, the permit math usually does not work."
+        ]
+      },
+      {
+        "heading": "What happens if you skip it",
+        "paragraphs": [
+          "Removing a protected tree without a permit is an offence under By-law 0021-2022. The city can lay charges, and the penalties run into the thousands of dollars per tree, on top of an order to replant what you took down. The fine dwarfs the permit fee every time.",
+          "And it is not a quiet rule. A fresh stump on a mature front-yard tree is obvious from the street, neighbours do report it, and the city does follow up. The contractor who tells you not to bother with the permit is the contractor leaving you holding the charge, because the property owner is the one the bylaw holds responsible, not the crew that did the cutting.",
+          "The honest math is simple. The permit and the wait are an annoyance. The fine plus forced replanting is a real financial hit. If a tree genuinely has to come down, do it through the process."
+        ]
+      },
+      {
+        "heading": "The part most homeowners miss: you might not need a removal at all",
+        "paragraphs": [
+          "Here is the thing the search query hides. People look up the Mississauga tree removal permit because they have a problem they want gone. A limb hanging over the roof. A tree that has outgrown its corner. Shade swallowing the back garden. Removal is one way to solve that. It is often the wrong one.",
+          "A lot of those problems are pruning problems, not removal problems. A crown reduction brings a too-big tree back into proportion. Clearing a few limbs opens up light and gets weight off the house. Take down the one bad limb over the driveway and the hazard is gone. The tree stays, the bylaw stays happy, and in many cases there is no removal permit to chase at all. If you do prune instead, doing it in the right season helps the tree heal cleanly, which our guide on <a href='/guide/when-to-prune-trees-southern-ontario/' class='underline text-forest hover:text-forest-dark'>when to prune trees in southern Ontario</a> walks through.",
+          "<strong>One honest caveat, because the bylaw is specific:</strong> By-law 0021-2022 covers injuring a protected tree, not just removing it. Light, routine maintenance pruning on a healthy tree is normally fine, but significant cuts on a 15 cm tree can still need sign-off. That is exactly the kind of thing we check for your specific tree before any work starts, so you are never guessing.",
+          "So before you budget for a removal and a permit, it is worth asking whether the actual goal is a smaller, safer, tidier tree. Most of the time, it is."
+        ]
+      },
+      {
+        "heading": "How we handle protected trees on a Mississauga job",
+        "paragraphs": [
+          "We do two things: <a href='/services/tree-pruning/' class='text-forest underline hover:text-forest-dark'>tree pruning</a> and <a href='/services/limb-removal/' class='text-forest underline hover:text-forest-dark'>limb removal</a>. Full tree removal is not something we offer yet, so we are not the crew that talks you into taking a tree down. If anything, we are the opposite.",
+          "When we look at a job, the first step is the tape measure. We tell you whether your tree is over the 15 cm line, whether the work you want counts as injuring a protected tree, and whether a permit is in play. If pruning or a single limb removal solves the problem and keeps you clear of the permit process, that is what we recommend.",
+          "If the tree genuinely needs to come out, we will say so plainly and point you to the City of Mississauga permit process and a removal company. We would rather lose that job than put you in a bad spot with the bylaw.",
+          "If you want a straight read on whether your work needs a Mississauga tree removal permit, or whether pruning quietly solves the whole thing, <a href='/contact/' class='text-forest underline hover:text-forest-dark'>get in touch</a>. We will tell you what we see, no pressure either way."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need a permit to remove a tree on my own property in Mississauga?",
+        "a": "Yes, if the tree is 15 cm (about 6 inches) or more across the trunk. Mississauga protects private trees of that size under By-law 0021-2022, so you need a permit before removing one. A tree under 15 cm can generally be removed without a permit, but measure first, because the line is lower than in many nearby cities."
+      },
+      {
+        "q": "How is the tree measured to see if it is protected?",
+        "a": "By the diameter across the trunk. The protected threshold in Mississauga is 15 cm (6 inches) or more. If your trunk is anywhere close to that, treat it as protected until the city confirms otherwise, and wrap a tape measure around it before you assume it is exempt."
+      },
+      {
+        "q": "Do I need a permit just to prune a protected tree?",
+        "a": "Routine maintenance pruning on a healthy tree is normally fine. But the Mississauga bylaw covers injuring a protected tree, not only removing it, so heavy or structural cuts on a 15 cm tree can need sign-off. We check the rule for your specific tree before any work, so you are not guessing about it."
+      },
+      {
+        "q": "What does a Mississauga tree removal permit cost?",
+        "a": "As of 2026 the city charges $399.77 including HST for the first tree on an application, and $139.72 including HST for each additional healthy tree. There is no fee if the tree is dead or dying. A replacement-tree condition usually applies too, roughly one new tree for every 15 cm of diameter removed. Confirm the current fee when you apply, since it changes."
+      },
+      {
+        "q": "Do you remove trees and handle the permit for me?",
+        "a": "We do pruning and limb removal, not full tree removal, so we do not file removal permits. What we do is tell you whether your job even needs a removal at all. Often the right pruning or a single limb removal solves the problem and keeps you clear of the permit process. If you genuinely need a tree gone, we will point you to the city process and a removal company."
+      }
     ]
-   },
-   {
-    "heading": "The part most homeowners miss: you might not need a removal at all",
-    "paragraphs": [
-     "Here is the thing the search query hides. People look up the Oakville tree removal permit because they have a problem they want gone. A limb hanging over the roof. A tree dropping mess on the deck. Roots crowding the patio. Too much shade on the garden.",
-     "Removal is the biggest, slowest, most regulated answer to all of those. Often it is the wrong one.",
-     "<a href='/services/tree-pruning/' class='text-forest underline hover:text-forest-dark'>Pruning is not a removal</a>. Cutting back, thinning, or shaping a tree you are keeping does not trigger the removal permit at all. A good prune fixes most \"this tree is a problem\" complaints without the permit, the fee, or the replacement obligation. One bad branch is a <a href='/services/limb-removal/' class='text-forest underline hover:text-forest-dark'>limb-removal job</a>, not a tree removal. And a young tree under 15 cm across usually is not protected in the first place, so it can often come out without a permit (confirm the measurement first).",
-     "A real example of how this plays out: a homeowner calls about a big silver maple shading the whole backyard and dropping seeds everywhere, convinced it has to go. Nine times out of ten the fix is a crown thin and a couple of low limbs off, which lets light through and stops the mess, with no permit and no replacement trees owed. The tree stays, the problem is gone, and the bill is a fraction of a permitted removal. And if pruning is the route you take, the season you cut in still affects how cleanly the tree heals, which our guide on <a href='/guide/when-to-prune-trees-southern-ontario/' class='underline text-forest hover:text-forest-dark'>when to prune trees in southern Ontario</a> covers.",
-     "Sometimes removal really is the answer. A dead tree, a failing trunk, a species planted in the wrong spot. When that is the case you need the permit and an arborist report, and we will tell you so plainly rather than talk you into a prune that will not hold."
+  },
+  {
+    "slug": "tree-removal-permit-toronto",
+    "heroImage": {
+      "src": "/photos/accent-forest.webp",
+      "alt": "Forest canopy of mature hardwood trees",
+      "width": 1200,
+      "height": 799
+    },
+    "title": "Toronto Tree Removal Permit · Tarzan Trimming",
+    "h1": "Toronto Tree Removal Permit: The Rules, the Fines, and When Pruning Is the Smarter Fix",
+    "description": "A plain guide to the Toronto tree removal permit rules: when you need one, what it costs, the fines for skipping it, and why pruning often beats removal.",
+    "focusKeyword": "Toronto tree removal permit",
+    "publishedAt": "2026-06-18",
+    "updatedAt": "2026-06-21",
+    "readTime": "7 min",
+    "relatedServices": [
+      "tree-pruning",
+      "limb-removal"
+    ],
+    "ctaHeading": "Not sure if your job needs a permit?",
+    "ctaCopy": "Send a photo of the tree and your address through the <a href='/contact/' class='underline text-forest hover:text-forest-dark'>contact page</a>. We will tell you whether the work needs a City of Toronto permit, whether pruning solves it instead, and what the job involves. No deposit, no pressure.",
+    "intro": "If you are planning tree work in Toronto, the first question is not which contractor to call. It is whether the city will even let you touch the tree. A <strong>Toronto tree removal permit</strong> is mandatory for most mature private trees, and skipping it can cost you far more than the job itself.\n\nHere is the honest version of how the rules work, what they cost you in time and money, and the part most homeowners miss. A lot of the time you do not need a removal at all. The right pruning, or a single heavy limb taken down, solves the problem and keeps you onside with the bylaw.\n\nWe are an owner-led shop that does pruning and limb removal across south Ontario, so that is the lens we read these rules through. We are not lawyers, and bylaws change, so confirm the current rule for your property before any cut. But this is the map.",
+    "sections": [
+      {
+        "heading": "When you actually need a permit",
+        "paragraphs": [
+          "Toronto protects private trees under its Private Tree By-law, Municipal Code Chapter 813. The trigger is size. As of 2026, any privately owned tree measuring 30 cm or more in diameter, taken at 1.4 m up the trunk (what arborists call DBH, or diameter at breast height), is protected.",
+          "If a tree clears that threshold, the process looks like this:",
+          "<ul class='list-disc pl-5 space-y-2'><li><strong>You need a permit to remove or seriously injure it.</strong> Not just removal, the bylaw covers injuring a protected tree too.</li><li><strong>The application includes an arborist report</strong> describing the tree's size, species, condition, and the reason for the work.</li><li><strong>The city reviews it,</strong> roughly 30 business days, sometimes longer.</li><li><strong>A permit often comes with a replanting condition.</strong> You take one down, you put one or more back.</li></ul>",
+          "Worth knowing: the 30 cm threshold has been under review, with proposals to protect smaller trees. The safe move is to measure your tree and assume anything close to 30 cm across is protected until the city tells you otherwise. A Toronto tree removal permit is not a formality you can skip on a guess about your tree's size. And if your lot sits near a municipal line, the number changes the moment you cross it. Both <a href='/blog/tree-removal-permit-oakville/' class='underline text-forest hover:text-forest-dark'>Oakville</a> and <a href='/blog/tree-removal-permit-mississauga/' class='underline text-forest hover:text-forest-dark'>Mississauga</a> protect trees at 15 cm, half of Toronto's threshold, so a tree that is fair game on one side of the border can be fully protected on the other. <a href='/blog/tree-removal-permit-burlington/' class='text-forest underline hover:text-forest-dark'>Burlington</a> sits between, protecting trees at 20 cm."
+        ]
+      },
+      {
+        "heading": "What the permit costs you, in money and in time",
+        "paragraphs": [
+          "There are two costs here, and both sit on top of the tree work itself. There is the city application fee, and there is the arborist report that has to go with the application. Neither is huge on its own, but they are real and they are separate line items.",
+          "Then there is time. Budget several weeks. The roughly 30 business day review is the floor, not a promise, and it stretches in busy season or if the city comes back asking for more detail.",
+          "<strong>One exception worth knowing:</strong> if a tree is an immediate hazard, there is a faster path. The city treats actively dangerous trees differently from a routine removal. That is the exception, not the everyday rule, so do not count on it for a tree that is simply in the way.",
+          "This is why timing matters. If you already know a tree needs attention, start early rather than the week you want the work done. And if the job turns out to be pruning rather than removal, our guide on <a href='/guide/when-to-prune-trees-southern-ontario/' class='underline text-forest hover:text-forest-dark'>when to prune trees in southern Ontario</a> walks through the seasonal timing."
+        ]
+      },
+      {
+        "heading": "What happens if you skip it",
+        "paragraphs": [
+          "The fines are the part people underestimate. Under Chapter 813, the penalty for removing or injuring a protected tree without a permit starts at $500 per tree and can run up to $100,000 per tree.",
+          "Read that again: <strong>per tree.</strong> Two trees, double the exposure. And the city does act on complaints. Neighbours notice when a mature tree disappears over a weekend, and they report it.",
+          "So the math is simple. A removal you could have permitted for a modest fee turns into a five-figure problem the moment you cut without one. It is not a gamble worth taking, and no honest contractor will tell you otherwise."
+        ]
+      },
+      {
+        "heading": "Where the rules get stricter: ravines, heritage, and city trees",
+        "paragraphs": [
+          "Three situations tighten things beyond the standard private-tree rule:",
+          "<ul class='list-disc pl-5 space-y-2'><li><strong>Ravine and natural-feature land.</strong> If your property sits in or near a protected ravine, a separate set of rules applies on top of the tree bylaw. The protections there are stronger.</li><li><strong>City-owned trees.</strong> The tree on the boulevard or right at the curb is often the city's, not yours. You cannot touch it, and neither can we. That is city forestry's call.</li><li><strong>Heritage properties and some development sites</strong> carry extra conditions of their own.</li></ul>",
+          "When you are unsure who owns the tree, or which set of rules stacks on top of which, that is a question to settle before anyone climbs. Guessing wrong on a ravine lot or a city tree is exactly how a small job becomes a fine."
+        ]
+      },
+      {
+        "heading": "The part most homeowners miss: you might not need a removal at all",
+        "paragraphs": [
+          "Here is what we see on a lot of quote visits. The homeowner is braced for a full removal, and the permit headache that comes with it, and the actual problem is one limb hanging over the roof, or a canopy that has gotten too dense and heavy on one side.",
+          "<strong>Pruning a protected tree the right way, within the bylaw, often solves the problem with no removal permit at all.</strong> A healthy mature tree is an asset the city is trying to keep for good reasons, and keeping it, well pruned, is usually cheaper and faster than taking it down.",
+          "Worth asking before you commit to a removal: is the whole tree the problem, or is it a couple of limbs? More often than not, it is the limbs. That is exactly the work we do, whether it is <a href='/services/tree-pruning/' class='underline text-forest hover:text-forest-dark'>careful pruning</a> to bring a canopy back into shape or <a href='/services/limb-removal/' class='underline text-forest hover:text-forest-dark'>taking down a single heavy limb</a> that is the real hazard.",
+          "One honest caveat: heavy pruning of a protected tree can still trigger the bylaw, because the rule covers injuring a tree, not only removing it. So the same check-first discipline applies. We confirm whether your specific job needs a permit before we touch the tree."
+        ]
+      },
+      {
+        "heading": "How we handle protected trees on a job",
+        "paragraphs": [
+          "Our lane is pruning and limb removal, owner-led, across <a href='/service-areas/' class='underline text-forest hover:text-forest-dark'>south Ontario</a>. Full tree takedowns are not something we offer yet, so if your tree genuinely has to come out, we will tell you straight and point you to the right process rather than pretend it is our job.",
+          "For the pruning and limb work we do, the routine is the same every time:",
+          "<ul class='list-disc pl-5 space-y-2'><li><strong>We read the bylaw for your property first</strong> and tell you honestly whether the work needs a permit before anything starts.</li><li><strong>We keep cuts clean and within what a protected tree can take,</strong> so the tree stays healthy and you stay compliant.</li><li><strong>We do not touch limbs on or near hydro lines.</strong> That is the utility's territory, every time, no exceptions.</li></ul>",
+          "A Toronto tree removal permit sounds like a wall, and for a genuine removal it is a real process you should not shortcut. But for most of the pruning and limb work a homeowner actually needs, the smarter path is to keep the tree, prune it right, and skip the permit headache entirely. Tell us what is going on with your tree and we will tell you which path you are on."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need a permit to remove a tree on my own property in Toronto?",
+        "a": "Usually yes, if the tree is protected. Toronto's Private Tree By-law (Municipal Code Chapter 813) protects privately owned trees measuring 30 cm or more in diameter at 1.4 m up the trunk. Removing or seriously injuring one without a permit can bring fines from $500 to $100,000 per tree. Smaller trees may be exempt, but measure before you assume."
+      },
+      {
+        "q": "How big does a tree have to be before it is protected?",
+        "a": "As of 2026 the threshold is 30 cm in diameter, measured at 1.4 m above the ground (DBH). The city has discussed lowering it, so anything close to that size should be treated as protected until you confirm the current rule for your property."
+      },
+      {
+        "q": "Do I need a permit just to prune a protected tree?",
+        "a": "Sometimes. The bylaw covers injuring a tree, not only removing it, so heavy pruning of a protected tree can require a permit, while routine, careful pruning generally does not. We confirm whether your specific job crosses that line before we start any cut."
+      },
+      {
+        "q": "What happens if I remove a tree without a permit?",
+        "a": "Under Chapter 813 the penalty starts at $500 per tree and can reach $100,000 per tree. The city acts on complaints, and neighbours do report unpermitted removals. A permit you could have obtained for a modest fee is far cheaper than the fine."
+      },
+      {
+        "q": "Do you handle the removal and the permit for me?",
+        "a": "We focus on pruning and limb removal, not full tree takedowns, so we do not file removal permits. What we do is tell you honestly whether your job needs one, handle the pruning or limb work within the bylaw, and point you to the city's process if the tree genuinely has to come out."
+      }
     ]
-   },
-   {
-    "heading": "How we handle protected trees on an Oakville job",
-    "paragraphs": [
-     "We do two things: <a href='/services/tree-pruning/' class='text-forest underline hover:text-forest-dark'>tree pruning</a> and <a href='/services/limb-removal/' class='text-forest underline hover:text-forest-dark'>limb removal</a>. For most problem trees, one of those is the fix, and it keeps you clear of the removal permit, the fee, and the replanting altogether.",
-     "We do not do full tree removals yet, and we say so up front. If your tree genuinely has to come down, you need the Oakville permit and an arborist report, and we will point you toward who can handle that part rather than pretend it is something we offer.",
-     "What you get from us is a straight read. We will tell you whether pruning solves it, whether you are looking at a permit, and what the job actually involves before any work starts. No deposit to find out, no pressure either way.",
-     "Owner-led, by appointment, evenings and weekends, across Oakville and the wider <a href='/service-areas/' class='text-forest underline hover:text-forest-dark'>south Ontario service area</a>. Send a photo and your address through the <a href='/contact/' class='text-forest underline hover:text-forest-dark'>contact page</a> and we will read your tree against the bylaw and tell you straight whether you actually need an Oakville tree removal permit, or whether a good prune settles the whole thing."
-    ]
-   }
-  ],
-  "faqs": [
-   {
-    "q": "Do I need a permit to remove a small tree in Oakville?",
-    "a": "It depends on the trunk size. Oakville protects any private tree measuring 15 cm or more across the trunk, taken at chest height (137 cm off the ground). Under 15 cm, it is generally not protected and can usually come out without a permit. At or over 15 cm, assume you need one. Measure before you assume, because 15 cm is smaller than most people guess."
-   },
-   {
-    "q": "How much does an Oakville tree removal permit cost?",
-    "a": "It is $65 for the first tree if it measures 15 to 24 cm across, and $425 for each additional tree and any tree larger than 24 cm. Dead, high-risk, ash, and buckthorn trees still need a permit but are exempt from the fee. You may also owe replacement trees, one per 10 cm of healthy trunk removed, with a $300 deposit each. Town fees change, so confirm current rates on oakville.ca."
-   },
-   {
-    "q": "How long does it take to get a tree permit in Oakville?",
-    "a": "A town tree inspector contacts you within five business days to arrange an on-site visit. Start to finish usually runs a couple of weeks, and longer through the busy spring season. If you have a closing or a build depending on the work, plan the wait into your timeline."
-   },
-   {
-    "q": "Do I need a permit to prune a tree in Oakville?",
-    "a": "No. The permit is for removing a protected tree. Pruning, thinning, or shaping a tree you are keeping does not trigger the removal permit, and it is often the cheapest fix for a problem tree. Get in touch and we will tell you whether a prune solves it."
-   },
-   {
-    "q": "What if the tree is dead or dangerous?",
-    "a": "Dead and high-risk trees still need a permit in Oakville, but they are exempt from the application fee. For an immediate hazard, contact the town directly, they run an emergency process. We handle hazardous limbs by appointment, and we never touch anything on or near a hydro line, that is the utility's job, not ours."
-   }
-  ]
- },
- {
-  "slug": "tree-removal-permit-mississauga",
-  "heroImage": { "src": "/photos/accent-branches.webp", "alt": "Tree branches and green leaves against an overcast sky", "width": 1200, "height": 675 },
-  "title": "Mississauga Tree Removal Permit · Tarzan Trimming",
-  "h1": "Mississauga Tree Removal Permit: When You Need One, What It Costs, and When Pruning Skips It",
-  "description": "A plain guide to the Mississauga tree removal permit: the 15 cm rule, what it costs, replacement trees, the fines, and when pruning avoids it entirely.",
-  "focusKeyword": "Mississauga tree removal permit",
-  "publishedAt": "2026-06-19",
-  "updatedAt": "2026-06-21",
-  "readTime": "7 min",
-  "relatedServices": [
-   "tree-pruning",
-   "limb-removal"
-  ],
-  "ctaHeading": "Not sure if your Mississauga tree needs a permit?",
-  "ctaCopy": "Send a photo of the tree and your address through the <a href='/contact/' class='underline text-forest hover:text-forest-dark'>contact page</a>. We will tell you whether the work needs a City of Mississauga permit, whether pruning solves it instead, and what the job involves. No deposit, no pressure.",
-  "intro": "Planning tree work in Mississauga? Before you call anyone, the real first question is not which contractor. It is whether the city will let you touch the tree at all. A <strong>Mississauga tree removal permit</strong> is required for most mature private trees, and taking one down without it can cost you far more than the job itself.\n\nHere is the honest version. The rules, the fees, the catch that trips people up, and the part most homeowners miss. A lot of the time you do not need a removal at all. The right pruning, or one heavy limb taken down, fixes the problem and keeps you onside with the bylaw.\n\nWe run an owner-led shop that does pruning and limb removal across south Ontario, so that is the lens we read these rules through. We are not lawyers, bylaws change, and we confirm the current rule for your specific tree before any cut. But this is the map.",
-  "sections": [
-   {
-    "heading": "When you actually need a permit in Mississauga",
-    "paragraphs": [
-     "Mississauga protects private trees under its Private Tree Protection By-law, By-law 0021-2022. The trigger is size. Any privately owned tree measuring 15 cm (about 6 inches) or more across the trunk is protected, and you need a permit before you remove it.",
-     "That number matters more than people expect. Mississauga's 15 cm line is half of Toronto's 30 cm threshold, so a tree that would be fair game one city over is protected here. If you are coming from our <a href='/blog/tree-removal-permit-toronto/' class='text-forest underline hover:text-forest-dark'>Toronto permit guide</a>, do not carry the 30 cm number across the border. Neighbouring <a href='/blog/tree-removal-permit-oakville/' class='text-forest underline hover:text-forest-dark'>Oakville sets the same 15 cm bar</a>, and stacks a stricter replacement-tree rule on top, so the line is consistent across the western GTA even though Toronto's runs higher. Measure your own tree first.",
-     "If a tree clears 15 cm, the process looks like this:",
-     "<ul class='list-disc pl-5 space-y-2'><li><strong>You need a permit to remove or injure it.</strong> The bylaw does not only cover cutting a tree down. Heavy work that damages a protected tree counts too.</li><li><strong>The city reviews your application.</strong> Routine residential removals do not always need a full arborist report, but the city decides what it needs to see.</li><li><strong>A replacement condition usually applies.</strong> Take one down and you plant one or more back.</li><li><strong>It takes time.</strong> Budget several weeks, not several days.</li></ul>",
-     "Quick check before you book anyone: wrap a tape measure around the trunk. If the diameter is anywhere near 15 cm, assume it is protected until the city tells you otherwise. Guessing low is how people end up on the wrong side of a fine."
-    ]
-   },
-   {
-    "heading": "What the permit costs you, in money and in time",
-    "paragraphs": [
-     "There are two costs here, and both sit on top of the tree work itself. There is the city application fee, and there is your time waiting on the review.",
-     "The fees are public. The City of Mississauga charges <strong>$399.77 (including HST) for the first tree</strong> on an application, and <strong>$139.72 (including HST) for each additional healthy tree</strong>. Those are the 2026 figures off the city's own permit page, and they tend to nudge up each year, so confirm the current number when you apply.",
-     "<strong>One thing in your favour:</strong> if the tree is genuinely dead or dying, there is no application fee. You still have to apply and let the city confirm it, but you are not paying the fee for a tree that is already gone.",
-     "Then there is the replacement rule. The city generally wants <strong>one replacement tree for every 15 cm of trunk diameter you remove</strong>, planted as a native, shade-bearing species (at least 1.8 m tall for an evergreen, or at least 6 cm in diameter for a deciduous tree). On a big mature tree that can mean several new trees on your lot, so factor that in before you commit to a removal.",
-     "On time: the city gives itself <strong>30 business days to review a complete application</strong>. That is the floor, not a promise. In busy season, or if the file comes back needing more detail, it stretches. If you are hoping to have a tree down by next weekend, the permit math usually does not work."
-    ]
-   },
-   {
-    "heading": "What happens if you skip it",
-    "paragraphs": [
-     "Removing a protected tree without a permit is an offence under By-law 0021-2022. The city can lay charges, and the penalties run into the thousands of dollars per tree, on top of an order to replant what you took down. The fine dwarfs the permit fee every time.",
-     "And it is not a quiet rule. A fresh stump on a mature front-yard tree is obvious from the street, neighbours do report it, and the city does follow up. The contractor who tells you not to bother with the permit is the contractor leaving you holding the charge, because the property owner is the one the bylaw holds responsible, not the crew that did the cutting.",
-     "The honest math is simple. The permit and the wait are an annoyance. The fine plus forced replanting is a real financial hit. If a tree genuinely has to come down, do it through the process."
-    ]
-   },
-   {
-    "heading": "The part most homeowners miss: you might not need a removal at all",
-    "paragraphs": [
-     "Here is the thing the search query hides. People look up the Mississauga tree removal permit because they have a problem they want gone. A limb hanging over the roof. A tree that has outgrown its corner. Shade swallowing the back garden. Removal is one way to solve that. It is often the wrong one.",
-     "A lot of those problems are pruning problems, not removal problems. A crown reduction brings a too-big tree back into proportion. Clearing a few limbs opens up light and gets weight off the house. Take down the one bad limb over the driveway and the hazard is gone. The tree stays, the bylaw stays happy, and in many cases there is no removal permit to chase at all. If you do prune instead, doing it in the right season helps the tree heal cleanly, which our guide on <a href='/guide/when-to-prune-trees-southern-ontario/' class='underline text-forest hover:text-forest-dark'>when to prune trees in southern Ontario</a> walks through.",
-     "<strong>One honest caveat, because the bylaw is specific:</strong> By-law 0021-2022 covers injuring a protected tree, not just removing it. Light, routine maintenance pruning on a healthy tree is normally fine, but significant cuts on a 15 cm tree can still need sign-off. That is exactly the kind of thing we check for your specific tree before any work starts, so you are never guessing.",
-     "So before you budget for a removal and a permit, it is worth asking whether the actual goal is a smaller, safer, tidier tree. Most of the time, it is."
-    ]
-   },
-   {
-    "heading": "How we handle protected trees on a Mississauga job",
-    "paragraphs": [
-     "We do two things: <a href='/services/tree-pruning/' class='text-forest underline hover:text-forest-dark'>tree pruning</a> and <a href='/services/limb-removal/' class='text-forest underline hover:text-forest-dark'>limb removal</a>. Full tree removal is not something we offer yet, so we are not the crew that talks you into taking a tree down. If anything, we are the opposite.",
-     "When we look at a job, the first step is the tape measure. We tell you whether your tree is over the 15 cm line, whether the work you want counts as injuring a protected tree, and whether a permit is in play. If pruning or a single limb removal solves the problem and keeps you clear of the permit process, that is what we recommend.",
-     "If the tree genuinely needs to come out, we will say so plainly and point you to the City of Mississauga permit process and a removal company. We would rather lose that job than put you in a bad spot with the bylaw.",
-     "If you want a straight read on whether your work needs a Mississauga tree removal permit, or whether pruning quietly solves the whole thing, <a href='/contact/' class='text-forest underline hover:text-forest-dark'>get in touch</a>. We will tell you what we see, no pressure either way."
-    ]
-   }
-  ],
-  "faqs": [
-   {
-    "q": "Do I need a permit to remove a tree on my own property in Mississauga?",
-    "a": "Yes, if the tree is 15 cm (about 6 inches) or more across the trunk. Mississauga protects private trees of that size under By-law 0021-2022, so you need a permit before removing one. A tree under 15 cm can generally be removed without a permit, but measure first, because the line is lower than in many nearby cities."
-   },
-   {
-    "q": "How is the tree measured to see if it is protected?",
-    "a": "By the diameter across the trunk. The protected threshold in Mississauga is 15 cm (6 inches) or more. If your trunk is anywhere close to that, treat it as protected until the city confirms otherwise, and wrap a tape measure around it before you assume it is exempt."
-   },
-   {
-    "q": "Do I need a permit just to prune a protected tree?",
-    "a": "Routine maintenance pruning on a healthy tree is normally fine. But the Mississauga bylaw covers injuring a protected tree, not only removing it, so heavy or structural cuts on a 15 cm tree can need sign-off. We check the rule for your specific tree before any work, so you are not guessing about it."
-   },
-   {
-    "q": "What does a Mississauga tree removal permit cost?",
-    "a": "As of 2026 the city charges $399.77 including HST for the first tree on an application, and $139.72 including HST for each additional healthy tree. There is no fee if the tree is dead or dying. A replacement-tree condition usually applies too, roughly one new tree for every 15 cm of diameter removed. Confirm the current fee when you apply, since it changes."
-   },
-   {
-    "q": "Do you remove trees and handle the permit for me?",
-    "a": "We do pruning and limb removal, not full tree removal, so we do not file removal permits. What we do is tell you whether your job even needs a removal at all. Often the right pruning or a single limb removal solves the problem and keeps you clear of the permit process. If you genuinely need a tree gone, we will point you to the city process and a removal company."
-   }
-  ]
- },
- {
-  "slug": "tree-removal-permit-toronto",
-  "heroImage": { "src": "/photos/accent-forest.webp", "alt": "Forest canopy of mature hardwood trees", "width": 1200, "height": 799 },
-  "title": "Toronto Tree Removal Permit · Tarzan Trimming",
-  "h1": "Toronto Tree Removal Permit: The Rules, the Fines, and When Pruning Is the Smarter Fix",
-  "description": "A plain guide to the Toronto tree removal permit rules: when you need one, what it costs, the fines for skipping it, and why pruning often beats removal.",
-  "focusKeyword": "Toronto tree removal permit",
-  "publishedAt": "2026-06-18",
-  "updatedAt": "2026-06-21",
-  "readTime": "7 min",
-  "relatedServices": [
-   "tree-pruning",
-   "limb-removal"
-  ],
-  "ctaHeading": "Not sure if your job needs a permit?",
-  "ctaCopy": "Send a photo of the tree and your address through the <a href='/contact/' class='underline text-forest hover:text-forest-dark'>contact page</a>. We will tell you whether the work needs a City of Toronto permit, whether pruning solves it instead, and what the job involves. No deposit, no pressure.",
-  "intro": "If you are planning tree work in Toronto, the first question is not which contractor to call. It is whether the city will even let you touch the tree. A <strong>Toronto tree removal permit</strong> is mandatory for most mature private trees, and skipping it can cost you far more than the job itself.\n\nHere is the honest version of how the rules work, what they cost you in time and money, and the part most homeowners miss. A lot of the time you do not need a removal at all. The right pruning, or a single heavy limb taken down, solves the problem and keeps you onside with the bylaw.\n\nWe are an owner-led shop that does pruning and limb removal across south Ontario, so that is the lens we read these rules through. We are not lawyers, and bylaws change, so confirm the current rule for your property before any cut. But this is the map.",
-  "sections": [
-   {
-    "heading": "When you actually need a permit",
-    "paragraphs": [
-     "Toronto protects private trees under its Private Tree By-law, Municipal Code Chapter 813. The trigger is size. As of 2026, any privately owned tree measuring 30 cm or more in diameter, taken at 1.4 m up the trunk (what arborists call DBH, or diameter at breast height), is protected.",
-     "If a tree clears that threshold, the process looks like this:",
-     "<ul class='list-disc pl-5 space-y-2'><li><strong>You need a permit to remove or seriously injure it.</strong> Not just removal, the bylaw covers injuring a protected tree too.</li><li><strong>The application includes an arborist report</strong> describing the tree's size, species, condition, and the reason for the work.</li><li><strong>The city reviews it,</strong> roughly 30 business days, sometimes longer.</li><li><strong>A permit often comes with a replanting condition.</strong> You take one down, you put one or more back.</li></ul>",
-     "Worth knowing: the 30 cm threshold has been under review, with proposals to protect smaller trees. The safe move is to measure your tree and assume anything close to 30 cm across is protected until the city tells you otherwise. A Toronto tree removal permit is not a formality you can skip on a guess about your tree's size. And if your lot sits near a municipal line, the number changes the moment you cross it. Both <a href='/blog/tree-removal-permit-oakville/' class='underline text-forest hover:text-forest-dark'>Oakville</a> and <a href='/blog/tree-removal-permit-mississauga/' class='underline text-forest hover:text-forest-dark'>Mississauga</a> protect trees at 15 cm, half of Toronto's threshold, so a tree that is fair game on one side of the border can be fully protected on the other."
-    ]
-   },
-   {
-    "heading": "What the permit costs you, in money and in time",
-    "paragraphs": [
-     "There are two costs here, and both sit on top of the tree work itself. There is the city application fee, and there is the arborist report that has to go with the application. Neither is huge on its own, but they are real and they are separate line items.",
-     "Then there is time. Budget several weeks. The roughly 30 business day review is the floor, not a promise, and it stretches in busy season or if the city comes back asking for more detail.",
-     "<strong>One exception worth knowing:</strong> if a tree is an immediate hazard, there is a faster path. The city treats actively dangerous trees differently from a routine removal. That is the exception, not the everyday rule, so do not count on it for a tree that is simply in the way.",
-     "This is why timing matters. If you already know a tree needs attention, start early rather than the week you want the work done. And if the job turns out to be pruning rather than removal, our guide on <a href='/guide/when-to-prune-trees-southern-ontario/' class='underline text-forest hover:text-forest-dark'>when to prune trees in southern Ontario</a> walks through the seasonal timing."
-    ]
-   },
-   {
-    "heading": "What happens if you skip it",
-    "paragraphs": [
-     "The fines are the part people underestimate. Under Chapter 813, the penalty for removing or injuring a protected tree without a permit starts at $500 per tree and can run up to $100,000 per tree.",
-     "Read that again: <strong>per tree.</strong> Two trees, double the exposure. And the city does act on complaints. Neighbours notice when a mature tree disappears over a weekend, and they report it.",
-     "So the math is simple. A removal you could have permitted for a modest fee turns into a five-figure problem the moment you cut without one. It is not a gamble worth taking, and no honest contractor will tell you otherwise."
-    ]
-   },
-   {
-    "heading": "Where the rules get stricter: ravines, heritage, and city trees",
-    "paragraphs": [
-     "Three situations tighten things beyond the standard private-tree rule:",
-     "<ul class='list-disc pl-5 space-y-2'><li><strong>Ravine and natural-feature land.</strong> If your property sits in or near a protected ravine, a separate set of rules applies on top of the tree bylaw. The protections there are stronger.</li><li><strong>City-owned trees.</strong> The tree on the boulevard or right at the curb is often the city's, not yours. You cannot touch it, and neither can we. That is city forestry's call.</li><li><strong>Heritage properties and some development sites</strong> carry extra conditions of their own.</li></ul>",
-     "When you are unsure who owns the tree, or which set of rules stacks on top of which, that is a question to settle before anyone climbs. Guessing wrong on a ravine lot or a city tree is exactly how a small job becomes a fine."
-    ]
-   },
-   {
-    "heading": "The part most homeowners miss: you might not need a removal at all",
-    "paragraphs": [
-     "Here is what we see on a lot of quote visits. The homeowner is braced for a full removal, and the permit headache that comes with it, and the actual problem is one limb hanging over the roof, or a canopy that has gotten too dense and heavy on one side.",
-     "<strong>Pruning a protected tree the right way, within the bylaw, often solves the problem with no removal permit at all.</strong> A healthy mature tree is an asset the city is trying to keep for good reasons, and keeping it, well pruned, is usually cheaper and faster than taking it down.",
-     "Worth asking before you commit to a removal: is the whole tree the problem, or is it a couple of limbs? More often than not, it is the limbs. That is exactly the work we do, whether it is <a href='/services/tree-pruning/' class='underline text-forest hover:text-forest-dark'>careful pruning</a> to bring a canopy back into shape or <a href='/services/limb-removal/' class='underline text-forest hover:text-forest-dark'>taking down a single heavy limb</a> that is the real hazard.",
-     "One honest caveat: heavy pruning of a protected tree can still trigger the bylaw, because the rule covers injuring a tree, not only removing it. So the same check-first discipline applies. We confirm whether your specific job needs a permit before we touch the tree."
-    ]
-   },
-   {
-    "heading": "How we handle protected trees on a job",
-    "paragraphs": [
-     "Our lane is pruning and limb removal, owner-led, across <a href='/service-areas/' class='underline text-forest hover:text-forest-dark'>south Ontario</a>. Full tree takedowns are not something we offer yet, so if your tree genuinely has to come out, we will tell you straight and point you to the right process rather than pretend it is our job.",
-     "For the pruning and limb work we do, the routine is the same every time:",
-     "<ul class='list-disc pl-5 space-y-2'><li><strong>We read the bylaw for your property first</strong> and tell you honestly whether the work needs a permit before anything starts.</li><li><strong>We keep cuts clean and within what a protected tree can take,</strong> so the tree stays healthy and you stay compliant.</li><li><strong>We do not touch limbs on or near hydro lines.</strong> That is the utility's territory, every time, no exceptions.</li></ul>",
-     "A Toronto tree removal permit sounds like a wall, and for a genuine removal it is a real process you should not shortcut. But for most of the pruning and limb work a homeowner actually needs, the smarter path is to keep the tree, prune it right, and skip the permit headache entirely. Tell us what is going on with your tree and we will tell you which path you are on."
-    ]
-   }
-  ],
-  "faqs": [
-   {
-    "q": "Do I need a permit to remove a tree on my own property in Toronto?",
-    "a": "Usually yes, if the tree is protected. Toronto's Private Tree By-law (Municipal Code Chapter 813) protects privately owned trees measuring 30 cm or more in diameter at 1.4 m up the trunk. Removing or seriously injuring one without a permit can bring fines from $500 to $100,000 per tree. Smaller trees may be exempt, but measure before you assume."
-   },
-   {
-    "q": "How big does a tree have to be before it is protected?",
-    "a": "As of 2026 the threshold is 30 cm in diameter, measured at 1.4 m above the ground (DBH). The city has discussed lowering it, so anything close to that size should be treated as protected until you confirm the current rule for your property."
-   },
-   {
-    "q": "Do I need a permit just to prune a protected tree?",
-    "a": "Sometimes. The bylaw covers injuring a tree, not only removing it, so heavy pruning of a protected tree can require a permit, while routine, careful pruning generally does not. We confirm whether your specific job crosses that line before we start any cut."
-   },
-   {
-    "q": "What happens if I remove a tree without a permit?",
-    "a": "Under Chapter 813 the penalty starts at $500 per tree and can reach $100,000 per tree. The city acts on complaints, and neighbours do report unpermitted removals. A permit you could have obtained for a modest fee is far cheaper than the fine."
-   },
-   {
-    "q": "Do you handle the removal and the permit for me?",
-    "a": "We focus on pruning and limb removal, not full tree takedowns, so we do not file removal permits. What we do is tell you honestly whether your job needs one, handle the pruning or limb work within the bylaw, and point you to the city's process if the tree genuinely has to come out."
-   }
-  ]
- }
+  }
 ]
