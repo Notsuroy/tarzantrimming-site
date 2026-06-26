@@ -382,10 +382,47 @@ anchored on the draft date below.
   before any external campaign points at this post.** Next per-city permit
   candidate per Gap 1: Hamilton or Burlington, staggered again; watch the 3/7d
   auto velocity cap (3 GTA permit posts now live on a ~23-day domain).
+- **[x] approve [x] drafted (auto), Burlington tree removal permit explainer.**
+  Focus keyword `Burlington tree removal permit` (50/mo focus, LOW comp index 5,
+  bid $1.89 to $6.74, Canada). Drafted + auto-published 2026-06-25 T22:08 under
+  P-PIPELINE-AUTO (4th Gap-1 city post; velocity cap cleared when the 06-18
+  Toronto post aged out of the rolling-7d window at 21:24). Slug
+  `/blog/tree-removal-permit-burlington/`. Draft commit `5586cd3`. Phase 0
+  qualifier = pre-validated GO WITH MODIFIER on 2026-06-24 (DfS, $0 this run).
+  Phase 4 on-page audit = 17 PASS / 1 WARN (shared 457KB hero, pre-existing
+  across all 4 permit posts) / 0 FAIL. 1,365 body words. **Honesty: all bylaw
+  facts primary-source verified on burlington.ca 2026-06-25 and attributed to
+  the Private Tree By-law (By-law 040-2022, in effect April 2022). The
+  pre-validation brief's assumed "By-law 02-2020 / 15 cm" was WRONG — the
+  draft-time verify gate caught it. Correct facts: 20 cm DBH threshold measured
+  at 1.37 m, and the bylaw ONLY applies inside Burlington's urban boundary
+  (rural/Greenbelt land north of the line is exempt — the unique angle this post
+  has that the other 3 do not); $54 + HST application fee; size-based
+  replacement ratios 2:1 (20-35 cm) / 3:1 (36-74 cm) / 4:1 (75 cm+); exemptions
+  for dead, terminal, high-risk trees and pruning up to a third of the live
+  crown; heritage + species-at-risk protected at any size; enforcement via the
+  City's administrative monetary penalty system.** Funnels pruning and
+  limb-removal only, states full removal not yet offered, no
+  pricing-as-our-rate / credential / insurance / 24-7 claim. Cross-links the
+  Toronto, Mississauga, and Oakville permit posts (the DBH-threshold comparison
+  is the hook); reciprocal Burlington links added back into all 3 in the same
+  commit (4-city cluster is now a full mesh). **Fee + ratios are time-sensitive
+  (the City revises them), re-verify against burlington.ca before any external
+  campaign points at this post.** Next per-city permit candidate per Gap 1:
+  Hamilton (10/mo, held), or a fresh higher-volume city once GSC verification
+  lands. At 4 permit posts on a ~30-day domain, the 4th is the natural pause
+  point — do not auto-draft a 5th Gap-1 city without re-checking demand.
 
 ---
 
 ## On-deck: next Gap-1 per-city permit post (cron pre-validated 2026-06-24)
+
+> **UPDATE 2026-06-25 T22:08:** Burlington DRAFTED + auto-published (commit
+> `5586cd3`, see the auto-approved section above). The on-deck question below is
+> RESOLVED. Hamilton (10/mo) remains held and deprioritized; do not re-spend DfS
+> on it. Treat the 4-post permit cluster as complete for now; the next Gap-1
+> per-city post should wait for GSC impression data to pick a city with real
+> demand rather than spending blind on a 5th low-volume municipality.
 
 The 2026-06-24 T19:08 cron run resolved the open "Hamilton or Burlington"
 question for the 4th Gap-1 permit post by running the mandatory Phase 0
