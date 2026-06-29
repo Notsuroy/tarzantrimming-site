@@ -36,6 +36,30 @@ const seo = seoMap[service.slug] ?? {
   metaDescription: service.shortDescription,
 };
 
+// Per-service hero photo. The service pages (the money pages) previously
+// carried no in-content imagery while every other page on the site has
+// photos, which left the highest-intent pages visually thin and gave Google
+// no image signal for them. These are existing licensed work photos already
+// shipped in public/photos, mapped to the matching service. Decorative only:
+// no claim about a specific job, certification, or guaranteed outcome.
+// width/height match the intrinsic 800x800 so the browser reserves the box
+// (CLS-safe), and object-cover crops to the fixed display height.
+const heroMap: Record<string, { src: string; alt: string; width: number; height: number }> = {
+  'tree-pruning': {
+    src: '/photos/work-climb.webp',
+    alt: 'Owner-led arborist roped into a mature tree making selective pruning cuts in south Ontario',
+    width: 800,
+    height: 800,
+  },
+  'limb-removal': {
+    src: '/photos/work-limb.webp',
+    alt: 'Arborist lowering a broken limb in controlled roped sections over a south Ontario yard',
+    width: 800,
+    height: 800,
+  },
+};
+const hero = heroMap[service.slug] ?? null;
+
 const title = `${service.name} in South Ontario · ${site.brand.name}`;
 
 // Other offered services for cross-linking.
@@ -179,6 +203,20 @@ const faqLd = faqs.length
         <p class="mt-4 text-bark font-medium text-lg">{service.tagline}</p>
         <p class="mt-4 text-lg text-ink-muted leading-relaxed">{service.shortDescription}</p>
       </div>
+
+      {hero && (
+        <div class="mb-12">
+          <img
+            src={hero.src}
+            alt={hero.alt}
+            width={hero.width}
+            height={hero.height}
+            loading="eager"
+            decoding="async"
+            class="w-full h-64 md:h-96 object-cover rounded-2xl border border-moss/40"
+          />
+        </div>
+      )}
 
       <div class="grid md:grid-cols-3 gap-10">
         <div class="md:col-span-2 space-y-10 text-ink leading-relaxed">
