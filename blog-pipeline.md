@@ -149,7 +149,7 @@ removal. Candidates 3 to 5 follow.
 
 ## Candidate 3: Why you should not prune oak trees in summer (Ontario)
 
-- **Status:** [ ] approve  [ ] skip  [ ] adjust
+- **Status:** [x] approve (auto)  [x] drafted
 - **Focus keyword:** `when to prune oak trees Ontario`
 - **Tier:** informational, niche-authority, feeds the pruning service
 - **Content type:** informational. Builds expertise signal and links back to
@@ -177,7 +177,23 @@ removal. Candidates 3 to 5 follow.
   made in the risk window" reflects what he actually does. This is the
   highest-care candidate: do not assert a specific bylaw or a guaranteed
   disease outcome, keep it to accepted arborist practice.
-- **Notes:**
+- **Notes:** P-PIPELINE-AUTO drafted + published 2026-06-30 (cron T13:08). Focus
+  keyword shipped as `when to prune oak trees in Ontario` (the seeded
+  `when to prune oak trees Ontario` exact phrase = NULL Canadian volume; the
+  measured cluster is "oak wilt ontario" 90/mo, "pruning oak trees" 70/mo,
+  "when to prune oak trees" 50/mo, all LOW comp). Phase 0 = GO (no AI Overview,
+  blog-dominated SERP, small ON arborist blogs safetree.ca + toarborist.com
+  already top-6 = winnable; geo gap, savatree #9 is Texas). Phase 4 audit:
+  16-17 PASS / 2 WARN (new-post inbound links; Org byline on borderline topic)
+  / 0 FAIL. 1,205 body / 1,478 with FAQs, 0 em/en, 0 24/7. All oak-wilt facts
+  sourced from Invasive Species Centre + CFIA (primary). Written claim-free per
+  hardened tarzan G5: general arboriculture only, funnels existing pruning +
+  limb-removal services, no price/cert/insurance/availability claim.
+- **Draft commit:** `cf1fbf2` — live at
+  https://tarzantrimming.ca/blog/when-to-prune-oak-trees-ontario/. FRIEND-VERIFY:
+  confirm Nathan is comfortable with the oak-wilt dormant-season timing as
+  standard guidance and the "seal hazard cuts made in the risk window" line
+  (flagged to MORNING_TASKS friend-verify queue).
 
 ---
 
