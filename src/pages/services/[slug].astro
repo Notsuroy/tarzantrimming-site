@@ -92,6 +92,7 @@ const permitGuides = [
   { city: 'Toronto', href: '/blog/tree-removal-permit-toronto/' },
   { city: 'Mississauga', href: '/blog/tree-removal-permit-mississauga/' },
   { city: 'Oakville', href: '/blog/tree-removal-permit-oakville/' },
+  { city: 'Burlington', href: '/blog/tree-removal-permit-burlington/' },
 ];
 
 const jsonLd = {
@@ -283,10 +284,7 @@ const faqLd = faqs.length
               should come out, it pays to know your city's bylaw before you start. We have written
               plain-language guides for
               {permitGuides.map((g, i) => (
-                <>
-                  {i > 0 && (i === permitGuides.length - 1 ? ', and ' : ', ')}
-                  <a href={g.href} class="text-forest underline hover:text-forest-dark">{g.city}</a>
-                </>
+                <>{i > 0 && (i === permitGuides.length - 1 ? ', and ' : ', ')}<a href={g.href} class="text-forest underline hover:text-forest-dark">{g.city}</a></>
               ))}.
             </p>
           </div>
