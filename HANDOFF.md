@@ -70,28 +70,50 @@ JSON-LD `LocalBusiness` + `FAQPage` schema on homepage (FAQPage built from the 8
 - `Footer` (3-column: brand, contact, service area)
 - `PhoneFloat` (floating mobile-friendly call CTA; replaces vicjimassage's `WhatsAppFloat`)
 
-## TODOs before launch (blocking on friend's input)
+## Open items needing Nathan's input (site is LIVE; these are post-launch)
 
-1. **Phone number** · currently using TOA's `(647) 788-8733`. Confirm friend wants to keep it or use a different number.
+> **Section corrected 2026-07-16 (T11:08 cron P0).** This was titled "TODOs
+> before launch" and still described pre-launch state. The site went LIVE
+> 2026-06-14. Items 1, 8, and 9 below were verified DONE first-hand against
+> the live site and `site.json` and are struck through; the remaining items
+> are genuinely still open and gated on Nathan.
+
+1. ~~**Phone number**~~ · **DONE 2026-06-13.** Wired to Nathan's cell
+   **(647) 216-1874** (`site.json` `phoneE164: +16472161874`, verified live
+   in the sitewide `tel:` links 2026-07-16). The old text here still named
+   TOA's `(647) 788-8733`, which was never the published number on this site.
+   *Residual ask:* Suroy/Nathan confirm publishing Nathan's personal cell is
+   intended (it drops the privacy buffer TOA's tracked line provided).
 2. **Service cities** · currently inheriting TOA's 7-city list. Confirm with friend.
-3. **Pricing strategy** · `services.json` is set to `quote-only` (no public ranges). Friend can switch to `public-ranges` for stronger CTR if comfortable committing to ranges.
+3. **Pricing strategy** · `services.json` is set to `quote-only` (no public ranges). Friend can switch to `public-ranges` for stronger CTR if comfortable committing to ranges. **This is also the blocker on blog Candidate 4 (tree pruning cost), the only pipeline candidate with real measured demand.** See `blog-pipeline.md` Phase 0 + MORNING_TASKS.
 4. **Hours** · currently labeled "By appointment. Evenings and weekends." Confirm exact availability given Davey day-job schedule.
 5. **Tagline** · placeholder is `"Tree pruning and limb removal across south Ontario."` Friend can swap to his own one-liner.
 6. **Insurance claim** · FAQ states "carries commercial general liability insurance". Confirm before publishing. If not yet bound, change the FAQ answer to "Insurance is being bound; certificate available before any job".
 7. **Day-job employer** · copy now says "commercial tree crews" generically. If friend confirms he actually works at a specific named company AND is comfortable naming it, swap "commercial crews" / "a commercial crew" back to the real name. Initial 2026-05-29 draft had Davey Tree by name; removed when Suroy could not confirm whether the friend works there or it was second-hand info.
-8. **Owner photo** · `MiniAbout` has a placeholder block where the owner photo goes. Friend to send.
-9. **Job photos** · `PhotoGallery` has 6 placeholder cards. Friend to send before/after pruning shots.
+8. ~~**Owner photo**~~ · **Placeholder resolved 2026-06-14.** `MiniAbout` now
+   renders `about-trees.webp` (licensed stock, decorative, no person). Still
+   worth swapping for a real Nathan portrait when he sends one, but the
+   "[Owner photo coming]" block is gone.
+9. ~~**Job photos**~~ · **Placeholder resolved 2026-06-14.** `PhotoGallery`
+   now shows 3 honest "the kind of work we do" stock cards, explicitly not
+   presented as Nathan's jobs. Replace with real before/after shots as the
+   first projects wrap.
 10. *(Reviews section removed entirely in v1 since friend has no reviews yet. To re-add later: copy `ReviewsWall.astro` and `reviews.json` back from `vicjimassage-site` reference, simplify, and re-import in `pages/index.astro`. Honest path: only re-add when there are at least 3 real customer reviews.)*
 
 ## TODOs Suroy needs to do (infrastructure)
 
-1. Create GitHub repo (`Notsuroy/tarzantrimming-site`?). Push initial commit.
-2. Cloudflare: add `tarzantrimming.ca` zone, point NS at Cloudflare, create Pages project, connect to GitHub repo.
-3. DNS records: apex + `www` to Pages, MX records for email forwarding (or Migadu mailbox).
-4. Email: set up `info@tarzantrimming.ca` (Cloudflare Email Routing to friend's inbox, OR Migadu mailbox with SPF/DKIM if friend wants real outbound).
-5. Update `src/data/site.json` `contact.email` from `TODO_EMAIL` to the real address.
-6. Google Search Console verification (DNS TXT or HTML file).
-7. Submit sitemap to GSC and Bing once `tarzantrimming.ca/sitemap.xml` exists.
+> **Section corrected 2026-07-16 (T11:08 cron P0)** against first-hand
+> checks: git remote, live apex, `site.json`, and a `google-site-verification`
+> grep. Items 1 to 5 were already DONE and are struck through. **Item 6 (GSC
+> verification) is the one live blocker and it is load-bearing** (see below).
+
+1. ~~Create GitHub repo. Push initial commit.~~ **DONE** · `Notsuroy/tarzantrimming-site`, origin/main tracking.
+2. ~~Cloudflare: zone, NS, Pages project.~~ **DONE** · zone `8dccf00d34ed0f68f554bc24a66a54ad`, site live. *(Pages project is NOT GitHub-linked; deploys go through the wrangler direct-upload fallback. See Architecture note.)*
+3. ~~DNS records: apex + `www` to Pages, MX.~~ **DONE** · apex live, Migadu MX/SPF/DKIM/DMARC in place.
+4. ~~Email setup.~~ **DONE 2026-06-14** · Migadu mailbox `nathan@tarzantrimming.ca` live end-to-end.
+5. ~~Update `site.json` `contact.email` from `TODO_EMAIL`.~~ **DONE** · set to `nathan@tarzantrimming.ca`; no `TODO_EMAIL` placeholder remains in `src/`.
+6. **Google Search Console verification (DNS TXT or HTML file). STILL OPEN, and this is the site's binding content blocker.** Verified 2026-07-16: no `google-site-verification` token in `src/` or `public/`, and `seo_query_daily_kpi` returns **0 rows** for `tarzantrimming.ca`. The GSC daily pull (`uyBDgQqkyq0WNqOz`) is healthy and pulling the appliance sites fine, so this domain is simply not verified. **Consequence:** the whole GSC-fed half of the cron cascade (P-EXPAND, P-REFRESH, and the P-PIPELINE-AUTO self-feed) is structurally dead on this site, which is why run after run reports NO-SHIP. Verifying the domain is the single highest-leverage unlock here. Already tracked in `rank-and-rent/MORNING_TASKS.md`.
+7. Submit sitemap to GSC and Bing. **Blocked on 6.** (`https://tarzantrimming.ca/sitemap.xml` exists and returns 200.)
 8. Eventually: 301 redirect `theontarioarborist.ca` → `tarzantrimming.ca` once new domain has authority (~6 months out).
 
 ## Things this site does NOT have (yet) vs vicjimassage
@@ -445,3 +467,31 @@ Site pick: STEP-2 ACTIVE `[auto]`/24h portfolio-min via first-hand git log = for
 **First-hand dry-confirm (not parroted):** (1) git HEAD 64e1f58 = origin/main after fetch, tree clean, 0 src drift. (2) tarzan GSC re-confirmed BLIND live — Supabase SHI REST `seo_query_daily_kpi?site_domain=eq.tarzantrimming.ca` = 0 rows (root blocker MORNING_TASKS L33 unchanged); appliance pull alive but frozen (sudbury + fortmac MAX metric_date both 07-11, 3d GSC lag, unchanged since prior runs; next advance ~03:00 07-15). (3) P-PIPELINE human queue = 0 undrafted `[x] approve` (grep: C1/C2/C4/C5 `[ ] approve`, C3 oak + 4-city permit cluster all `[x] drafted`). (4) P-PIPELINE-AUTO no eligible candidate — seeded pool exhausted per 06-15 Phase-0 (C1 dup-of-guide G6, C2/C5 durable NULL-Canada-vol, C3 gov-wall+guide-covered, C4 real-demand-but-pricing→Step-E on file), competitor-gap Gap-1 permit cluster HARD-STOPPED at 4 cities pending GSC demand (Hamilton held, "do not re-spend DfS"), GSC self-feed structurally empty (blind domain). (5) P-EXPAND/P-REFRESH GSC-dead (0 rows). P1 Nathan/Suroy-gated; P2 no claim-free structural gap + no measured demand; P3/P4 saturated; P5 competitor-gaps fresh.
 
 Honest NO-SHIP. Binding constraint = tarzan GSC verification (MORNING_TASKS L33) + Nathan C4 pricing/launch decisions + off-page authority (GBP/operator, L20) the cron cannot build — ALL already on file → no new MORNING_TASKS (no-dup). No lastmod-bump / speculative-seed (forbidden per bump-lastupdated/faq-churn/no-ship-subset). Read-only, $0 DfS, doc-only. Anchor: tarzan dry T19:08 07-14; next content lever = GSC advance past 07-11 (~03:00 07-15) or Nathan decision.
+
+---
+
+### 2026-07-16 T11:08 cron P0 + P3-doc: health audit FULLY CLEAN; stale TODO sections corrected against reality (SHIPPED, doc-only)
+
+**Site pick:** STEP-2 ACTIVE `[auto]`/24h first-hand `git log` = **tarzan 0** (fewest) < sudbury 1 < fortmac 2 (3 FROZEN excluded). Last tarzan touch T19:08 07-14 (~40h), HR9 4h cooldown clear.
+
+**P0 health audit (genuinely due, ~48h since T11:08 07-14): FULLY CLEAN, no fix needed.**
+- **(a) URL sweep:** all **14/14** sitemap URLs HTTP 200 via Chrome UA, spaced 1.2s (per `curl-000`). Sizes 12.4KB to 39.6KB, zero THIN/500 (no CF unbuilt-home fallback, no deploy-state break). Note: tarzan has no `scripts/indexnow_submit.py`, so the URL list was taken first-hand from the live `sitemap.xml` rather than `ALL_PAGES`.
+- **Dash sweep:** the `·` separator in every `<title>` was verified by codepoint as **U+00B7 middle dot**, NOT a banned dash (Git Bash console renders it as a replacement char, which is a false alarm worth not re-chasing). Homepage em-dash U+2014 count 0, en-dash U+2013 count 0.
+- **(c) Markers:** theme-color `#2D4A36` matches brand; `/favicon.svg` 200; `/robots.txt` 200; `/sitemap.xml` 200; H1 "Honest tree work, owner-led, across south Ontario." carries niche + region; banned-claim scan (24/7, "24 hours", "always available", "round the clock") = **0 hits**. Phone `tel:+16472161874` consistent live vs `site.json`. `/quote/` form checks N/A (v1 is phone/text funnel by design).
+- **(d) GSC pipeline:** `[SEO] Daily GSC KPI` (`uyBDgQqkyq0WNqOz`) **active=True**, last 2 executions **success** (72369 @ 07-16T01:00Z, 71227 @ 07-15T01:00Z). Appliance freshness MAX `metric_date` = **07-13** for both sudbury + fortmac = normal 3d GSC lag, inside the 4-day rule, NOT stale. **tarzan `seo_query_daily_kpi` = 0 rows (GSC-blind, root blocker unchanged).**
+- **(e) Cannibalization:** N/A on this site (GSC-blind, no query data to scan).
+
+**Cascade walked first-hand, all dry:** P-EXPAND + P-REFRESH GSC-dead (0 rows). P-PIPELINE human queue **0 undrafted `[x] approve`** (grepped: C1/C2/C4/C5 `[ ] approve`; C3 oak + the 4-city permit cluster all `[x] drafted`). P-PIPELINE-AUTO no eligible candidate (seeded pool exhausted per the 06-15 Phase-0 record: C1 dup-of-guide G6, C2/C5 durable NULL-Canada-volume, C3 gov-wall + guide-covered, C4 real-demand-but-pricing routed to Step E; Gap-1 permit cluster HARD-STOPPED at 4 cities pending GSC demand, "do not re-spend DfS" on Hamilton; self-feed structurally empty on a blind domain). P1 Nathan/Suroy-gated. P2 no measured demand + no claim-free structural gap.
+
+**P3 on-page audit run fresh (not parroted), site is genuinely saturated:** all 14 live pages measured for title length, meta-desc length, H1 count, and heading-skip. **Titles 23 to 60 chars (0 over 60). Meta-descs 136 to 153 chars (0 over 160, 0 under 70, 0 missing). Exactly one H1 per page. Zero H2-to-H4 skips.** Nothing shippable in P3 on-page.
+
+**SHIPPED (the deliverable, doc-only, no site source touched):** corrected two substantially stale HANDOFF sections against first-hand system state, per the CLAUDE.md drift rule (trust the system, update the doc). This mattered because the doc was actively misleading:
+- "TODOs **before launch**" was still framed pre-launch although the site went **live 2026-06-14**. Retitled to post-launch framing.
+- **Item 1 (phone) named `(647) 788-8733`**, TOA's number, which was never published on this site. Actual published number is **(647) 216-1874**, wired 06-13 and verified live today. Struck through, residual privacy-buffer ask preserved.
+- **Items 8/9 (owner photo, job photos)** described placeholders (`[Owner photo coming]`, "6 placeholder cards") that the 06-14 buildout replaced with licensed stock. Struck through, honest "swap for real shots later" ask preserved.
+- **Infra items 1 to 5** (GitHub repo, CF zone/Pages, DNS, Migadu email, `site.json` email) were all verified **DONE** first-hand (git remote, live apex, `site.json`, `TODO_EMAIL` grep = no hits). Struck through.
+- **Infra item 6 (GSC verification) confirmed STILL OPEN and promoted to a named binding blocker** with the evidence chain: no `google-site-verification` token in `src/` or `public/`, 0 rows in `seo_query_daily_kpi`, while the same GSC pull feeds the appliance sites fine. This is the reason this site NO-SHIPs run after run, and it is the single highest-leverage unlock. Item 3 (pricing) cross-linked to blog Candidate 4, the only candidate with real measured demand.
+
+No build/deploy/CF-purge/IndexNow needed (zero source or `dist` change). No synthetic lead test (per `no-synthetic`). **$0 DfS.** No new MORNING_TASKS: GSC verification (L33), Nathan pricing/launch decisions, and off-page authority are all already on file, so no duplicate. Verified 0 em/en dashes in the edited region.
+
+**Anchor:** tarzan P0 CLEAN + TODO-drift correction T11:08 07-16; next P0 due ~T23:08 07-16. Next content lever is unchanged and NOT time-based: **GSC verification of this domain**, or a Nathan decision on pricing (C4).
