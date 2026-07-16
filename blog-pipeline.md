@@ -81,7 +81,24 @@ removal. Candidates 3 to 5 follow.
 
 ## Candidate 1 (suggested highest priority): When to prune trees in Ontario
 
-- **Status:** [ ] approve  [ ] skip  [ ] adjust
+> **[x] SKIP, DO NOT DRAFT (cron 2026-07-16 T14:08). Reason: this topic is
+> already live as the site's flagship page at
+> `/guide/when-to-prune-trees-southern-ontario/` (~1,876 words, in the sitemap
+> at `PAGE_LASTMOD`, featured on the `/blog/` hub as `featuredGuide`).** The
+> T14:08 run took this candidate through Phase 0, got a GO WITH MODIFIER, drafted
+> the full post, and only caught the duplication at the pre-commit stage because
+> the mechanical G6 check cross-references `blog.json` / `services.json` /
+> `areas.json` only, and the guide lives in `src/pages/guide/` (outside all three).
+> The draft was reverted unpublished. Shipping it would have cannibalized the
+> flagship for an identical keyword, which is exactly what the P0(e)
+> cannibalization detector exists to prevent. **Any future run: G6 for this site
+> must grep `src/pages/**` too, not just the JSON data files.**
+>
+> The Phase 0 data below is real and paid for. It says the EXISTING guide is
+> aimed at a good keyword and is worth protecting, not competing with. If this
+> topic ever comes up again, the move is a P-REFRESH of the guide, never a new
+> blog post.
+- **Status:** [x] skip (duplicate of live `/guide/` page, cron 2026-07-16)
 - **Focus keyword:** `when to prune trees in Ontario`
 - **Tier:** informational, seasonal, top-of-funnel feeding the pruning service
 - **Content type:** clean informational / seasonal intent. Low mismatch
@@ -428,6 +445,63 @@ anchored on the draft date below.
   Hamilton (10/mo, held), or a fresh higher-volume city once GSC verification
   lands. At 4 permit posts on a ~30-day domain, the 4th is the natural pause
   point — do not auto-draft a 5th Gap-1 city without re-checking demand.
+
+---
+
+## Phase 0 demand data for Candidates 1, 2, 4, 5 (cron-measured 2026-07-16, DO NOT RE-SPEND)
+
+The T14:08 2026-07-16 run put the whole remaining seeded queue through the
+DataForSEO volume wrapper (location_code 2124 Canada, ~$0.30, well under the
+$1/run cap). **Verdict: the seeded informational queue is demand-dead and should
+not be drafted blind.** Recording every number so no future run re-buys it.
+
+| Keyword | Vol/mo | Comp | CPC | Read |
+|---|---|---|---|---|
+| `signs a tree branch is dangerous` (C2 focus) | **null** | n/a | n/a | Too niche for Google Ads to measure (under ~10) |
+| `dangerous tree branch` | null | n/a | n/a | dead |
+| `dead tree branch` | 40 | LOW 3 | n/a | best in the C2 cluster, still thin |
+| `hanging tree branch` | 10 | MED 40 | n/a | dead |
+| `how to tell if a tree is dangerous` | 10 | n/a | n/a | dead |
+| `signs of a dead tree` | 10 | LOW 0 | n/a | dead |
+| `tree branch about to fall` / `hazard tree signs` / `tree limb over house` / `dead branches in tree` | null | n/a | n/a | dead |
+| `tree pruning cost ontario` (C4 focus, Ontario-qualified) | **null** | n/a | n/a | the *Ontario-qualified* phrasing is dead. **This does NOT contradict the 06-15 finding** that the bare national terms `tree pruning cost` + `tree trimming cost` are 210/mo MEDIUM. Both are true, they are different keywords. C4's demand is real and lives on the unqualified terms. |
+| `storm damaged tree` (C5 cluster) | 20 | LOW 3 | n/a | thin |
+| `storm damage tree removal` | 10 | LOW 13 | n/a | thin, and removal is not offered |
+| `when to prune trees in ontario` (C1 focus) | 20 | LOW 17 | $11.08 | GO WITH MODIFIER, but **already live at `/guide/`** |
+| `when to trim trees in ontario` | 20 | LOW 29 | $0.85 | C1 cluster, same guide covers it |
+| `when to cut tree branches` | 10 | LOW 9 | $8.88 | C1 cluster |
+| **`tree pruning toronto`** | **320** | **HIGH 84** | **$4.82** | **the real demand. See MORNING_TASKS.** |
+| **`tree trimming toronto`** | **320** | **HIGH 84** | **$4.82** | same SERP as above |
+
+**Decisions this locks in:**
+
+- **C2 (dangerous branch): NO-GO on demand.** Focus keyword unmeasurable, whole
+  cluster caps at 40/mo. It passes every honesty and funnel gate and is the exact
+  topic type the SKILL blesses for auto-publish, but there is no traffic to win.
+  Do not draft it just because it is eligible. Re-open only if GSC (once verified)
+  shows real impressions on the hazard cluster.
+- **C4 (pruning cost): still the one live, demand-backed topic. Do not mark it
+  dead.** Only the Ontario-qualified phrasing is null; the bare `tree pruning cost`
+  / `tree trimming cost` terms measure 210/mo MEDIUM (06-15 data, re-confirmed as
+  non-conflicting today). It stays blocked on the hardened G5 pricing gate, which
+  is a Suroy/Nathan decision, not a demand problem. The open Step-E item in
+  MORNING_TASKS ("needs your price call") is the unblock path: option (b), a
+  price-free "what affects the cost" angle, needs no dollar figures and would let
+  the cron draft it. **If that gets greenlit, C4 is the next post, and it should
+  target the unqualified terms, not `... ontario`.**
+- **C5 (storm cleanup): HOLD.** 30/mo across the cluster and the strongest framing
+  ("storm damage tree removal") points at a service that is not offered yet.
+- **C1: SKIP permanently, duplicate.** See the block at the top of this file.
+
+**The seeded queue is exhausted for AUTO purposes.** C1 is live already, C2 and C5
+are demand-dead, and C4 is demand-real but parked behind a human price decision.
+So **P-PIPELINE-AUTO on this site has nothing left to publish**, and it stays that
+way until either (a) the C4 price call is made, or (b) GSC verification lands so
+the self-feed can pick topics from real impressions instead of a priori guesses.
+The GSC blocker is the single highest-leverage thing on this site and it needs
+Suroy (already flagged in MORNING_TASKS, do not re-flag). Future runs: do not
+re-walk this queue candidate by candidate, and do not re-spend DfS on it. Read
+this table instead.
 
 ---
 
