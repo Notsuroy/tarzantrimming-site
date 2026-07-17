@@ -22,9 +22,9 @@ import blog from '~/data/blog.json';
 // to a stale fixed date.
 const PAGE_LASTMOD: Record<string, string> = {
   '': '2026-06-14',
-  'services/': '2026-06-29',
-  'services/tree-pruning/': '2026-06-29',
-  'services/limb-removal/': '2026-06-29',
+  'services/': '2026-07-17',
+  'services/tree-pruning/': '2026-07-17',
+  'services/limb-removal/': '2026-07-17',
   'service-areas/': '2026-06-13',
   'guide/when-to-prune-trees-southern-ontario/': '2026-06-29',
   'about/': '2026-06-14',
