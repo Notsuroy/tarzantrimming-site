@@ -547,3 +547,69 @@ domain is genuinely unverified and the 403 is the correct, expected response.
 the DNS record). The n8n daily-KPI workflow `uyBDgQqkyq0WNqOz` still omits tarzan
 and stays hand-gated per HARD RULE 2. No build/deploy/wrangler/CF-purge/IndexNow:
 zero site source changed, so all would have been no-ops.
+
+### 2026-07-16 T23:08 cron P0: scheduled health audit FULLY CLEAN, cascade dry, NO-SHIP (doc-only)
+
+**Site pick:** ACTIVE `[auto]`/24h first-hand git log = **tarzan 4** < fortmac 5 <
+sudbury 6 (3 FROZEN excluded); tarzan strict min, no tie. HR9 clear (last tarzan
+task was P1 at T21:08, ~2h, different phase). **P0 genuinely DUE** (last P0
+T11:08 today = exactly 12h) and IS the deliverable.
+
+**P0 CLEAN first-hand (a/c/d; b skip no-src-drift; e N/A GSC-blind):**
+- (a) **14/14 live sitemap URLs HTTP 200** via spaced (1.2s) Python urllib +
+  Chrome UA. Home 39,579B; service pages 25.6-25.8KB; `/services/` hub 17,816B;
+  `/service-areas/` 24,315B; guide 27,545B; `/blog/` 18,654B; 5 blog posts
+  31.3-33.1KB; smallest `/contact/` 12,391B (all >> the 5KB broken-state floor).
+  **14 distinct correct-brand titles (0 dup, so no CF home-fallback)**. BAD=0,
+  SMALL=0. 404-control `/zzz-no-such-page-xyz/` returns a real **404** (10,651B
+  custom page), not a soft-200.
+- **PATH GOTCHA (recorded so no future run misreads it):** tarzan's sitemap is
+  **`/sitemap.xml`** (from `src/pages/sitemap.xml.ts`), NOT the appliance sites'
+  `/sitemap-index.xml`. This run's first probe hit `/sitemap-index.xml` and got a
+  correct **404**. That 404 is EXPECTED and is **not** a P0 finding. `robots.txt`
+  line 4 already points at the right file. Do not "fix" it.
+- (c) Home `theme-color #2D4A36` (forest brand), `/favicon.svg` present,
+  `tel:+16472161874` = canonical Nathan cell in `site.json` (not a new flag),
+  H1 "Honest tree work, owner-led, across south Ontario." carries niche + geo,
+  CTA visible. Live home em-dash U+2014 = **0**, en-dash U+2013 = **0**, banned
+  family (`24/7`, `24 hours`, `always available`, `around the clock`) = **0**.
+  No web form by design, so `qf-email` / `markFieldError` are structurally N/A.
+- (b) Screenshot skipped: HEAD `605628b` = origin/main, working tree clean, **0
+  src drift** (last `src/`+`public/` commit is `db13d93`, 06-30). Same markers
+  passed at T11:08 today; a screenshot would add nothing.
+- (d) **GSC pipeline healthy first-hand:** `[SEO] Daily GSC KPI`
+  (uyBDgQqkyq0WNqOz) **active=True**; last 3 executions all **success** (latest
+  2026-07-17T01:00Z). Portfolio `seo_query_daily_kpi` MAX `2026-07-14` (2d < 4d
+  → FRESH). `rank_tracking_results` gsc MAX `2026-07-13T10:00Z` = weekly Monday
+  feed, PASS per the weekly rule (not a staleness flag).
+  **tarzantrimming.ca returns 0 KPI rows = GSC-blind, expected**, root blocker
+  unchanged (MORNING_TASKS L33, needs Suroy to paste the GSC TXT value).
+- (e) Cannibalization scan N/A: GSC-blind, so there is no query x page data to
+  scan.
+
+**Cascade DRY (re-confirmed, no new input since T21:08 ~2h ago):**
+- P-EXPAND / P-REFRESH / P-PIPELINE-AUTO **GSC self-feed**: structurally dead
+  while the domain is GSC-blind (0 rows to select from).
+- P-PIPELINE human `[x] approve` queue: **empty** (C1 `[x] skip`, C2/C5
+  demand-dead per the 07-16 Phase 0 data, C3 drafted 06-30 in 60d cooldown, C4
+  parked on Nathan's pricing call).
+- P-PIPELINE-AUTO **competitor-gap self-feed**: the "On-deck next Gap-1 permit
+  post" section is **RESOLVED, not actionable** — Burlington was the pre-validated
+  winner and was already drafted + auto-published 06-25 (`5586cd3`); it is live
+  and 200 in this run's sweep. The 4-city permit cluster (Toronto, Mississauga,
+  Oakville, Burlington) is complete, and the file explicitly gates the 5th city on
+  real GSC impressions rather than blind DfS spend on a low-volume municipality
+  (Hamilton held at 10/mo). So the same GSC blocker gates this path too.
+- P1 Open Issues: 0 cron-doable (the cron-doable half of the GSC blocker was
+  already shipped at T21:08; the remaining half is Suroy's TXT paste).
+- P2 no structural gap; P3/P4 saturated (T21:08 dist audit = 0 findings across
+  meta-desc, title, H1, heading-skip, img alt/dims, dashes, banned family;
+  link-graph = 0 orphans / 0 broken hrefs; sitemap 14/14 with per-page lastmod)
+  and **0 src drift since**, so re-auditing would return the same zeros.
+
+**Net:** read-only NO-SHIP. $0.00 DfS, no Supabase writes, no n8n mutation, no
+source/build/deploy/wrangler/CF-purge/IndexNow, no synthetic lead, no new
+MORNING_TASKS (every blocker already on file). Repo untouched and clean.
+
+**Anchors:** tarzan P0 CLEAN T23:08 07-16; next tarzan P0 due ~T11:08 07-17;
+next content lever = GSC verification TXT from Suroy.
