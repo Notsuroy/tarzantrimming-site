@@ -114,7 +114,7 @@ JSON-LD `LocalBusiness` + `FAQPage` schema on homepage (FAQPage built from the 8
 5. ~~Update `site.json` `contact.email` from `TODO_EMAIL`.~~ **DONE** · set to `nathan@tarzantrimming.ca`; no `TODO_EMAIL` placeholder remains in `src/`.
 6. **Google Search Console. STILL OPEN, and this is the site's binding content blocker. There are TWO independent blockers here, both verified first-hand 2026-07-16, and fixing only one will NOT produce data:**
    - **(a) The domain appears genuinely unverified.** All three verification methods checked and absent: no `google-site-verification` DNS TXT on zone `8dccf00d34ed0f68f554bc24a66a54ad` (only `_dmarc`, Migadu `hosted-email-verify`, and SPF are present), no HTML verification file in `public/`, no verification meta tag in `src/`. The other six sites are all `sc-domain:` (Domain properties), which require exactly the DNS TXT that is missing here.
-   - **(b) Even once verified, tarzan is not wired into the pipeline.** `gsc_discovery_sweep.py`'s `SITE_TO_GSC_URL` dict enumerates six domains (kamloops, belleville, sudbury, fortmac, theontarioarborist, breatheradonfree) and **omits `tarzantrimming.ca`**. So the sweep would still skip it. This is the exact two-part fix already written up in `rank-and-rent/MORNING_TASKS.md` L33: Suroy confirms/completes verification, then the domain gets added to the sweep dict + the daily-KPI workflow.
+   - **(b) ~~Even once verified, tarzan is not wired into the pipeline.~~ FIXED 2026-07-16 (T21:08 cron) for the local scripts.** `tarzantrimming.ca` → `sc-domain:tarzantrimming.ca` is now present in the `SITE_TO_GSC_URL` dict of all four local GSC scripts (`.tmp/gsc_discovery_sweep.py`, `.tmp/gsc_daily_kpi.py`, `.tmp/gsc_rank_tracker.py`, `.tmp/portfolio_ranker.py`), 6 → 7 domains each, all compiling. Pre-wired deliberately *before* verification so no code change is needed once the TXT lands. Safe because each script isolates per-site failures with `try/except → continue`; a live read-only probe confirmed tarzan returns a handled `HttpError 403` while `sudburyappliancerepair.ca` returned 262 rows in the same loop. **Residual (b) remainder:** the LIVE daily pull is n8n workflow `uyBDgQqkyq0WNqOz`, read-only to the cron per HARD RULE 2, and still omits tarzan; it needs the same one-line add by hand. So blocker (a) is now the only thing standing between this site and demand data.
    - **Evidence it is these two and not a broken pull:** the daily GSC workflow (`uyBDgQqkyq0WNqOz`) is `active=True` with its last two executions succeeding, and it is feeding the appliance sites normally (MAX `metric_date` 07-13). The pipeline is healthy; tarzan is simply not in it. **Consequence:** the whole GSC-fed half of the cron cascade (P-EXPAND, P-REFRESH, and the P-PIPELINE-AUTO self-feed) is structurally dead on this site, which is why run after run honestly reports NO-SHIP. This is the single highest-leverage unlock here.
 7. Submit sitemap to GSC and Bing. **Blocked on 6.** (`https://tarzantrimming.ca/sitemap.xml` exists and returns 200.)
 8. Eventually: 301 redirect `theontarioarborist.ca` → `tarzantrimming.ca` once new domain has authority (~6 months out).
@@ -499,3 +499,51 @@ Honest NO-SHIP. Binding constraint = tarzan GSC verification (MORNING_TASKS L33)
 No build/deploy/CF-purge/IndexNow needed (zero source or `dist` change). No synthetic lead test (per `no-synthetic`). **$0 DfS.** No new MORNING_TASKS: GSC verification (L33), Nathan pricing/launch decisions, and off-page authority are all already on file, so no duplicate. Verified 0 em/en dashes in the edited region.
 
 **Anchor:** tarzan P0 CLEAN + TODO-drift correction T11:08 07-16; next P0 due ~T23:08 07-16. Next content lever is unchanged and NOT time-based: **GSC verification of this domain**, or a Nathan decision on pricing (C4).
+
+### 2026-07-16 T21:08 cron P1: GSC pipeline pre-wired for tarzan (the cron-doable half of the site's #1 blocker)
+
+**SHIPPED (tooling, not site source — no commit here: the four scripts live in
+the workspace `.tmp/`, which is not a git repo; tarzan's own tree is untouched
+and clean at `fa98dc5`).**
+
+**Site pick:** ACTIVE `[auto]`/24h first-hand git = tarzan **3** < sudbury **5**
+= fortmac **5** (3 FROZEN excluded). HR9 clear (last tarzan touch T14:08, ~7h).
+P0 not due (last T11:08 today, ~10h < 12h).
+
+**Cascade:** P-PIPELINE dry (human `[x] approve` queue empty; C1 `[x] skip` as of
+T14:08, C2/C5 demand-dead, C3 drafted 06-30 in cooldown, C4 parked on Nathan's
+price call). P-EXPAND / P-REFRESH / AUTO self-feed all structurally dead: the
+domain is GSC-blind. So instead of logging a sixth NO-SHIP against that blocker,
+this run **attacked the blocker itself**.
+
+**Audits run first (all clean, which is why the run moved on):** rebuilt 15 pages
+green; dist audit = 0 findings across meta-desc length, title length, H1 count,
+heading-skip, `img` alt + width/height, em/en dashes, and the banned 24/7 family;
+link-graph audit = 0 orphans (bar `/404.html`, expected), 0 broken internal hrefs,
+both money pages at 11 in-content inbound links, sitemap 14/14 with per-page
+`lastmod`. Sibling `schema-domain` defect: tarzan already confirmed clean (0
+findings) by the fortmac T17:08 sweep, so no port was owed.
+
+**Deliverable:** added `tarzantrimming.ca` → `sc-domain:tarzantrimming.ca` to the
+`SITE_TO_GSC_URL` dict in `.tmp/gsc_discovery_sweep.py`, `.tmp/gsc_daily_kpi.py`,
+`.tmp/gsc_rank_tracker.py` and `.tmp/portfolio_ranker.py` (6 → 7 domains each,
+4/4 `py_compile` OK), each with an inline comment stating the entry is expected
+to fail until verification so a future reader does not misread the skip as a
+broken pipeline.
+
+**Verified first-hand, not assumed:** (1) every script isolates per-site failures
+with `try/except → continue`, so an unverified domain cannot poison the appliance
+sites' pulls; (2) live read-only probe of the real GSC API reproduced the exact
+loop — `tarzantrimming.ca` → *handled* `HttpError 403` (property does not exist),
+`sudburyappliancerepair.ca` → **262 rows** in the same pass, loop completed. No
+Supabase writes, no DfS spend ($0.00), no n8n mutation.
+
+**Blocker (a) re-confirmed first-hand, not trusted from prose:** CF zone
+`8dccf00d34ed0f68f554bc24a66a54ad` holds only `_dmarc`, Migadu
+`hosted-email-verify=mp1zhzjn` and SPF. No `google-site-verification` TXT, so the
+domain is genuinely unverified and the 403 is the correct, expected response.
+
+**Net:** Suroy's task drops from two steps to one (paste the GSC TXT value; I add
+the DNS record). The n8n daily-KPI workflow `uyBDgQqkyq0WNqOz` still omits tarzan
+and stays hand-gated per HARD RULE 2. No build/deploy/wrangler/CF-purge/IndexNow:
+zero site source changed, so all would have been no-ops.
