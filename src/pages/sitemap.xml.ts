@@ -27,7 +27,7 @@ const PAGE_LASTMOD: Record<string, string> = {
   'services/limb-removal/': '2026-07-17',
   'service-areas/': '2026-06-13',
   'guide/when-to-prune-trees-southern-ontario/': '2026-06-29',
-  'about/': '2026-06-14',
+  'about/': '2026-07-18',
   'contact/': '2026-06-10',
 };
 
