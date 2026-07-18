@@ -21,7 +21,7 @@ import blog from '~/data/blog.json';
 // bump that page's date here in the same commit, or the freshness signal decays
 // to a stale fixed date.
 const PAGE_LASTMOD: Record<string, string> = {
-  '': '2026-06-14',
+  '': '2026-07-18',
   'services/': '2026-07-17',
   'services/tree-pruning/': '2026-07-17',
   'services/limb-removal/': '2026-07-17',

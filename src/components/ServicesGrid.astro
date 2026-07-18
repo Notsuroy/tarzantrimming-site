@@ -25,8 +25,8 @@ const services = servicesData.services;
           <p class="mt-4 text-ink leading-relaxed">{s.shortDescription}</p>
           <div class="mt-6 pt-4 border-t border-cream-deep text-sm text-ink-muted">{s.priceRange}</div>
           {!s.comingSoon && (
-            <a href={`/services/#${s.slug}`} class="mt-4 inline-block text-forest font-medium hover:text-forest-dark transition-colors text-sm">
-              Learn more →
+            <a href={`/services/${s.slug}/`} class="mt-4 inline-block text-forest font-medium hover:text-forest-dark transition-colors text-sm">
+              More on {s.name.toLowerCase()} →
             </a>
           )}
         </div>
