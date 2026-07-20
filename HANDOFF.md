@@ -618,3 +618,65 @@ MORNING_TASKS (every blocker already on file). Repo untouched and clean.
 
 **Anchors:** tarzan P0 CLEAN T23:08 07-16; next tarzan P0 due ~T11:08 07-17;
 next content lever = GSC verification TXT from Suroy.
+
+### 2026-07-20 T16:08 cron P4: Call/Text CTA label-action parity (commit `b9950fc`, wrangler `c4a0b5c2`, LIVE)
+
+**Pick:** ACTIVE `[auto]`/24h first-hand git = tarzan **2** (min) < sudbury 4 <
+fortmac 6, so the rule pointed here with no deviation needed. P0 not due (last
+T12:08, ~4h < 12h). P-PIPELINE human queue verified empty first-hand (C1 + C3
+both `[x] drafted`; C2/C4/C5 still `[ ] approve`, C4 durably blocked on Nathan's
+pricing call). P-EXPAND / P-REFRESH / P-PIPELINE-AUTO self-feed all structurally
+dead while the site is GSC-blind (blocker 6a, Suroy's DNS TXT). P1 remaining half
+is that same TXT paste. P2 no structural gap. P3 barred by HR9 (tarzan P3 T12:08).
+Cascade landed honestly on **P4**.
+
+**Defect found (label vs actual behaviour, same class as `[form-required-parity]`
+but on a link CTA):** the sitewide `PhoneFloat` — the single highest-frequency
+conversion control on the site, present on all 15 pages at every scroll position —
+was labelled **"Call or text"** while its only `href` was `tel:`. The text CTA it
+advertised did not exist. Worse, that label was `hidden sm:inline`, so on mobile
+it collapsed to an **unlabelled icon-only circle** on exactly the viewport where
+it matters most. Second, smaller finding: the Hero offered **call only**, while
+every other contact surface on the site (`FinalCTA`, `Footer`, `/contact/`)
+offers call **and** text. For an owner-led business whose lower-friction path is
+a homeowner texting a photo of the tree, that is a real lead leak.
+
+**Fix:**
+- `PhoneFloat` split into **two separate, always-labelled actions** — a cream
+  "Text" pill (`sms:`) and a forest "Call" pill (`tel:`) — each with an
+  `aria-label` matching what it actually does. No hidden labels at any breakpoint.
+- `Hero` gains a **"Text a photo"** outline CTA (`sms:`) matching `FinalCTA`'s
+  existing treatment; "See what we do" demoted from an outline pill to an
+  underlined text link so hierarchy stays Call > Text > browse.
+- `Footer` inner padding `py-14` → `pt-14 pb-28 sm:pb-14` so the now-wider float
+  never sits on the copyright row on small screens (per `[callbar-overlap]`).
+- Homepage `sitemap.xml.ts` lastmod bumped `2026-07-18` → `2026-07-20` per
+  `[bump-lastupdated]`. Chrome-only changes (footer, float) did not bump other
+  leaves.
+
+**Verify:** build clean **1st attempt**, 15 pages, 910ms. Scripted dist audit:
+**15/15** pages carry the dual-action float with label/action parity asserted
+per-anchor (sms block contains only "Text", tel block only "Call"); **0**
+occurrences of the stale "Call or text" string; em U+2014 = **0**, en U+2013 =
+**0**; banned 24/7-family regex = **0**. Mobile screenshot confirms both float
+pills labelled and the hero three-CTA hierarchy reading correctly.
+
+**Deploy:** push 1st attempt (`ee3c965..b9950fc`); wrangler direct-upload
+(project not GitHub-linked) → `c4a0b5c2`, 17 files; apex content-match on the
+net-new "Text a photo" marker **LIVE at first poll** per `[poll-marker]`;
+**12-URL deploy-state sweep = 11× HTTP 200 [13,090-40,974B], BAD(5xx)=0,
+SMALL=0**, dual-float verified live on all 11. `/quote/` 404 is **expected and
+correct** (this site has no quote form by design, documented in "Things this site
+does NOT have"); it served the real 404 page, not a CF home fallback. CF zone
+purged `success:true`. No IndexNow (no new pages).
+
+**Sibling-fix scan** per `[sibling-fix]`: grepped all six other site repos for
+the same mislabelled CTA — **0 hits**. The defect was introduced in the
+vicjimassage → tarzan rebrand when `WhatsAppFloat` became `PhoneFloat`, so it is
+tarzan-specific. No cross-site flag needed.
+
+**Net:** DfS $0.00, no Supabase writes, no n8n mutation, no synthetic lead, no
+new MORNING_TASKS (every remaining blocker already on file).
+
+**Anchors:** tarzan P4 4h → T20:08; next tarzan P0 due ~T00:08 07-21; next
+content lever remains the GSC verification TXT from Suroy.
