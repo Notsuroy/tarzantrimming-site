@@ -28,7 +28,7 @@ const PAGE_LASTMOD: Record<string, string> = {
   'service-areas/': '2026-06-13',
   'guide/when-to-prune-trees-southern-ontario/': '2026-06-29',
   'about/': '2026-07-18',
-  'contact/': '2026-06-10',
+  'contact/': '2026-07-20',
 };
 
 // Date the /blog/ system shipped. The hub's lastmod is the max of this and the
