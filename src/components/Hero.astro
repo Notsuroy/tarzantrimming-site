@@ -31,8 +31,14 @@ const hasPhone = !!site.contact.phoneE164;
             See what we do
           </a>
         )}
+        {hasPhone && (
+          <a href={`sms:${site.contact.phoneE164}`} class="inline-flex items-center gap-2 px-6 py-3 border border-cream/40 text-cream rounded-full font-medium hover:bg-cream/10 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+            Text a photo
+          </a>
+        )}
         {hasPhone ? (
-          <a href="/services/" class="inline-flex items-center px-6 py-3 border border-cream/40 text-cream rounded-full font-medium hover:bg-cream/10 transition-colors">
+          <a href="/services/" class="inline-flex items-center px-6 py-3 text-cream/85 rounded-full font-medium underline underline-offset-4 decoration-cream/40 hover:text-cream hover:decoration-cream transition-colors">
             See what we do
           </a>
         ) : (

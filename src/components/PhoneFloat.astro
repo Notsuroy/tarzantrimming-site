@@ -3,17 +3,37 @@ import site from '~/data/site.json';
 
 const hasPhone = !!site.contact.phoneE164;
 // Hide the float entirely until phone is set. No CTA = no float.
+//
+// Label/action parity: this control used to read "Call or text" while its only
+// href was `tel:`, so the text CTA it advertised did not exist. The label was
+// also `hidden sm:inline`, so on mobile it collapsed to an unlabelled icon on
+// the exact viewport where it is the primary conversion path. It is now two
+// separate, always-labelled actions whose text matches what each one does.
+// Texting a photo of the tree is the lower-friction path for this business, so
+// it gets a real target instead of being implied by a dialer button.
 ---
 
 {hasPhone && (
-  <a
-    href={`tel:${site.contact.phoneE164}`}
-    class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 px-5 py-3 bg-forest text-cream rounded-full shadow-soft hover:bg-forest-dark transition-colors font-medium text-sm"
-    aria-label={`Call ${site.brand.name} at ${site.contact.phoneDisplay}`}
-  >
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path>
-    </svg>
-    <span class="hidden sm:inline">Call or text</span>
-  </a>
+  <div class="fixed bottom-5 right-5 z-50 flex items-center gap-2">
+    <a
+      href={`sms:${site.contact.phoneE164}`}
+      class="inline-flex items-center gap-1.5 px-4 py-3 bg-cream text-forest border border-forest/20 rounded-full shadow-soft hover:bg-cream-dark transition-colors font-medium text-sm"
+      aria-label={`Text a photo to ${site.brand.name} at ${site.contact.phoneDisplay}`}
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+      </svg>
+      <span>Text</span>
+    </a>
+    <a
+      href={`tel:${site.contact.phoneE164}`}
+      class="inline-flex items-center gap-1.5 px-4 py-3 bg-forest text-cream rounded-full shadow-soft hover:bg-forest-dark transition-colors font-medium text-sm"
+      aria-label={`Call ${site.brand.name} at ${site.contact.phoneDisplay}`}
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-1.107 2.281l-.84.42a11.05 11.05 0 005.516 5.516l.42-.84a2 2 0 012.282-1.106l2.8.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.716 22 2 14.284 2 5V4a1 1 0 011-1h0"></path>
+      </svg>
+      <span>Call</span>
+    </a>
+  </div>
 )}
