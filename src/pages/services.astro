@@ -7,6 +7,56 @@ import site from '~/data/site.json';
 const services = servicesData.services;
 const title = `Services · ${site.brand.name}`;
 
+// The services hub was the only content page on the site emitting no entity
+// schema at all: just a BreadcrumbList, no tie to the LocalBusiness graph and
+// no machine-readable list of what we actually offer. Every other hub carries
+// one (/blog/ has Blog, /service-areas/ has Service + LocalBusiness), and this
+// is the money hub. Property set is mirrored verbatim from the already-shipped
+// per-service page schema in services/[slug].astro, so nothing here is a new
+// or unvalidated property.
+//
+// "Coming soon" services are excluded on purpose, same rule the leaf pages
+// follow: we do not publish structured data claiming work we do not do yet.
+const offeredServices = services.filter((s) => !s.comingSoon);
+const areaServed = site.serviceCities.map((c) => ({ '@type': 'City', name: c.name }));
+const provider = {
+  '@type': 'LocalBusiness',
+  name: site.brand.name,
+  url: site.url,
+  areaServed: site.location.serviceAreaLabel,
+};
+
+const collectionLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Services · ${site.brand.name}`,
+  description:
+    'Tree pruning and limb removal across south Ontario, done properly by an owner-led crew.',
+  url: new URL('/services/', Astro.site).toString(),
+  inLanguage: 'en-CA',
+  about: provider,
+  mainEntity: {
+    '@type': 'ItemList',
+    name: 'Tree care services',
+    numberOfItems: offeredServices.length,
+    itemListElement: offeredServices.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.name,
+      url: new URL(`/services/${s.slug}/`, Astro.site).toString(),
+      item: {
+        '@type': 'Service',
+        name: s.name,
+        serviceType: s.name,
+        description: s.shortDescription,
+        areaServed,
+        provider,
+        url: new URL(`/services/${s.slug}/`, Astro.site).toString(),
+      },
+    })),
+  },
+};
+
 const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -71,5 +121,6 @@ const breadcrumbLd = {
     </div>
   </section>
   <FinalCTA />
+  <script type="application/ld+json" set:html={JSON.stringify(collectionLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
 </BaseLayout>
