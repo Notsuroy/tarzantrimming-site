@@ -708,3 +708,37 @@ content lever remains the GSC verification TXT from Suroy.
 **Net:** DfS $0.00, no Supabase writes, no n8n mutation, no synthetic lead, no new MORNING_TASKS (every remaining blocker already on file).
 
 **Anchors:** tarzan P3 4h → T22:08; next tarzan P0 due ~T00:08 07-21; next content lever remains the GSC verification TXT from Suroy.
+
+---
+
+### 2026-07-20 T22:08 cron P3: wire the Burlington permit guide into the footer + service-areas hub (commit `261b2b2`, wrangler `cd60e975`, LIVE)
+
+**Pick:** ACTIVE `[auto]`/24h first-hand git = tarzan **6** (min) < sudbury 8 = fortmac 8 (3 FROZEN excluded). HR9: last tarzan P3 was T18:08, cooldown expired T22:08.
+
+**Cascade walked first-hand:**
+- **P0** not due (T12:08, ~10h < 12h). Next ~T00:08 07-21.
+- **P-PIPELINE** human `[x] approve` queue empty; **AUTO** seeded pool durably NO-GO per the 2026-06-15 Phase 0 verdicts (C4 still Step-E parked on Nathan's pricing call); GSC self-feed unavailable.
+- **P-EXPAND / P-REFRESH** structurally dead while GSC-blind (blocker 6a, Suroy's DNS TXT).
+- **P1** remaining Open Issues all Nathan/Suroy-gated. **P2** no structural gap. **P4** shipped T16:08.
+- **P3 SHIPPED** (below).
+
+**Defect found (`[slice-orphan]` / `[authority-inbound]` class, real):** a 15-page dist audit came back clean on every structural axis (titles 23 to 64 chars, metas 107 to 153, H1x1 everywhere, zero heading skips, every `<img>` carrying alt + width/height, JSON-LD present on all but `/404/`). The gap was in the link graph. `/blog/tree-removal-permit-burlington/` (published 2026-06-25) was receiving inbound links only from its four sibling blog posts, the guide, and the two service pages. **Both curated surfaces that list its siblings still listed only three cities:**
+- `Footer.astro` "Helpful guides" hardcoded Toronto, Mississauga, Oakville. The footer renders on all 15 pages, so Burlington was missing from the single highest-frequency internal-link surface on the site.
+- `service-areas.astro` "Tree permits, city by city" named the same three and then said "with more cities on the way", which had gone stale and understated real coverage to a reader standing on the city hub.
+
+Both lists were written when three permit guides existed and were never updated when the fourth shipped.
+
+**Fix:**
+- `Footer.astro`: added the Burlington permit guide `<li>`, giving it sitewide inbound equity (10 → 16 files referencing it).
+- `service-areas.astro`: added Burlington to the permit paragraph and rebalanced the serial comma so the sentence reads correctly with four cities. "With more cities on the way" is kept and is still honest: Hamilton, Kitchener, and Whitby are serviceCities with no guide yet.
+- `sitemap.xml.ts`: `service-areas/` lastmod `2026-06-13` → `2026-07-20` per `[bump-lastupdated]`. Footer is chrome, so per the T16:08 precedent no other leaf dates were bumped.
+
+**Verify:** build clean **1st attempt**, 15 pages, 934ms. Scripted dist sweep: **15/15** pages carry all four permit-guide footer links (0 missing), em U+2014 = **0**, en U+2013 = **0**, banned 24/7-family regex = **0**. Rendered hub prose re-read to confirm no double conjunction.
+
+**Deploy:** push 1st attempt (`06efd5f..261b2b2`); wrangler direct-upload (project not GitHub-linked) → `cd60e975`, 16 files. Apex content-match on the net-new homepage footer marker **LIVE at first poll** per `[poll-marker]` (the Burlington href did not previously exist on `/`, so it is a genuine net-new marker, not a pre-existing href false-positive). **12-URL deploy-state sweep = 12× HTTP 200 [15,245-41,106B], BAD(5xx)=0, SMALL=0**, footer link verified live on all 12. CF zone purged `success:true`. No IndexNow (no new URLs).
+
+**Sibling-fix scan** per `[sibling-fix]`: grepped `src/components/` across all five other non-frozen site repos for hardcoded per-post blog hrefs. **0 hits** anywhere; every sibling footer links `/blog/` hub-only. The curated "Helpful guides" list is a tarzan-only pattern, so this defect class cannot exist on the others. No cross-site flag needed.
+
+**Net:** DfS $0.00, no Supabase writes, no n8n mutation, no synthetic lead, no new MORNING_TASKS (every remaining blocker already on file).
+
+**Anchors:** tarzan P3 4h → T02:08 07-21; next tarzan P0 due ~T00:08 07-21; next content lever remains the GSC verification TXT from Suroy.
