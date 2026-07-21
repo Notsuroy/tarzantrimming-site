@@ -82,6 +82,18 @@ const sections = [
   },
 ];
 
+// Word count derived the same way the blog template does, so the two content
+// surfaces report comparably rather than one guessing.
+const wordCount = (intro + ' ' + sections.map((s) => s.paragraphs.join(' ')).join(' '))
+  .replace(/<[^>]+>/g, ' ')
+  .split(/\s+/)
+  .filter(Boolean).length;
+
+// Schema parity with the blog posts (src/pages/blog/[slug].astro). This guide is
+// the site's cornerstone content page but was emitting a bare Article with an
+// Organization publisher, so it was the only content page not tied to the
+// LocalBusiness entity the rest of the graph reuses. Same property set as
+// BlogPosting; both inherit from CreativeWork so every prop below is in domain.
 const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -89,10 +101,30 @@ const articleLd = {
   description: metaDescription,
   datePublished,
   dateModified,
-  author: { '@type': 'Organization', name: site.brand.name },
-  publisher: { '@type': 'Organization', name: site.brand.name, url: site.url },
+  url: new URL(path, Astro.site).toString(),
   mainEntityOfPage: new URL(path, Astro.site).toString(),
-  about: 'Tree pruning timing in southern Ontario',
+  inLanguage: 'en-CA',
+  wordCount,
+  image: {
+    '@type': 'ImageObject',
+    url: new URL('/photos/accent-branches.webp', Astro.site).toString(),
+    width: 1200,
+    height: 675,
+  },
+  author: { '@type': 'Organization', name: site.brand.name, url: site.url },
+  publisher: {
+    '@type': 'LocalBusiness',
+    name: site.brand.name,
+    url: site.url,
+    telephone: site.contact.phoneE164,
+    areaServed: site.location.serviceAreaLabel,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/favicon.svg', Astro.site).toString(),
+    },
+  },
+  about: { '@type': 'Thing', name: 'when to prune trees in Ontario' },
+  keywords: 'when to prune trees in Ontario',
 };
 
 const breadcrumbLd = {
