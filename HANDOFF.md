@@ -680,3 +680,31 @@ new MORNING_TASKS (every remaining blocker already on file).
 
 **Anchors:** tarzan P4 4h → T20:08; next tarzan P0 due ~T00:08 07-21; next
 content lever remains the GSC verification TXT from Suroy.
+
+---
+
+### 2026-07-20 T18:08 cron P3: LocalBusiness + ContactPage JSON-LD on /contact/ (commit `93b68b7`, wrangler `8dddbf1c`, LIVE)
+
+**Pick:** ACTIVE `[auto]`/24h first-hand git = tarzan **4** (min) < sudbury 6 = fortmac 6 (3 FROZEN excluded). Last tarzan touch T16:08 (P4), so HR9 blocks another P4 this run.
+
+**Cascade walked first-hand:**
+- **P0** not due (T12:08, ~6h < 12h). Next ~T00:08 07-21.
+- **P-PIPELINE** human `[x] approve` queue empty (all ticked entries already drafted). **P-PIPELINE-AUTO** dry: seeded pool durably resolved on 2026-06-15 Phase 0 (C1 skip/duplicates the live `/guide/`, C2 NULL Canadian volume, C3 published 06-30, C4 Step-E Suroy-gated on pricing, C5 NULL volume); GSC self-feed unavailable.
+- **P-EXPAND / P-REFRESH** GSC-blind, re-verified live this run: `seo_query_daily_kpi` returns `[]` for `tarzantrimming.ca` (portfolio max = 07-17, normal 3-day lag, so the pull itself is healthy — tarzan is simply not GSC-verified yet).
+- **P1** remaining Open Issues are all Nathan/Suroy-gated (GSC TXT, pricing, cities, photos).
+- **P2** no structural gap: both offered services have pages, full removal is `comingSoon`.
+- **P3 SHIPPED** (below). P4 blocked by HR9.
+
+**Defect found (real, not busywork):** a 15-page dist schema audit (meta length, H1 count, img alt/dimensions, JSON-LD types) came back clean on every axis except one — `/contact/`, the page that carries the entire NAP in visible copy (phone, text, email, service area, hours label), emitted **only** a `BreadcrumbList`. No business entity at all. The site's most entity-dense page was structurally anonymous to Google.
+
+**Fix:** added two JSON-LD nodes to `src/pages/contact.astro`:
+- `LocalBusiness` reusing the homepage `@id` (`https://tarzantrimming.ca/#business`) so both pages reconcile to ONE entity instead of Google inferring two businesses. Carries `telephone`, `email` (valid Organization property the homepage node omits but this page displays), `areaServed` (7 cities), `address` (region + country, no street — mobile service business), `image`, `priceRange`.
+- `ContactPage` with `mainEntity: {'@id': businessId}` pointing at it.
+
+**Deliberately NOT added:** `openingHoursSpecification`. Real availability is "by appointment, evenings and weekends" around Nathan's Davey day job, which does not map honestly onto a fixed weekly schedule. Inventing one would assert hours he has not confirmed and would trip the `jsonld-hours` 24/7-sweep precedent.
+
+**Verify:** build clean 15 pages, 1st attempt. All 3 `/contact/` ld+json blocks parse; `@id` string-matches the homepage node. Dist sweep em(U+2014)=0 / en(U+2013)=0 / 0 banned availability phrases. Content-match poll found `"@type":"ContactPage"` live on first probe. **11-URL deploy-state sweep all 200, all ≥15KB, 0 problems.** CF zone cache purged (`success:true`). No IndexNow (no new URLs).
+
+**Net:** DfS $0.00, no Supabase writes, no n8n mutation, no synthetic lead, no new MORNING_TASKS (every remaining blocker already on file).
+
+**Anchors:** tarzan P3 4h → T22:08; next tarzan P0 due ~T00:08 07-21; next content lever remains the GSC verification TXT from Suroy.
