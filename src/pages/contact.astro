@@ -15,6 +15,47 @@ const breadcrumbLd = {
     { '@type': 'ListItem', position: 2, name: 'Contact', item: new URL('/contact/', Astro.site).toString() },
   ],
 };
+
+// ContactPage + the business entity. This page carries the NAP (phone, text,
+// email, service area) in visible copy but until now emitted only a
+// BreadcrumbList, so the one page most responsible for entity signals was
+// structurally anonymous. The LocalBusiness node reuses the homepage '@id'
+// (/#business) so Google reconciles both to a single entity rather than
+// inferring two businesses. Properties are limited to ones already validated
+// on the homepage node plus 'email' (a valid Organization property that the
+// homepage node omits but this page displays). No openingHoursSpecification:
+// real availability is "by appointment, evenings and weekends", which does not
+// map honestly onto a fixed weekly schedule, and inventing one would assert
+// hours Nathan has not confirmed.
+const businessId = new URL('/#business', Astro.site).toString();
+
+const businessLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': businessId,
+  name: site.brand.name,
+  description: site.brand.shortDescription,
+  url: site.url,
+  image: new URL('/photos/og-default.png', Astro.site).toString(),
+  ...(hasPhone ? { telephone: site.contact.phoneE164 } : {}),
+  ...(hasEmail ? { email: site.contact.email } : {}),
+  areaServed: site.serviceCities.map((c) => ({ '@type': 'City', name: c.name })),
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: site.location.province,
+    addressCountry: 'CA',
+  },
+  priceRange: '$$',
+};
+
+const contactPageLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: title,
+  url: new URL('/contact/', Astro.site).toString(),
+  description: 'Phone, text, and email contact details for Tarzan Trimming, owner-led tree pruning and limb removal across south Ontario.',
+  mainEntity: { '@id': businessId },
+};
 ---
 <BaseLayout title={title} description="Reach Tarzan Trimming for owner-led tree pruning and limb removal in south Ontario. Get in touch for a free, no-pressure on-site quote today." path="/contact/">
   <section class="py-16 md:py-24 bg-cream">
@@ -82,6 +123,8 @@ const breadcrumbLd = {
     </div>
   </section>
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(businessLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(contactPageLd)} />
 
   <script>
     const copyBtn = document.getElementById('copy-email');
