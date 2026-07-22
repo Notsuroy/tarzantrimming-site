@@ -772,3 +772,23 @@ Both lists were written when three permit guides existed and were never updated 
 **Net:** DfS $0.00, no Supabase writes, no n8n mutation, no synthetic lead (no quote-path file changed), no new MORNING_TASKS (every remaining blocker already on file; GSC verification TXT from Suroy remains the site's #1 content lever).
 
 **Anchors:** tarzan P3 4h -> T13:08 07-22; next tarzan P0 due ~T09:08 07-23; next content lever remains the GSC verification TXT from Suroy.
+
+---
+
+### 2026-07-22 T13:08 cron: full cascade re-walked first-hand → read-only NO-SHIP (9-axis structural audit CLEAN, no non-churn deliverable)
+
+**Pick:** ACTIVE `[auto]`/24h first-hand git all three tied at **4** (sudbury 4, fortmac 4, tarzan 4; 3 FROZEN excluded). Open Issues 0/0/0 (no separation). Tie-break = oldest last-touch per ROUTINE_LOG: **tarzan T09:08** < fortmac T10:08 < sudbury T10:16. So tarzan. HR9 clear: tarzan's last deliverable was T09:08 P3 (AboutPage schema, a different target); the T09:08 note's own anchor put the P3 4h cooldown at exactly T13:08, now expired.
+
+**P0 skip:** last tarzan P0 T09:08 ~4h ago, 12h cooldown → next due ~T21:08. Not re-run.
+
+**Cascade walked first-hand, every stage confirmed dead by inspection, not assumption:**
+- **P-PIPELINE (manual):** human `[x] approve` queue empty — the only `[x]` topics (C3 oak + the 4 permit posts) are already `[x] drafted`. No manual topic to draft.
+- **P-PIPELINE-AUTO:** seeded pool = C2/C4/C5 (`[ ] approve`, un-drafted). All durably NO-GO/gated and **already codified in `blog-pipeline.md` itself** (two in-file sections: "Phase 0 keyword validation (cron, 2026-06-15)" L285 + "Phase 0 demand data … (cron-measured 2026-07-16, DO NOT RE-SPEND)" L451). Verdicts, both DfS-backed: **C2 (dangerous branch) NO-GO** (NULL Canadian volume, top-3 competitor etv 0.3/0/0, US-only traffic); **C5 (storm cleanup) NO-GO** (NULL volume); **C4 (pruning cost) demand-real (210/mo MEDIUM) but Suroy price-gated (G5), Step-E parked**. GSC self-feed unavailable (domain not GSC-verified). Per `[selffeed-nogo]` the guards are correctly in-file, so re-running Phase 0 would just re-burn DfS on known dead ends — did NOT. (Verified the guard is present; the empty inline "Notes:" lines on C2/C4/C5 are not a gap — the durable verdicts live in the two dedicated sections.)
+- **P-EXPAND / P-REFRESH:** structurally dead while GSC-blind (no `seo_keyword_discovered` / `seo_page_daily_kpi` rows for an unverified domain). Per `[gsc-vs-dfs]`, owned-site rank/discovery is GSC-only.
+- **P1:** site's #1 open lever is the GSC verification TXT — Suroy/Nathan-gated, already on MORNING_TASKS. 0 cron-doable.
+- **P2:** no structural gap (both offered services + areas hub live), no measured demand (blind).
+- **P3/P4:** fresh 9-axis structural dist audit (15 pages built clean, 985ms) — **all CLEAN, no non-churn defect:** (1) schema parity exhausted — every content page carries a page-level entity node; (2) images all have alt + width/height (0 CLS-risk `<img>`); (3) meta descriptions 136–153 chars (all reasonable; Burlington 136 is a benign outlier, not worth a churn edit); (4) titles fine — homepage 60 chars after entity-decode per `[meta-overflow]` (raw `&amp;` inflated a naive count to 64, NOT a regression of the 06-30 60-char trim); (5) exactly 1 H1/page, 0 heading-level skips; (6) in-content inbound links to money pages 15/15 balanced, no equity dead-ends; (7) every blog/guide page links BOTH money services in-content; (8) both money pages link out to the full blog cluster + areas + contact (not equity sinks); (9) sitemap per-post `lastmod` correct and reflects `updatedAt` (mississauga 07-17 etc.), no shared-build-time drift.
+
+**Why NO-SHIP (not a skipped deliverable):** the site is genuinely structurally clean and the content engine is durably blocked on a human decision (GSC verification TXT / C4 pricing). Manufacturing a churn edit would violate Suroy's documented anti-busywork standard, matching today's fortmac T10:08 + sudbury T10:16 first-hand NO-SHIP conclusions. Read-only: no source/build-ship, no deploy, no CF purge, $0 DfS, no Supabase/n8n writes, no synthetic lead, no new MORNING_TASKS (every remaining blocker already on file).
+
+**Anchors:** tarzan NO-SHIP T13:08 07-22; next tarzan P0 due ~T21:08 07-22 (12h from T09:08); cascade otherwise durably GSC-blind-dead / human-gated; next content lever = GSC verification TXT from Suroy.
