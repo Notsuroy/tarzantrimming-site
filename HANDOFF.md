@@ -744,3 +744,31 @@ Both lists were written when three permit guides existed and were never updated 
 **Net:** DfS $0.00, no Supabase writes, no n8n mutation, no synthetic lead, no new MORNING_TASKS (every remaining blocker already on file).
 
 **Anchors:** tarzan P3 4h → T02:08 07-21; next tarzan P0 due ~T00:08 07-21; next content lever remains the GSC verification TXT from Suroy.
+
+---
+
+### 2026-07-22 T09:08 cron P0 + P3: AboutPage JSON-LD on /about/ (commit `2c5a8e5`, wrangler `3a2eedca`, LIVE)
+
+**Pick:** ACTIVE `[auto]`/24h first-hand git = tarzan **4** (min) < sudbury 6 = fortmac 6 (3 FROZEN excluded). HR9 clear: last tarzan touch T16:08 07-21, ~17h ago. Overnight gap in the cron (last logged run any site was T18:08 07-21), so >12h since any active site was touched.
+
+**P0 (genuinely due ~22.7h since last tarzan P0 T10:08 07-21), FULLY CLEAN:**
+- a: 14/14 sitemap URLs HTTP 200 with distinct correct titles, no CF home-fallback (spaced Python urllib + Chrome UA per `[curl-000]`). Title separator verified codepoint U+00B7 middle-dot, NOT a banned en/em dash (`[mojibake]`).
+- theme-color `#2D4A36`, favicon `/favicon.svg`, phone `+16472161874`, hero mentions south Ontario + pruning + limb, all correct.
+- dist sweep: em U+2014 = 0, en U+2013 = 0, 24-7-family = 0.
+- b skip (no visual/CSS drift since last screenshot audit). d/e N/A (GSC-blind).
+
+**Cascade walked first-hand:** P-PIPELINE human `[x] approve` queue empty (the 3 non-drafted `[x] approve` hits are instructional header text, not topics; all 5 real topics drafted); **AUTO** seeded pool demand-exhausted per the 2026-07-16 Phase 0 table (C1 live, C2/C5 demand-dead, C4 Suroy price-gated, Burlington done) + GSC self-feed unavailable (GSC-blind); P-EXPAND/P-REFRESH structurally dead while GSC-blind; P1 Suroy/Nathan-gated; P2 no structural gap. → **P3 from a fresh structural audit.**
+
+**Defect found (`[authority-inbound]` / schema-parity class, real):** a 15-page dist structural audit (schema @types, meta lengths, H1 counts, heading-skip, in-content link graph) was clean on every axis EXCEPT one: `/about/` emitted only `BreadcrumbList` + `ListItem` (a nav breadcrumb) and **no page-level entity schema**. It is the site's primary EEAT/trust surface (describes the owner-led operator, operating model, safe-scope honesty) yet was structurally anonymous. This is the exact defect the `/contact/` run fixed on T18:08 07-20, and `/about/` was the last content page (excl. `/404/`) still in that state now that `/contact/` (LocalBusiness+ContactPage) and `/services/` hub (CollectionPage+ItemList) are done.
+
+**Fix (2 files, schema-only):**
+- `about.astro`: added an `AboutPage` node (name, url, description, `mainEntity: {'@id': /#business}`) referencing the canonical homepage `LocalBusiness` `@id` for entity consolidation. **No `Person` node** — the owner is intentionally unnamed in the visible copy, so asserting a named person would fabricate a fact the page does not state (`[arborist-real]`). BreadcrumbList kept.
+- `sitemap.xml.ts`: `about/` lastmod `2026-07-18` → `2026-07-22` per `[bump-lastupdated]`.
+
+**Verify:** build clean **1st attempt**, 15 pages, 1.61s. `/about/` now emits 2 valid JSON-LD blocks (AboutPage + BreadcrumbList, both `json.loads`-parse clean); `mainEntity.@id` byte-matches the homepage `#business` `@id` (entity consolidation confirmed); description dash-free. dist sweep em=0 en=0 24-7=0. sitemap `/about/` lastmod = 2026-07-22.
+
+**Deploy:** push 1st attempt (`7ccfc7e..2c5a8e5`); wrangler direct-upload (project not GitHub-linked) → `3a2eedca`, 2 new files. Apex content-match on net-new `"@type":"AboutPage"` marker **LIVE at first poll** per `[poll-marker]` (that string did not exist on `/about/` before, genuine net-new). **12-URL deploy-state sweep = 12x HTTP 200 [15,258-41,128B], BAD(5xx)=0, SMALL=0** (`/about/` grew 15,300 -> 15,722B from the added schema). CF zone purged `success:true`. No IndexNow (no new URLs).
+
+**Net:** DfS $0.00, no Supabase writes, no n8n mutation, no synthetic lead (no quote-path file changed), no new MORNING_TASKS (every remaining blocker already on file; GSC verification TXT from Suroy remains the site's #1 content lever).
+
+**Anchors:** tarzan P3 4h -> T13:08 07-22; next tarzan P0 due ~T09:08 07-23; next content lever remains the GSC verification TXT from Suroy.
