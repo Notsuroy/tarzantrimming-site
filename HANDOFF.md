@@ -821,3 +821,49 @@ Both lists were written when three permit guides existed and were never updated 
 **Why NO-SHIP (not a skipped deliverable):** P0 was the genuinely-due deliverable and it came back fully clean; the content engine is durably blocked on human decisions (GSC verification TXT / C4 pricing), both already flagged. Manufacturing a churn edit would violate the documented anti-busywork standard. Read-only: no source/build ship, no deploy, no CF purge, $0 DfS, no Supabase/n8n writes, no synthetic lead, no new MORNING_TASKS (every blocker already on file).
 
 **Anchors:** tarzan P0 CLEAN + NO-SHIP T09:08 07-23; next tarzan P0 due ~T21:08 07-23; cascade durably GSC-blind-dead / human-gated; next content lever = GSC verification TXT from Suroy.
+
+---
+
+### 2026-07-25 T02:08 cron: genuinely-due P0 health audit FULLY CLEAN + cascade dead first-hand → read-only NO-SHIP
+
+**Pick:** ACTIVE `[auto]`/24h first-hand git = tarzan **4** (min) < sudbury 5 < fortmac 8 (3 FROZEN excluded). HR9 clear: last tarzan touch T22:08 07-24 (NO-SHIP cascade re-walk), ~4h ago; last tarzan P0 T13:08 07-24, ~13h ago so P0 genuinely due (>12h).
+
+**P0 genuinely DUE, FULLY CLEAN (a/c; b skip; d/e N/A GSC-blind):**
+- **(a)** all **14/14 sitemap URLs** HTTP 200 via spaced (0.7s) Python urllib + Chrome UA (per `[curl-000]`+`[ua-required]`): sizes 15,373–41,234B all >> 5KB floor, **14/14 distinct titles**, no CF home-fallback, **em U+2014 = 0 / en U+2013 = 0 on live HTML across all 14 pages**. Title separator is U+00B7 middle-dot (terminal mojibake only, NOT a banned dash, per `[mojibake]`).
+- **(c)** live `/` invariants all correct: theme-color `#2D4A36` forest-green, `favicon.svg` present, phone `6472161874` (`+16472161874`), hero names pruning + limb + Ontario, `tel:` CTA present, **0 banned 24/7-family phrases**.
+- **(b)** skip — no visual/CSS/component drift since last screenshot audit (no source commit since schema-only AboutPage `2c5a8e5` 07-22 + doc commits). **(d/e)** N/A — GSC-blind (no query/page KPI rows to run cannibalization or pipeline-freshness against).
+
+**Cascade re-confirmed dead by first-hand inspection (not log-trusted), $0 DfS:**
+- **P-PIPELINE (manual):** human `[x] approve` queue empty — all 5 real topics (C3 oak + 4 permit) already `[x] drafted`; the `[x]` hits at file top are how-to-approve header text.
+- **P-PIPELINE-AUTO:** nothing left to publish per `blog-pipeline.md`'s own durable verdict (L496–504): seeded queue exhausted (C1 live/duplicates the flagship `/guide/`, C2/C5 demand-dead NULL Canadian volume, C3 published 06-30, C4 demand-real 210/mo but Suroy price-gated at hardened G5/Step-E); 4-city GTA permit cluster complete + paused; GSC self-feed unavailable.
+- **P-EXPAND / P-REFRESH:** verified GSC-blind **first-hand via Supabase this run** — `seo_query_daily_kpi` = `[]` and `seo_keyword_discovered` = `[]` for tarzantrimming.ca. Portfolio-wide GSC max = 2026-07-22 (3-day lag, normal, so the daily pull itself is healthy; tarzan is simply not GSC-verified). Per `[gsc-vs-dfs]`, owned-site rank/discovery is GSC-only.
+- **P1:** site's #1 open lever is the GSC verification Domain-property TXT — Suroy/Nathan-gated, already on MORNING_TASKS L37 (part (1) answered 07-16: NOT verified). 0 cron-doable.
+- **P2:** no structural gap (both offered services + areas hub live); no measured demand (blind).
+- **P3/P4:** structurally exhausted across ~10 prior runs (schema parity, image alt/dims, heading hierarchy, meta lengths, in-content link graph, footer/hub link equity, sitemap integrity, 404 quality, form accessibility, LCP fetchpriority all clean). Live HTML this run re-confirmed em0/en0 + 0 banned phrases across all 14 pages. No non-churn defect. Checked `/llms.txt` gap: NOT shipping — that portfolio-roll of the fortmac-only unproven experiment is exactly what `[llms-unproven]` forbids and is already Suroy-gated on MORNING_TASKS L33.
+
+**Why NO-SHIP (not a skipped deliverable):** P0 was the genuinely-due deliverable-action and came back fully clean; the content engine is durably blocked on human decisions (GSC verification TXT / C4 pricing), both already flagged. Manufacturing a churn edit would violate the documented anti-busywork standard. Read-only: no source/build ship, no deploy, no CF purge, $0 DfS, no Supabase/n8n writes, no synthetic lead, no new MORNING_TASKS (every blocker already on file).
+
+**Anchors:** tarzan P0 CLEAN + NO-SHIP T02:08 07-25; next tarzan P0 due ~T14:08 07-25; cascade durably GSC-blind-dead / human-gated; next content lever = GSC verification TXT from Suroy.
+
+---
+
+### 2026-07-26 T00:08 cron: genuinely-due P0 health audit FULLY CLEAN (post ~21h cron gap) + cascade dead first-hand → read-only NO-SHIP
+
+**Context:** first portfolio tick since T03:08 07-25 (sudbury); the hourly cron was down ~21h. **Pick:** ACTIVE `[auto]`/24h first-hand git = tarzan **0** (rule-min, outright) < sudbury 2 = fortmac 2 (3 FROZEN excluded). HR9 clear: last tarzan touch T02:08 07-25 (~22h ago). P0 genuinely due (last CLEAN T02:08 07-25, ~22h > 12h) and IS the deliverable.
+
+**P0 FULLY CLEAN (a/c; b skip; d/e N/A GSC-blind):**
+- **(a)** all **14/14 sitemap URLs** HTTP 200 via spaced Chrome-UA curl (per `[curl-000]`+`[ua-required]`): sizes 15,019–40,889B all >> 5KB floor, **14/14 distinct titles**, no CF home-fallback; 404 control `/this-page-does-not-exist-xyz/` → real HTTP 404 (no CF masking); **em U+2014 = 0 / en U+2013 = 0 (byte-level LC_ALL=C) on live HTML across all 14 pages**; banned-24/7-family = 0 across all 14. Title separator is U+00B7 middle-dot (NOT a banned dash, per `[mojibake]`).
+- **(c)** live `/` invariants all correct: theme-color `#2D4A36` forest-green, `favicon.svg` present, phone `tel:+16472161874`, hero names pruning + limb removal + Ontario + owner-led.
+- **(b)** skip — no visual/CSS/component drift (working tree carried only the stranded T02:08 doc entry, no source commit since). **(d/e)** N/A — GSC-blind.
+
+**Cascade re-confirmed dead by first-hand inspection (not log-trusted), $0 DfS:**
+- **P-EXPAND / P-REFRESH:** GSC-blind verified **first-hand via Supabase this run** — `seo_query_daily_kpi` Content-Range `*/0` and `seo_keyword_discovered` `*/0` for tarzantrimming.ca. Portfolio-wide GSC max = 2026-07-23 (normal lag, daily pull healthy; tarzan simply not GSC-verified). Per `[gsc-vs-dfs]`, owned-site rank/discovery is GSC-only.
+- **P-PIPELINE (manual + AUTO):** human `[x] approve` queue empty (all real topics `[x] drafted`); AUTO durably doc-dead per `blog-pipeline.md` L496–504 (seeded pool exhausted, C4 Suroy price-gated Step-E, permit cluster complete/paused, GSC self-feed blind). No DfS re-spend.
+- **P1:** #1 lever is GSC verification Domain TXT — Suroy/Nathan-gated, already on MORNING_TASKS. 0 cron-doable.
+- **P2:** no structural gap (both offered services + areas hub live; full-removal `comingSoon`). **P3/P4:** structurally exhausted across ~15 prior runs; live re-confirmed em0/en0 + 0 banned phrases. No non-churn defect.
+
+**Adopted stranded WIP:** the T02:08 07-25 run's changelog entry was written but never committed (uncommitted in working tree, matches `[concurrent-cron]`/`[adopt-wip]`); it is accurate and already logged in ROUTINE_LOG, so it is committed alongside this entry rather than left stranded.
+
+**Why NO-SHIP (not a skipped deliverable):** P0 was the genuinely-due deliverable and came back fully clean; the content engine is durably blocked on human decisions (GSC verification TXT / C4 pricing), both already flagged. A churn edit would violate the anti-busywork standard. Read-only: no source/build ship, no deploy, no CF purge, $0 DfS, no Supabase/n8n writes, no synthetic lead, no new MORNING_TASKS (every blocker already on file).
+
+**Anchors:** tarzan P0 CLEAN + NO-SHIP T00:08 07-26; next tarzan P0 due ~T12:08 07-26; cascade durably GSC-blind-dead / human-gated; next content lever = GSC verification TXT from Suroy.
