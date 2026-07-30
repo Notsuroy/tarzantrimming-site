@@ -335,6 +335,55 @@ strongest single content asset.
 
 ---
 
+## Phase 0 keyword validation, round 2 (cron P-PIPELINE-AUTO, 2026-07-30)
+
+Context: the four drafted permit explainers (Toronto, Mississauga, Oakville,
+Burlington) exhausted the biggest-metro corridor cities. A cron run on
+2026-07-30 evaluated whether to extend the permit/bylaw corpus to the next
+served city, **Hamilton** (the only remaining served city the competitor-gap
+analysis names with its own private-tree bylaw; Kitchener and Whitby are the
+other two un-covered served cities). Phase 0 ran the full
+`seo-keyword-qualifier` against DataForSEO (location_code 2124 Canada). Result:
+**NO-GO on measured demand.** Recording here so future runs do not re-spend
+DataForSEO re-validating Hamilton (or the smaller Kitchener/Whitby) permit
+posts.
+
+- **Candidate: Hamilton tree removal permit explainer** (focus keyword `tree
+  removal permit hamilton`, would funnel into `/services/limb-removal/` +
+  `/services/tree-pruning/`).
+  - **Search demand: FAIL.** `tree removal permit hamilton`, `tree permit
+    hamilton`, `tree cutting permit hamilton` all return **NULL** Google Ads
+    volume in Canada. `hamilton tree bylaw` = 20/mo LOW. The only real volume
+    is `tree removal hamilton` = **260/mo HIGH comp, CPC $4.25**, which is a
+    commercial head term a blog post cannot and should not target (that is a
+    service-page / GBP term, not a permit explainer). G2 excludes it.
+  - **Traffic potential: FAIL.** The SERP is genuinely winnable (city pages
+    hold #1 as the primary source, but local arborists rank the permit content
+    directly: `treeservicehamilton.ca` #3, `beswicktreeservice.com` #5/#13, and
+    only one Reddit result, so it is NOT a government-authority wall like the
+    oak-wilt SERP). BUT DfS Traffic Estimation on those exact winnable
+    competitor permit pages returns **etv 0.83 / 1.29 / 1.44 monthly visits**
+    (2 to 3 ranking keywords each). Even ranking #1 for this content earns ~1
+    Canadian visit/month. The skill's own threshold (`top etv < 50 = dead
+    query`) fails hard.
+  - **Verdict: NO-GO.** Two scorecard FAILs (demand + traffic). Same low-value
+    profile that killed seeded Candidates 2 and 5 (NULL Canadian volume) on
+    2026-06-15. The permit query is a real high-intent long-tail, but for a
+    mid-size city like Hamilton the measured Canadian prize is negligible.
+
+**Refined strategy takeaway:** the per-city permit/bylaw post pattern pays off
+only for the largest metros (Toronto tier), where informational permit demand
+is large enough to register. For mid-size served cities (Hamilton, Kitchener,
+Whitby) the exact-permit keyword shows NULL Ads volume AND the winnable
+competitor pages measure etv < 2, so a per-city permit post there is thin
+speculative corpus, not a lead lever. Do NOT auto-extend the permit corpus to
+Hamilton/Kitchener/Whitby. The served-city permit-expansion lever is
+**exhausted** until GSC verification (blocker 6a) opens a real demand signal.
+Next real content moves remain: (a) GSC verification unlock, then the
+GSC-self-feed loop, and (b) Nathan's call on Candidate 4 (cost) + GBP.
+
+---
+
 ## Auto-approved + drafted (competitor-gap self-feed)
 
 Topics the cron auto-approved and published under P-PIPELINE-AUTO that were
