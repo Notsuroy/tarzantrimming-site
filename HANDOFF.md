@@ -874,3 +874,21 @@ Both lists were written when three permit guides existed and were never updated 
 **Why NO-SHIP (not a skipped deliverable):** P0 was the genuinely-due deliverable and came back fully clean; the content engine is durably blocked on human decisions (GSC verification TXT / C4 pricing), both already flagged. A churn edit would violate the anti-busywork standard. Read-only: no source/build ship, no deploy, no CF purge, $0 DfS, no Supabase/n8n writes, no synthetic lead, no new MORNING_TASKS (every blocker already on file).
 
 **Anchors:** tarzan P0 CLEAN + NO-SHIP T00:08 07-26; next tarzan P0 due ~T12:08 07-26; cascade durably GSC-blind-dead / human-gated; next content lever = GSC verification TXT from Suroy.
+
+---
+
+### 2026-07-30 T10:08 cron: first-hand live-health re-verify CLEAN + cascade dead → read-only NO-SHIP
+
+**Pick:** all 3 ACTIVE tied 2 `[auto]`/24h (sudbury `2354fa9` / fortmac `f8ab85c` / tarzan `a3bbc51`; 3 FROZEN excluded) → tie-break to oldest last-touch = tarzan (T07:58 < fortmac T08:05 < sudbury T09:11). HR9 clear: last tarzan touch T01:08 07-30 (~9h ago); sudbury blocked (~1h ago T09:08). P0 NOT due (last T01:08 07-30, ~9h < 12h; next ~T13:08). Deliverable = live-health re-verify (deploy-state is the one thing that silently breaks between audits).
+
+**Live health CLEAN (spaced Chrome-UA curl per `[curl-000]`+`[ua-required]`):**
+- **14/14 live sitemap URLs HTTP 200**, body sizes 15,019–40,889B all >> 5KB broken-state floor (no CF DYNAMIC zero-body / home-fallback).
+- Banned-phrase sweep on live `/` + newest blog (`/blog/when-to-prune-oak-trees-ontario/`): **em U+2014 = 0, en U+2013 = 0, 24/7-family = 0** on both.
+- Phone invariant: live `/` carries `tel:+16472161874` (Nathan's cell, correct).
+- No source drift: HEAD `a3bbc51` is the T01:08 doc-only NO-SHIP commit; working tree clean pre-run.
+
+**Cascade dead (first-hand, $0 DfS):** GSC-blind confirmed live — `seo_query_daily_kpi` + `seo_page_daily_kpi` both NO ROWS for tarzantrimming.ca (appliance sibs frozen 07-27, unchanged). P-EXPAND/P-REFRESH GSC-blind. P-PIPELINE manual queue empty + AUTO durably doc-dead (`blog-pipeline.md` L496–504: seeded pool exhausted, C4 Suroy price-gated Step-E, permit cluster complete, GSC self-feed blind). P1 #1 lever = GSC verification TXT, Suroy/Nathan-gated + already on MORNING_TASKS. P2 no structural gap. P3/P4 structurally exhausted (~16 prior runs; live re-confirmed em0/en0/0-banned).
+
+**Why NO-SHIP:** no genuinely-due deliverable this hour (P0 not due, GSC frozen, pipeline exhausted, all open items human-gated); a churn edit would violate the anti-busywork standard. Read-only: no source/build/deploy/CF-purge/IndexNow/synthetic, $0 DfS, no Supabase/n8n writes, no new MORNING_TASKS (every blocker already on file).
+
+**Anchors:** tarzan live-health CLEAN T10:08 07-30; next tarzan P0 due ~T13:08 07-30; cascade durably GSC-blind-dead / human-gated; next content lever = GSC verification TXT from Suroy.
