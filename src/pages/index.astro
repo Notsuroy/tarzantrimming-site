@@ -59,6 +59,16 @@ const title = `${site.brand.name} · Tree Pruning & Limb Removal, South Ontario`
 
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": new URL('/#website', Astro.site).toString(),
+    "url": Astro.site?.toString(),
+    "name": site.brand.name,
+    "inLanguage": "en-CA",
+    "publisher": { "@id": new URL('/#business', Astro.site).toString() }
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": faqData.items.map(item => ({
       "@type": "Question",

@@ -54,6 +54,7 @@ const readMinutes = parseInt((post.readTime || '').match(/\d+/)?.[0] || '0', 10)
 const articleLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
+  '@id': `${new URL(path, Astro.site).toString()}#article`,
   headline: post.h1,
   description: post.description,
   datePublished: post.publishedAt,
@@ -61,6 +62,7 @@ const articleLd: Record<string, unknown> = {
   url: new URL(path, Astro.site).toString(),
   mainEntityOfPage: new URL(path, Astro.site).toString(),
   inLanguage: 'en-CA',
+  isPartOf: { '@id': new URL('/#website', Astro.site).toString() },
   wordCount,
   ...(readMinutes > 0 ? { timeRequired: `PT${readMinutes}M` } : {}),
   image: {
@@ -72,6 +74,7 @@ const articleLd: Record<string, unknown> = {
   author: { '@type': 'Organization', name: site.brand.name, url: site.url },
   publisher: {
     '@type': 'LocalBusiness',
+    '@id': new URL('/#business', Astro.site).toString(),
     name: site.brand.name,
     url: site.url,
     telephone: site.contact.phoneE164,
@@ -100,6 +103,9 @@ const faqLd = faqs.length
   ? {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+      '@id': `${new URL(path, Astro.site).toString()}#faq`,
+      isPartOf: { '@id': new URL('/#website', Astro.site).toString() },
+      about: { '@id': `${new URL(path, Astro.site).toString()}#article` },
       mainEntity: faqs.map((f) => ({
         '@type': 'Question',
         name: f.q,
