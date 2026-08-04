@@ -25,16 +25,13 @@ const featuredGuide = {
 const blogLd = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
+  '@id': new URL('/blog/#blog', Astro.site).toString(),
+  isPartOf: { '@id': new URL('/#website', Astro.site).toString() },
   name: `${site.brand.name} Tree Care Guides`,
   url: new URL(path, Astro.site).toString(),
   description,
   inLanguage: 'en-CA',
-  publisher: {
-    '@type': 'LocalBusiness',
-    name: site.brand.name,
-    url: site.url,
-    areaServed: site.location.serviceAreaLabel,
-  },
+  publisher: { '@id': new URL('/#business', Astro.site).toString() },
   blogPost: sortedPosts.map((p) => ({
     '@type': 'BlogPosting',
     headline: p.h1 || p.title,

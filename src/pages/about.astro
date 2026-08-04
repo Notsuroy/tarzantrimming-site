@@ -30,6 +30,8 @@ const businessId = new URL('/#business', Astro.site).toString();
 const aboutPageLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
+  '@id': new URL('/about/#webpage', Astro.site).toString(),
+  isPartOf: { '@id': new URL('/#website', Astro.site).toString() },
   name: title,
   url: new URL('/about/', Astro.site).toString(),
   description: 'The owner-led story behind Tarzan Trimming: a working arborist doing careful, honest tree pruning and limb removal for south Ontario homeowners on evenings and weekends.',

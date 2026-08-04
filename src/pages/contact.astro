@@ -51,6 +51,8 @@ const businessLd = {
 const contactPageLd = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
+  '@id': new URL('/contact/#webpage', Astro.site).toString(),
+  isPartOf: { '@id': new URL('/#website', Astro.site).toString() },
   name: title,
   url: new URL('/contact/', Astro.site).toString(),
   description: 'Phone, text, and email contact details for Tarzan Trimming, owner-led tree pruning and limb removal across south Ontario.',

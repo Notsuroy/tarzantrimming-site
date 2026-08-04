@@ -29,6 +29,8 @@ const provider = {
 const collectionLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
+  '@id': new URL('/services/#webpage', Astro.site).toString(),
+  isPartOf: { '@id': new URL('/#website', Astro.site).toString() },
   name: `Services · ${site.brand.name}`,
   description:
     'Tree pruning and limb removal across south Ontario, done properly by an owner-led crew.',
