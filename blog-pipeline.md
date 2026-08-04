@@ -133,7 +133,7 @@ removal. Candidates 3 to 5 follow.
 
 ## Candidate 2: Signs a tree branch is dangerous and should come down
 
-- **Status:** [ ] approve  [ ] skip  [ ] adjust
+- **Status:** [x] skip  (NO-GO, durably dead. Do not re-qualify or re-burn DfS)
 - **Focus keyword:** `signs a tree branch is dangerous`
 - **Tier:** informational / safety, mid-funnel feeding limb removal
 - **Content type:** informational / decision intent. Routes the commercial
@@ -160,7 +160,20 @@ removal. Candidates 3 to 5 follow.
   near hydro lines, that is the utility's job") is how Nathan actually
   operates, and the response framing does not imply emergency same-day
   service.
-- **Notes:**
+- **Notes:** NO-GO, durably dead. First qualified NO-GO 2026-06-30 (cron
+  T13:08). Re-confirmed FIRST-HAND 2026-08-04 (cron, DfS Canada 2124):
+  `signs a tree branch is dangerous`, `dangerous tree branch`,
+  `signs a tree is dangerous`, `when to remove a tree branch` all NULL
+  search volume; SERP clean (no AI Overview, no Reddit, only small-domain +
+  UK arborist blogs) so it is *winnable* but the measured Traffic Estimation
+  on the top 3 organic URLs (redmountainrigging, instagram, riverbendva)
+  returned **etv 0 / 0 keywords each** = dead query, ranking #1 funnels ~0
+  local readers to `/services/limb-removal/`. Fails qualifier points 1
+  (demand) + 2 (traffic potential). **Do not re-qualify or re-draft** (this
+  08-04 run re-burned ~$0.006 DfS reproducing the exact 06-30 verdict before
+  reading the standing MORNING_TASKS L344 guard, which is why this verdict is
+  now inline here at the source). Re-open only if a real Canadian GSC
+  impression cluster appears on the localized phrasing.
 
 ---
 
@@ -244,13 +257,28 @@ removal. Candidates 3 to 5 follow.
   bands and no dollar figures (matches `services.json` quote-only). If
   Nathan switches to public ranges (launch TODO #3), the post can add real
   ranges in a follow-up commit. Do not invent dollar figures.
-- **Notes:**
+- **Notes:** THE ONE VIABLE SEEDED TOPIC, but human-gated, do not auto-publish.
+  Demand is real and re-confirmed FIRST-HAND 2026-08-04 (cron, DfS Canada 2124):
+  base term `tree pruning cost` = 210/mo, cpc $2.55, MEDIUM comp (Ontario/geo
+  variants NULL as expected per `feedback_dfs_city_vs_country_location`); the
+  live `tree pruning cost Ontario` SERP has genuine traffic (homestars etv 1334,
+  r/londonontario etv 767, bigleaftree.ca etv 224) and is blog/price-guide
+  format = matches our type. Blocked from P-PIPELINE-AUTO by tarzan's hardened
+  G5: a *competitive* cost post needs real price ranges = a pricing claim I
+  cannot fabricate on Nathan's real business (`feedback_arborist_real_business_
+  no_fabrication`). Already an OPEN Step-E decision for Suroy, see
+  `rank-and-rent/MORNING_TASKS.md` "Pipeline topics needing a Suroy call" (item
+  flagged 2026-06-15). Two unlock paths there: (a) Nathan-approved price ranges
+  → real cost guide, or (b) approve a price-free "what affects pruning cost"
+  angle → draftable now with zero dollar figures. Do NOT re-flag in
+  MORNING_TASKS (already present); do NOT re-burn DfS (numbers current as of
+  08-04).
 
 ---
 
 ## Candidate 5: Cleaning up after a storm: broken and hanging limbs in south Ontario
 
-- **Status:** [ ] approve  [ ] skip  [ ] adjust
+- **Status:** [x] skip  (NO-GO, durably dead. Do not re-qualify or re-burn DfS)
 - **Focus keyword:** `storm damaged tree limb cleanup Ontario`
 - **Tier:** seasonal / informational, feeds limb removal
 - **Content type:** informational / seasonal. Routes urgency to the limb
@@ -278,7 +306,12 @@ removal. Candidates 3 to 5 follow.
   same-day response. Default is "evenings and weekends, by appointment, call
   the utility or city for anything actively dangerous." Confirm this matches
   what Nathan can realistically commit to around the Davey day job.
-- **Notes:**
+- **Notes:** NO-GO, durably dead. `storm damaged tree limb cleanup` (and the
+  cleaner variant `storm damaged tree limb cleanup Ontario`) = NULL Canadian
+  search volume, confirmed 2026-06-15 and re-confirmed FIRST-HAND 2026-08-04
+  (cron, DfS Canada 2124). Same dead-informational class as Candidate 2. **Do
+  not re-qualify or re-draft.** Re-open only if a real Canadian GSC impression
+  cluster appears on the localized phrasing.
 
 ---
 
