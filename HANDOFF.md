@@ -958,3 +958,23 @@ Both lists were written when three permit guides existed and were never updated 
 **Why NO-SHIP (not a skipped deliverable):** P0 was the genuinely-due deliverable and came back fully clean; the content engine is durably blocked on human decisions (GSC verification TXT / C4 pricing), both already flagged in MORNING_TASKS. A churn edit would violate the anti-busywork standard. Read-only: no source/build/deploy/CF-purge/IndexNow/synthetic, $0 DfS, no Supabase/n8n writes, no new MORNING_TASKS (every blocker already on file).
 
 **Anchors:** tarzan P0 CLEAN + NO-SHIP T23:08 08-10; next tarzan P0 due ~T11:08 08-11; cascade durably GSC-blind-dead / human-gated; next content lever = GSC verification TXT from Suroy. Portfolio GSC advanced to 08-08 healthy.
+
+---
+
+### 2026-08-13 T14:08 cron: fresh internal-link audit + live deploy-state sweep both CLEAN → read-only NO-SHIP
+
+**Pick:** ACTIVE `[auto]`/24h first-hand git = tarzan **3** (min) < sudbury 4 = fortmac 4 (3 FROZEN excluded). HR9 clear: last tarzan touch T12:08 08-13 (NO-SHIP), P0 NOT due (last tarzan P0 T05:08 08-13, ~9h < 12h; next ~T17:08). HEAD `47b409b` == origin/main, working tree clean pre-run.
+
+**Did NOT rubber-stamp the ~18 prior NO-SHIPs — ran a fresh first-hand P3 internal-link-equity audit** (the one dimension worth re-deriving rather than trusting "exhausted" assertions):
+- **Blog → money-page equity:** all 5 posts carry in-content links to BOTH `/services/tree-pruning/` + `/services/limb-removal/` (1-2 each) + `/service-areas/` — 0 orphan posts, no `[money-equity]` gap.
+- **Cluster interlinking:** the 4 GTA permit posts are a fully-meshed cluster (each links the other 3). The lone `when-to-prune-oak-trees-ontario` post has no blog-sibling link, but that is defensible (no topically-relevant sibling; forcing a permit-post link would be `[prose-link-gap]`-style churn, not a fix).
+- **Inbound equity:** service pages (`[slug].astro`) link 5 blog posts, `/service-areas/` links 4. Homepage + about link 0 blog posts by design (tight conversion funnel). All healthy.
+- **Verdict:** P3 link graph genuinely clean, independently confirming the prior "P3 exhausted" claim rather than assuming it.
+
+**Live deploy-state sweep CLEAN (14 live sitemap URLs, spaced 1.2s Chrome-UA curl per `[curl-000]`+`[ua-required]`):** 14/14 HTTP **200**, body sizes **15,126 to 41,167B** all >> 5KB broken-state floor (no CF DYNAMIC zero-body / home-fallback per `[cf-500-blind]`); **em U+2014 = 0, en U+2013 = 0, 24/7-family = 0 on every one of the 14 URLs** (HARD RULE 5+6 clean); 404 control `/this-does-not-exist-xyz-9f/` → real **HTTP 404** (11,366B custom page, no CF soft-404 masking). No deploy-state break, no source drift.
+
+**Cascade dead (unchanged, first-hand this run):** P-EXPAND/P-REFRESH/P-PIPELINE-AUTO self-feed all GSC-blind (tarzan still unverified in GSC — DNS TXT missing on zone `8dccf00d`, on MORNING_TASKS L37). Manual `[x] approve` queue empty; seeded AUTO pool drained; the one demand-real candidate (C4 tree-pruning-cost, 210/mo) is Step-E price-gated on MORNING_TASKS L59 (option (b) price-free angle offered, awaiting Suroy). P1 #1 lever = GSC verification TXT (human-gated). P2 no structural gap.
+
+**Why NO-SHIP (not a skipped deliverable):** no genuinely-due deliverable this hour (P0 not due; P3 re-audited clean first-hand; content engine GSC-blind + C4 human-gated). A churn edit would violate the anti-busywork standard. Read-only: no source/build/deploy/CF-purge/IndexNow/synthetic, $0 DfS, no Supabase/n8n writes, no new MORNING_TASKS (every blocker already on file, L37 + L59).
+
+**Anchors:** tarzan internal-link P3 CLEAN + live deploy-state CLEAN + NO-SHIP T14:08 08-13; next tarzan P0 due ~T17:08 08-13; cascade durably GSC-blind-dead / human-gated; next content lever = GSC verification TXT from Suroy/Nathan.
