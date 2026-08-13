@@ -978,3 +978,22 @@ Both lists were written when three permit guides existed and were never updated 
 **Why NO-SHIP (not a skipped deliverable):** no genuinely-due deliverable this hour (P0 not due; P3 re-audited clean first-hand; content engine GSC-blind + C4 human-gated). A churn edit would violate the anti-busywork standard. Read-only: no source/build/deploy/CF-purge/IndexNow/synthetic, $0 DfS, no Supabase/n8n writes, no new MORNING_TASKS (every blocker already on file, L37 + L59).
 
 **Anchors:** tarzan internal-link P3 CLEAN + live deploy-state CLEAN + NO-SHIP T14:08 08-13; next tarzan P0 due ~T17:08 08-13; cascade durably GSC-blind-dead / human-gated; next content lever = GSC verification TXT from Suroy/Nathan.
+
+---
+
+### 2026-08-13 T18:08 cron P0: genuinely-due health audit FULLY CLEAN (a/b/c/d PASS; e N/A GSC-blind) → read-only NO-SHIP
+
+**Pick:** ACTIVE `[auto]`/24h first-hand git = tarzan **4** (min) < fortmac 5 < sudbury 6 (3 FROZEN excluded). HR9 clear: last tarzan touch T14:08 08-13 (NO-SHIP, ~4h ago). Last tarzan P0 was T05:08 08-13, ~13h ago, so **P0 is genuinely due again (>12h) and IS this run's deliverable-action.** HEAD `511e350` == origin/main (git fetch confirmed in-sync), working tree clean pre-run.
+
+**P0 FULLY CLEAN (a/b/c/d PASS; e N/A GSC-blind):**
+- **(a) URL sweep + deploy-state verify:** all **14/14 live sitemap URLs** HTTP **200** via spaced (1.2s) Chrome-UA curl (per `[curl-000]`+`[ua-required]`). Body sizes **15,126 to 41,167B**, all >> 5KB broken-state floor, all distinct (no CF DYNAMIC zero-body / home-fallback per `[cf-500-blind]`). 404 control `/this-does-not-exist-zz9/` → real **HTTP 404** (11,366B custom 404 page, no CF soft-404 masking). Doubles as a deploy-state verify of the full corpus (5 posts + guide + 2 service pages + hubs) — 0 CF regression on untouched routes.
+- **(b) brand markers:** live theme-color `#2D4A36` forest-green ✓; `favicon.svg` = **200 image/svg+xml** ✓; title `Tarzan Trimming · Tree Pruning & Limb Removal, South Ontario` (separator is U+00B7 middle-dot, NOT a dash, per `[mojibake]`) ✓; homepage `<h1 class="font-display …">` present ✓; primary CTA present ✓.
+- **(c) phone/dash/24-7:** phone `tel:+16472161874` = (647) 216-1874, single consistent number home + contact ✓; live sweep of 3 newest-content pages (`/`, newest blog, `/service-areas/`): **em U+2014 = 0, en U+2013 = 0, 24/7-family = 0** on each ✓. `/contact/` = intentional owner-led direct-contact (no lead-capture form; `qf-email`/`markFieldError` checks are rank-and-rent-n8n-webhook-specific, N/A on tarzan).
+- **(d) GSC pipeline health (portfolio safeguard):** `[SEO] Daily GSC KPI` (uyBDgQqkyq0WNqOz) **active=True** ✓; portfolio `seo_query_daily_kpi` MAX metric_date = **2026-08-10** (3-day lag < 4-day threshold, healthy, no `gsc-stale`) ✓; `rank_tracking_results` gsc MAX checked_at = **2026-08-10T10:00Z** (Monday-weekly per `[rank-weekly]`, 3-day lag < 4, PASS) ✓.
+- **(e)** N/A — tarzan GSC-blind: `seo_query_daily_kpi` for tarzantrimming.ca verified first-hand this run = Content-Range `*/0` (~76-day domain still not GSC-verified; DNS TXT missing on zone `8dccf00d`, Suroy/Nathan-gated per MORNING_TASKS L37). No query rows to run cannibalization against.
+
+**Cascade re-confirmed dead first-hand, $0 DfS:** P-EXPAND/P-REFRESH GSC-blind (0 tarzan rows confirmed above). P-PIPELINE manual `[x] approve` queue empty (only `[x] approve` markers in `blog-pipeline.md` are already `[x] drafted (auto)`; the C4 tree-pruning-cost candidate is `[ ] approve`, Suroy price-gated at hardened G5/Step-E). AUTO durably doc-dead (seeded pool drained, 4-city GTA permit cluster complete + paused, GSC self-feed blind). P1 #1 lever = GSC verification Domain TXT (Suroy/Nathan-gated, MORNING_TASKS L37). P2 no structural gap. P3 internal-link graph re-audited clean only 4h ago (T14:08). P4 exhausted.
+
+**Why NO-SHIP (not a skipped deliverable):** P0 was the genuinely-due deliverable-action and came back fully clean; the content engine is durably blocked on human decisions (GSC verification TXT / C4 pricing), both already flagged. A churn edit would violate the anti-busywork standard. Read-only: no source/build/deploy/CF-purge/IndexNow/synthetic, $0 DfS, no Supabase/n8n writes, no new MORNING_TASKS (every blocker already on file, L37 + L59).
+
+**Anchors:** tarzan P0 CLEAN + NO-SHIP T18:08 08-13; next tarzan P0 due ~T06:08 08-14; cascade durably GSC-blind-dead / human-gated; next content lever = GSC verification TXT from Suroy/Nathan. Portfolio GSC fresh at 08-10.
