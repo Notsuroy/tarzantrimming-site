@@ -123,10 +123,10 @@ JSON-LD `LocalBusiness` + `FAQPage` schema on homepage (FAQPage built from the 8
 
 Intentionally trimmed for v1 scope:
 
-- **No blog.** Astro content collection deleted. Can re-add later if friend wants long-form posts.
+- ~~**No blog.**~~ **Blog re-added (cron, 2026-06 onward).** `src/pages/blog/index.astro` hub + `src/pages/blog/[slug].astro` post template, driven by `src/data/blog.json` (5 posts live as of 2026-08-15: 4 per-city tree-removal-permit posts for Burlington/Oakville/Mississauga/Toronto + `when-to-prune-oak-trees-ontario`). Each post carries BlogPosting JSON-LD, a populated `heroImage` (alt + width + height), and in-content links to both money pages (`/services/tree-pruning/`, `/services/limb-removal/`) plus `/service-areas/`. Separately, `src/pages/guide/when-to-prune-trees-southern-ontario.astro` is a standalone long-form guide (not in the blog collection). The old "content collection deleted" note was stale.
 - **No bilingual setup.** vicjimassage runs PT root + EN at `/en/`. Tarzan is English-only.
 - **No WhatsApp integration.** Canadian customers prefer phone/SMS. `WhatsAppFloat` replaced with `PhoneFloat`.
-- ~~**No sitemap.xml route.**~~ DONE 2026-06-09 (cron, commit `5d4ae95`). Custom `src/pages/sitemap.xml.ts` endpoint emits the 4 static pages; `public/robots.txt` references it. Live at `https://tarzantrimming.ca/sitemap.xml`. Add a route to the `PAGES` array in the endpoint when a new page ships.
+- ~~**No sitemap.xml route.**~~ DONE 2026-06-09 (cron, commit `5d4ae95`), since expanded. Custom `src/pages/sitemap.xml.ts` endpoint emits **all 8 static pages** (`/`, `/services/`, both service detail pages, `/service-areas/`, the `/guide/` page, `/about/`, `/contact/`) via the `PAGE_LASTMOD` map PLUS the `/blog/` hub and every post derived from `blog.json`, so new posts self-register. Per-page honest `lastmod` (git last-content-change date), not a shared build stamp. `public/robots.txt` references it. Live at `https://tarzantrimming.ca/sitemap.xml`. MAINTENANCE: when a static page's content changes, bump its date in `PAGE_LASTMOD` in the same commit; blog posts pull `updatedAt || publishedAt` automatically.
 - **No /quote/ form.** v1 funnels to phone + text. If form conversion data later supports it, can add (using the same /api/quote pattern as the rank-and-rent sites).
 
 ## Architecture principles
