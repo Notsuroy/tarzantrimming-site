@@ -1091,3 +1091,22 @@ Both lists were written when three permit guides existed and were never updated 
 **Verification:** apex `https://tarzantrimming.ca/` 200 (Chrome UA); `/services/full-tree-removal/` renders coming-soon copy live. Read-only, $0 DfS, 0 Supabase/n8n writes. Doc-only commit (HANDOFF).
 
 **Anchors:** tarzan money-page-equity + coming-soon honesty-parity CLEAN T13:08 08-16; full-removal exclusion confirmed intentional (not a P3 gap); cascade durably GSC-blind; next tarzan P0 due ~T16:08 08-16.
+
+### 2026-08-16 T15:08 cron: first-hand direct-SQL re-verification of the two GSC-gated content levers (portfolio-wide) → read-only NO-SHIP
+
+**Pick:** rule-min ACTIVE `[auto]`/24h git = tarzan **5** = fortmac **5** < sudbury **6** (3 FROZEN excl); tie broken by oldest last-touch (tarzan T13:08 < fortmac T14:08). P0 NOT due (last tarzan P0 T04:08 08-16 +12h = ~T16:08).
+
+**Distinct axis this run (vs T13:08 money-page equity / T10:08 rule-pick / T07:08 deploy-state):** instead of inheriting the "cascade dead" assertion, I VERIFIED the two content levers first-hand via direct `seo_keyword_discovered` SQL, so future runs have concrete evidence rather than a chain of inherited claims:
+- **sudbury** P-EXPAND (pos 8-20, imp>=20) = empty; broader imp>=15 = only `gas stove repair near me` (17 imp, **pos 56.9**) — near-me/service-page + GBP intent, unwinnable by a blog, G1/G4 discard.
+- **fortmac** P-EXPAND = only `fort appliance repair` (41 imp, pos 18.2); broader adds `fort appliance repair fort mcmurray` (64 imp, pos 25.75) — **both garbled fragments of the homepage's own commercial head term "appliance repair fort mcmurray," G2-excluded (money-page-owned, already targeted), cannibalization-class not a page-gap.**
+- Net: **no eligible P-EXPAND / P-PIPELINE-AUTO deliverable exists on either GSC-having site** → no VALUE-override target → rule-pick (tarzan) stands.
+
+**GSC freshness:** portfolio MAX `metric_date` = 2026-08-13 (3 days, within 4-day tolerance → no gsc-stale flag).
+
+**tarzan own cascade re-confirmed dead:** `seo_query_daily_kpi` for tarzantrimming.ca = Content-Range `*/0` (GSC-blind ~2mo, blocker unchanged — Domain-TXT verify still Suroy/Nathan-gated); P-PIPELINE human queue 0 un-drafted + AUTO seeded pool durably drained; on-page maxed across prior runs; P1/P2 off-page + friend/Suroy-gated.
+
+**Liveness / deploy-state (Chrome UA):** apex 41,167B, `/services/tree-pruning/` 26,701B, `/blog/tree-removal-permit-toronto/` 32,898B — all HTTP 200, no 500, no <5KB zero-body.
+
+**NO-SHIP:** no source/build/deploy/wrangler/CF-purge/IndexNow/synthetic; $0 DfS; n8n untouched; Supabase read-only (5 SELECT/HEAD, 0 writes); no new MORNING_TASKS (real blockers already on file). HEAD 9357e27==origin, clean tree. Doc-only commit (this entry + ROUTINE_LOG row).
+
+**Anchors:** portfolio content levers verified dead first-hand T15:08 08-16; next tarzan P0 ~T16:08; highest-leverage unlock remains off-page authority + tarzan GSC Domain-TXT verification (both Suroy-gated).
