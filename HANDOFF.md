@@ -1134,3 +1134,20 @@ Both lists were written when three permit guides existed and were never updated 
 **NO-SHIP:** no source/build/deploy/wrangler/CF-purge/IndexNow/synthetic; $0 DfS; n8n read-only (2 GET); Supabase read-only (5 SELECT/HEAD, 0 writes); no new MORNING_TASKS (GSC-TXT-verify + Nathan-gated items already on file). Doc-only commit (this entry + ROUTINE_LOG row).
 
 **Anchors:** next tarzan P0 ~T13:08 08-18; highest-leverage unlock remains off-page authority + tarzan GSC Domain-TXT verification (both Suroy-gated). Prior run T20:08 08-17 recommended freezing tarzan to health-checks-only until GSC TXT lands — still the standing recommendation on file in MORNING_TASKS.
+
+### 2026-08-18 T15:08 cron P0: genuinely-due health audit FULLY CLEAN (a/b/c/d PASS; e N/A GSC-blind) → read-only NO-SHIP
+
+**Pick:** ACTIVE fewest `[auto]`/24h git (HEAD `f074ef9`==origin, clean tree): tarzan **4** < sudbury 5 < fortmac 6 (3 FROZEN excl). Last tarzan touch T12:08 (~3h) was a NO-SHIP cascade re-verify, NOT a P0 — this P0 is a distinct task (last tarzan P0 T01:08 ~14h > 12h cooldown), so HR9 4h-same-task rule satisfied. **P0 genuinely due.**
+
+**P0 (curl + Chrome UA):**
+- **(a)** 14/14 live sitemap URLs HTTP 200, all 15,126–41,167B (no <5KB zero-body, no CF home-fallback), 14 distinct topic-matched titles → doubles as full-corpus deploy-state verify. Nonexistent-probe `/404-nonexistent-probe/` correctly hard-404s (real 404 status, not soft-404 home).
+- **(b)** theme-color `#2D4A36` (brand forest), favicon `/favicon.svg`, H1 "Honest tree work, owner-led, across south Ontario" (niche + region + owner-led).
+- **(c)** phone `+16472161874` [(647) 216-1874] present with 3 `tel:` call-CTA buttons on home; em-dash=0, en-dash=0, banned-24-7=0 across full dist. Owner-led site has no lead form → qf-email/markFieldError N/A.
+- **(d)** `[SEO] Daily GSC KPI` uyBDgQqkyq0WNqOz active=True, last 3 execs all success (08-18/08-17/08-16 @01:00Z); portfolio `seo_query_daily_kpi` MAX metric_date=2026-08-15 (3d lag <4d → no gsc-stale); `rank_tracking_results` gsc MAX checked_at 08-17T10:00Z (weekly-fed healthy). tarzan `seo_query_daily_kpi` GSC-blind (Domain-TXT verify still Suroy/Nathan-gated, known blocker not new).
+- **(e)** N/A — tarzan GSC-blind, no query rows to scan for cannibalization.
+
+**Cascade dead first-hand:** P-EXPAND/P-REFRESH both GSC-blind (no seo_keyword_discovered / seo_page_daily_kpi rows); P-PIPELINE human `[x]approve` undrafted = 0 + AUTO self-feed GSC-gated; P1/P2 Nathan/Suroy-gated (phone-confirm, cities, pricing, hours); P3/P4 on-page maxed (both money pages structured-skill-audited 08-17 T14:08/T16:08).
+
+**NO-SHIP:** no source/build/deploy/wrangler/CF-purge/IndexNow/synthetic; $0 DfS; n8n read-only (2 GET); Supabase read-only (4 SELECT/HEAD, 0 writes); no new MORNING_TASKS (GSC-TXT-verify decision already thoroughly on file at MORNING_TASKS L71 flagged 08-17; SAB-GBP + Nathan-gated items also on file). Doc-only commit (this entry + ROUTINE_LOG row).
+
+**Anchors:** next tarzan P0 ~T03:08 08-19; highest-leverage unlock remains off-page authority + tarzan GSC Domain-TXT verification (both Suroy-gated). Standing recommendation on file: freeze tarzan to health-checks-only until GSC TXT lands (MORNING_TASKS L71).
