@@ -417,6 +417,72 @@ GSC-self-feed loop, and (b) Nathan's call on Candidate 4 (cost) + GBP.
 
 ---
 
+## Phase 0 keyword validation, round 3 (cron, 2026-08-19): EAB / ash re-seed candidate
+
+Context: `MORNING_TASKS.md` had carried, since 2026-06-15, a standing note that
+the strongest un-validated re-seed topic (once the seeded 5 were exhausted) was
+**"emerald ash borer / what to do with a dying ash tree in southern Ontario"**,
+recommended because EAB is the #1 regional tree-loss driver, the `/guide/` page
+only mentions ash in passing (verified: 2 passing mentions), and it reads as
+pure educational content with no price/cert/availability claim (passes the
+tarzan-hardened honesty gate G5). It was never keyword-checked. This run ran the
+full `seo-keyword-qualifier` against DataForSEO (location_code 2124 Canada) on
+six ash/EAB variants to settle it with data. Result: **NO-GO.** Recording here so
+no future run re-drafts an EAB post or re-spends DfS re-validating it.
+
+- **Candidate: EAB / dying-ash educational post** (would funnel into the live
+  `/services/limb-removal/`; note the strongest-intent funnel
+  `/services/full-tree-removal/` is `comingSoon:true`, so an honesty-safe post
+  could only point to limb-removal, not full removal).
+  - **Search demand: split, and the winnable half is dead.** Measured Canadian
+    Google Ads volume:
+    - `emerald ash borer ontario` = **320/mo, LOW comp, CPC $2.85** (the only
+      real-demand variant, clears the 300 floor)
+    - `signs of emerald ash borer` = 50/mo, LOW comp
+    - `emerald ash borer treatment ontario` = 10/mo
+    - `ash tree removal ontario` = 10/mo
+    - `dying ash tree ontario` = **NULL** (0/mo)
+    - `what to do with a dead ash tree` = **NULL** (0/mo)
+    The commercial-intent variants (removal / treatment / dying / dead), the
+    ones that would actually funnel a reader toward a tree-service call, all
+    return NULL or ~10/mo in Canada. The only variant with real volume is the
+    purely informational head term `emerald ash borer ontario`.
+  - **Search intent match + ranking difficulty: FAIL (monolith authority
+    SERP).** The SERP for `emerald ash borer ontario` (top 13 organic) is
+    100% government / conservation-authority / national-nonprofit factsheets:
+    `ontario.ca` (#2), `natural-resources.canada.ca` (#4), `invadingspecies.com`
+    (#5, Ontario Invasive Species / OFAH), `trca.ca` (#6), `exoticpests.gc.ca`
+    (#7, CFIA), `treecanada.ca` (#8), `nrcan.gc.ca` (#9), `grandriver.ca` (#10),
+    Toronto Master Gardeners (#11), CBC (#13). **Zero local tree-service pages
+    in the top 13.** Google has decided this query is answered by environmental
+    regulators and invasive-species authorities, not by contractors. A
+    2.5-month-old owner-led tree-service domain has near-zero shot, and this is
+    the same authority-wall pattern that killed the oak-wilt candidate (C... the
+    summer-oak-pruning SERP). No AI Overview present; no Reddit in the top 13.
+  - **Business potential: 1 (low).** The 320/mo term is informational ("what is
+    EAB / is it in my area"), not transactional. A ranking page would earn
+    awareness, not calls. The transactional ash intent (removal) has no
+    measurable Canadian volume to capture.
+  - **Verdict: NO-GO.** Two hard FAILs (winnable-demand + ranking difficulty)
+    plus a weak business-potential score. The high-volume variant is an
+    authority-walled informational query we cannot rank and would not convert;
+    the convertible variants have no measurable demand.
+
+**Refined strategy takeaway:** the EAB / dying-ash re-seed hypothesis is now
+empirically closed. It looked like the obvious next educational topic, but the
+demand is bimodal in exactly the wrong way, real volume sits on an
+informational head term walled by government + conservation authorities, and
+the commercial variants that would actually feed limb-removal are dead in
+Canada. Combined with the exhausted seeded pool (C1 live-as-guide, C2/C5
+NULL-demand, C3 drafted, C4 price-gated Step-E) and the completed per-city
+permit corpus (biggest-metros-only per the permit-bigmetro rule), tarzan's
+autonomous content lane has **no remaining GO candidate** until the domain is
+GSC-verified (blocker 6a, Suroy-gated DNS TXT) and the GSC self-feed surfaces
+real owned-query demand, or Nathan clears the Candidate 4 cost-framing call.
+Do NOT re-draft or re-qualify any EAB/ash post.
+
+---
+
 ## Auto-approved + drafted (competitor-gap self-feed)
 
 Topics the cron auto-approved and published under P-PIPELINE-AUTO that were
