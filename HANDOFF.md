@@ -1211,3 +1211,21 @@ Both lists were written when three permit guides existed and were never updated 
 **NO-SHIP:** no source/build/deploy/wrangler/CF-purge/IndexNow/synthetic; $0 DfS; n8n 2 read-only GET; Supabase 2 read-only GET; 0 writes; no NEW MORNING_TASKS (GSC-TXT L37, off-page/SAB-GBP L20, Nathan items, freeze rec L71 all on file). Doc-only commit (this entry) per `[[noship-commit]]`.
 
 **Anchors:** tarzan P0 CLEAN T05:08 08-19; next tarzan P0 eligible ~T17:08 08-19. Doc-only NO-SHIP streak now 22 runs since `aeb65a5` (08-15); unlock remains Suroy GSC TXT verify or Nathan decision (MORNING_TASKS L71). Portfolio content-GSC MAX 08-16 (advance-watch ~01Z 08-20).
+
+
+---
+
+## BRAND SUPERSEDED (2026-08-12): Treegonometry is Nathan's final brand
+
+Suroy + Nathan decided 2026-08-12: **treegonometry.ca replaces Tarzan Trimming** as the
+permanent brand. Full port built at `treegonometry-site/` (repo Notsuroy/treegonometry-site,
+CF Pages `treegonometry`, live). THIS site stays live temporarily.
+
+**Do NOT invest new content or citations in tarzantrimming.ca.** Sequence:
+1. treegonometry.ca indexes + nathan@treegonometry.ca goes live on Migadu.
+2. Then 301 tarzantrimming.ca -> treegonometry.ca page-for-page (same structure).
+3. theontarioarborist.ca's eventual 301 now targets treegonometry.ca too.
+4. Cron: tarzantrimming's ACTIVE slot in rank-and-rent-builder should transfer to
+   treegonometry-site at 301 time (needs Suroy's explicit go-ahead).
+The nathan@tarzantrimming.ca Migadu mailbox stays alive through the transition (it is the
+address his Gmail send-as uses today) until treegonometry email is proven.
