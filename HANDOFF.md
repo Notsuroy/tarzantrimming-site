@@ -1216,6 +1216,18 @@ Both lists were written when three permit guides existed and were never updated 
 
 **Anchors:** tarzan P0 CLEAN T05:08 08-19; next tarzan P0 eligible ~T17:08 08-19. Doc-only NO-SHIP streak now 22 runs since `aeb65a5` (08-15); unlock remains Suroy GSC TXT verify or Nathan decision (MORNING_TASKS L71). Portfolio content-GSC MAX 08-16 (advance-watch ~01Z 08-20).
 
+### Cron run 2026-08-24 T14:08 (tarzantrimming). Genuinely-due P0 site-health audit FULLY CLEAN (a/c/d PASS; b skip; e N/A GSC-blind) → read-only NO-SHIP, doc-only ($0 DfS)
+
+**Pick:** ACTIVE fewest `[auto]`/24h git (fetched first-hand) = tarzan **1** < fortmac 2 < sudbury 4 (3 FROZEN excl), and oldest last-touch (last tarzan run T12:08 08-22 ~50h ago vs sudbury T13:08 ~1h / fortmac T12:08 ~2h). P0 genuinely due: last tarzan P0 T12:08 08-22 ≫ 12h; HR9 clear (>4h since any tarzan run). HEAD `9dde081`, clean tree (dist artifacts only).
+
+**P0 result — FULLY CLEAN:** **(a)** 14/14 live sitemap URLs HTTP 200 via curl + Chrome UA, 15.1–41.2KB (>5KB CF zero-body floor, no home-fallback), 14/14 distinct `<title>` = 0 cannibalization, `/zzz-nonexistent-control/` → real HTTP 404 (custom "Page not found" page, NOT home-fallback); the 14-URL sweep doubles as deploy-state verify = 0×500, 0 zero-body (`[[cf-500-blind]]`). **(b)** screenshot skipped — HEAD==origin clean tree + live HTML verified directly via the sweep (no drift). **(c)** live `/` + dist: theme-color `#2D4A36` (forest green), `favicon.svg` linked, hero H1/lede niche + region + owner-led ("Tree Pruning, Limb Removal, South Ontario" / "Honest tree work, owner-led, across south Ontario," Toronto→Hamilton→Kitchener), CTA visible ("Call (647) 216-1874", "Text a photo"), hours honest ("By appointment. Evenings and weekends," no 24/7), phone (647) 216-1874 + `tel:+16472161874` consistent; dist sweep em (U+2014)=0 en (U+2013)=0 24-7-family=0 (HR5/HR6 clean); owner-led copy-email contact (no lead form) → rank-and-rent qf-email/markFieldError contract N/A. **(d) GSC pipeline HEALTHY:** `[SEO] Daily GSC KPI` (uyBDgQqkyq0WNqOz) active=True; `rank_tracking_results` source=gsc MAX 08-24T10Z (today, <4d PASS per `[[rank-weekly]]`); tarzantrimming.ca absent from `seo_query_daily_kpi` — expected (not a portfolio-tracked site; Treegonometry is the successor, BRAND SUPERSEDED below). DfS Rank Tracker stays deactivated (HR2). **(e)** N/A — tarzan GSC-blind (Domain TXT unverified, on file); title-proxy clean (14 distinct titles) → no flag.
+
+**Cascade below P0 unchanged-dead (durable-noge, not re-elaborated per 08-19 anchor):** tarzan gets NO new content — Treegonometry rebrand (memory `project_arborist_frozen_tarzan_rebrand`; BRAND SUPERSEDED section below). All deliverable phases (P-PIPELINE/P-EXPAND/P-REFRESH/P1-P5) N/A. Binding unlock stays human-side (Suroy GSC TXT verify, or Nathan service/pricing decision).
+
+**NO-SHIP:** no source/build/deploy/wrangler/CF-purge/IndexNow/synthetic; $0 DfS; n8n 1 read-only GET; Supabase 2 read-only GET; 0 writes; no NEW MORNING_TASKS (freeze rec L71, GSC-TXT L37, off-page/Nathan items all on file). Doc-only commit (this entry) per `[[noship-commit]]`.
+
+**Anchors:** tarzan P0 CLEAN T14:08 08-24; next tarzan P0 eligible ~T02:08 08-25. Doc-only NO-SHIP streak continues (no `src`/`public` change since `aeb65a5` 08-15); unlock remains Suroy GSC TXT verify or Nathan decision. Portfolio rank-track GSC fresh (08-24T10Z).
+
 
 ---
 
