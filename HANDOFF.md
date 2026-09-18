@@ -1240,6 +1240,16 @@ Both lists were written when three permit guides existed and were never updated 
 
 **Anchors:** tarzan P0 CLEAN T14:08 08-24; next tarzan P0 eligible ~T02:08 08-25. Doc-only NO-SHIP streak continues (no `src`/`public` change since `aeb65a5` 08-15); unlock remains Suroy GSC TXT verify or Nathan decision. Portfolio rank-track GSC fresh (08-24T10Z).
 
+### Cron run 2026-09-18 T16:08 (tarzantrimming). P0-FROZEN-HEALTH-CHECK FULLY CLEAN → read-only NO-SHIP, doc-only ($0 DfS)
+
+**Pick:** ACTIVE cascade (sudbury/fortmac) genuinely foreclosed — both P0'd + full-cascade-walked CLEAN 2-3h ago on unchanged 09-15 GSC (sudbury T14:08, fortmac T13:08), so re-walk = churn per `[[durable-noge]]`. Fell to most-overdue FROZEN 24h health-check anchor: tarzan last P0-FROZEN T13:08 09-17 (~27h, oldest) > the-ontario-arborist T14:08 09-17 (~26h) > kamloops T16:08 09-17 (exactly 24h); belleville ~17h + treegonometry ~1h not yet due. Oldest-anchor-wins → tarzan. tarzantrimming.ca still live (apex 200, not yet 301'd into treegonometry.ca).
+
+**P0 result — FULLY CLEAN (flag-don't-fix, frozen; nothing to flag):** **(a)** 14/14 live `sitemap.xml` URLs (8 static + `/blog/` hub + 5 posts) HTTP 200 via Chrome-UA curl, 15.1–41.2KB (all >5KB CF zero-body floor, no home-fallback), 14/14 distinct correct `<title>` = 0 cannibalization; sweep doubles as deploy-state verify (0×500, 0 zero-body). **(b)** screenshot skipped (b-skip) — live HTML verified directly via sweep. **(c)** theme-color `#2D4A36` (forest green), phone (647) 216-1874 = `tel:+16472161874` consistent home+contact, no banned 24/7/always-available (HR6 clean), em (U+2014)=0 / en (U+2013)=0 across home+contact+representative post (HR5 clean), owner-led copy-email contact by design (rank-and-rent qf-email/markFieldError N/A). **(d)** GSC pipeline N/A for tarzan — GSC-blind (superseded domain, no Domain TXT). **(e)** N/A GSC-blind; 14 distinct titles independently confirm 0 on-site dup.
+
+**NO-SHIP:** no source/build/deploy/wrangler/CF-purge/IndexNow/synthetic; $0 DfS (<$1 cap); n8n + Supabase untouched (frozen GSC-blind site, no pipeline query needed); ~17 live Chrome-UA curl GET only; 0 site writes; no NEW MORNING_TASKS (freeze + GSC-TXT + Nathan/off-page items all on file, "do not re-flag"). Doc-only commit (this entry + central ROUTINE_LOG) per `[[noship-commit]]`.
+
+**Anchors:** tarzan P0-FROZEN CLEAN T16:08 09-18; next tarzan health-check eligible ~T16:08 09-19. Cascade below P0 durably dead (Treegonometry rebrand — deliverables N/A; unlock stays human-side: Suroy GSC TXT verify or Nathan service/pricing decision).
+
 
 ---
 
