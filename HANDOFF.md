@@ -1253,6 +1253,16 @@ Both lists were written when three permit guides existed and were never updated 
 
 **Anchors:** tarzan P0-FROZEN CLEAN T16:08 09-18; next tarzan health-check eligible ~T16:08 09-19. Cascade below P0 durably dead (Treegonometry rebrand — deliverables N/A; unlock stays human-side: Suroy GSC TXT verify or Nathan service/pricing decision).
 
+### Cron run 2026-09-25 T10:02 (tarzantrimming). Genuinely-due P0 site-health audit FULLY CLEAN (a/c PASS; b skip; d/e N/A GSC-blind) -> read-only NO-SHIP, doc-only ($0 DfS)
+
+**Pick:** ACTIVE fewest-`[auto]`/24h tarzan **0** (first-hand git, last `[auto]` 34e2429 T06:06 09-23 >24h) < sudbury 1 (d3fb0f7 T15:12 09-24) < fortmac 2 (abcde8e T10:01 09-25). fortmac just P0'd T09:52 09-25 (~10min, HR9-barred) on FRESH 09-22 GSC all-foreclosed; sudbury P0 T15:10 09-24 + its only lever (restaurant-refrigeration H1/title-fold) title-cooldown-blocked to ~10-10 (MORNING_TASKS L31). tarzan P0 last T06:08 09-23 (~52h >> 12h cooldown) = genuinely-due + fewest-auto -> tarzan the honest deliverable. tarzan content-FROZEN health-checks-only (Treegonometry-superseded, 301 pending per memory `[[project_arborist_frozen_tarzan_rebrand]]`); no content attempted. No concurrent run (0 T10:xx entries). HEAD `34e2429`==origin/main clean, 0 WIP.
+
+**Health check** (python-urllib Chrome-UA 0.8s-spaced per `[[sandbox-net]]`/`[[curl-000]]`/`[[ua-required]]`): **(a)** live `/sitemap.xml` (`[[tarzan-sitemap]]`) = 14 loc, **14/14 HTTP 200, 15,493-41,534B all >>5KB** (0 CF home-fallback / 0 zero-body-500 `[[cf-500-blind]]` clear all dynamic routes), **14/14 distinct titles = 0 cannibalization** (sep `·`=U+00B7 `[[mojibake]]`); `/services/zzz-p0-health-control-404-xyz/` -> real HTTP **404** (11,733B custom, no home-mask). Whole-body scan all 14 pages: **0 em(U+2014) / 0 en(U+2013) / 0 24-7-family** sitewide. **(b)** screenshot skip (frozen, HEAD==origin, 0 drift since content-freeze). **(c)** theme #2D4A36, /favicon.svg, phone (647) 216-1874 = tel:+16472161874 (HANDOFF item 1 intact), H1 "Honest tree work, owner-led, across south Ontario." (niche+region), "By appointment / Evenings and weekends" (owner-led real-business hours, **no 24/7**), Call+Text CTAs visible, 0 Treegonometry leaks (tarzan is live brand until 301); no /quote/ form by design (owner-led tel/mailto). **(d)** own-domain GSC-blind (verification TXT Suroy-gated durable, MORNING_TASKS on file); global daily WF `uyBDgQqkyq0WNqOz` proven active <15min ago via fortmac T09:52 -> not re-probed (`[[durable-noge]]`/HR9 churn). **(e)** detector schema-blind (GSC-blind); title-dedup 14/14 distinct = 0 self-competing.
+
+**NO-SHIP:** flag-don't-fix (FROZEN); 0 issues / 0 fixes / 0 new MORNING_TASKS (GSC-verify TXT + SKILL.md tarzan->treego ACTIVE-swap both durable on file, re-flag = churn `[[durable-noge]]`). $0 DfS, 0 site writes, n8n untouched, Supabase 0 queries, ~16 live urllib GET, git 1 doc commit+push (tarzan repo). Doc-only commit per `[[noship-commit]]`.
+
+**Anchors:** next tarzan P0 ~T10:02 09-26 (24h de-facto FROZEN cadence); ACTIVE unlock = GSC advance past 09-22 (~3am 09-26) or Suroy landing tarzan GSC-TXT / Nathan service-pricing decision. Highest-leverage unlock unchanged = off-page authority + tarzan GSC Domain-TXT verification (both Suroy-gated).
+
 
 ---
 
