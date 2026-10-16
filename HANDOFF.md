@@ -1309,6 +1309,16 @@ Both lists were written when three permit guides existed and were never updated 
 
 **Anchors:** tarzan P0-FROZEN CLEAN T18:02 10-14; next tarzan health-check eligible ~T18:02 10-15. Cascade below P0 durably dead (Treegonometry rebrand, deliverables N/A; unlock stays human-side per L1311).
 
+### Cron run 2026-10-15 T22:02 (tarzantrimming). Most-overdue FROZEN P0 health-check FULLY CLEAN (a/c PASS; b skip; d/e N/A GSC-blind) -> read-only NO-SHIP, doc-only ($0 DfS)
+
+**Pick:** both ACTIVE appliance sites P0'd earlier today inside the 12h cooldown (fortmac P0 T16:51 10-15 re-elig ~T04:51 10-16, sudbury P0 `9915e2a`-era T17:02 10-15 re-elig ~T05:02 10-16), content cascade foreclosed on the static GSC frontier (off-page-authority-walled `[[offpage-bottleneck]]`, re-walk = HR9 churn). Among FROZEN anchors tarzan is the single most-overdue (last T18:02 10-14 = ~28.4h >> 24h gate; arborist T19:02 ~27.4h + treego T21:02 ~25.4h also overdue but tarzan oldest = genuinely-due non-churn pick); kamloops (T18:07 10-15) + belleville (T19:06 10-15) both FROZEN-checked <24h ago = not due. HEAD `9e95846`==origin/main, clean tree, 0 WIP, content-frozen -> no rebuild.
+
+**Health check** (curl Chrome-UA per `[[ua-required]]`, sandbox-disabled per `[[sandbox-net]]`): **(a)** live `/sitemap.xml` (`[[tarzan-sitemap]]`: this domain serves `/sitemap.xml`, not `/sitemap-index.xml`) 14 routes (8 static + `/guide/` + `/blog/` hub + 5 posts) **14/14 HTTP 200, 15,126-41,167B all >>5KB** (0 CF home-fallback / 0 zero-body-500 = `[[cf-500-blind]]` deploy-state clear across all dynamic routes), **14/14 distinct <title>** (0 cannibalization proxy). **(b)** screenshot skipped (HEAD==origin, 0 source drift, text-based sweep per `[[sandbox-net]]`). **(c)** across all 14 rendered pages: **0 em-dash (U+2014) / 0 en-dash (U+2013) / 0 banned 24-7 phrases / 0 cross-site brand-leak** (no treegonometry/kamloops/belleville/sudbury/fortmac/appliance bleed). **(d/e)** N/A: own-domain not in SHI GSC pipeline (GSC-blind), title-distinctness in (a) is the cannibalization proxy.
+
+**NO-SHIP:** flag-don't-fix (FROZEN); 0 issues / 0 fixes / 0 new MORNING_TASKS (GSC-verify TXT + SKILL.md tarzan ACTIVE->FROZEN/treego-swap drift both durable on file + extensively flagged already, re-flag = churn `[[durable-noge]]`). $0 DfS (<$1 cap), 0 site writes, n8n untouched, Supabase 0 queries, ~28 live Chrome-UA curl GET only, git 1 doc commit+push (tarzan repo). No build/deploy/wrangler/CF-purge/IndexNow (HANDOFF.md not in dist). Doc-only commit per `[[noship-commit]]`.
+
+**Anchors:** tarzan P0-FROZEN CLEAN T22:02 10-15; next tarzan health-check eligible ~T22:02 10-16. Cascade below P0 durably dead (Treegonometry rebrand, deliverables N/A; unlock stays human-side per L1311).
+
 
 ---
 
