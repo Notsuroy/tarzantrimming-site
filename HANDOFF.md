@@ -1323,6 +1323,16 @@ Both lists were written when three permit guides existed and were never updated 
 
 **Anchors:** tarzan P0-FROZEN CLEAN T22:02 10-15; next tarzan health-check eligible ~T22:02 10-16. Cascade below P0 durably dead (Treegonometry rebrand, deliverables N/A; unlock stays human-side per L1311).
 
+### Cron run 2026-10-28 T16:02 (tarzantrimming). Most-overdue FROZEN P0 health-check FULLY CLEAN (a/c PASS; b skip; d/e N/A GSC-blind) -> read-only NO-SHIP, doc-only ($0 DfS)
+
+**Pick:** both ACTIVE appliance sites P0'd earlier today inside the 12h cooldown (fortmac P0 T14:04 10-28 re-elig ~T02:04 10-29, sudbury P0 T15:01 10-28 re-elig ~T03:01 10-29); content cascade foreclosed on the static 10-25 GSC frontier (re-verified LIVE this run: `seo_query_daily_kpi` MAX 2026-10-25 BOTH fortmacappliance.ca + sudburyappliancerepair.ca, 3d<4d so no `[[gsc-stale]]`, can't advance until ~02:00Z 10-29 daily pull; off-page-authority-walled `[[offpage-bottleneck]]`, re-walk = HR9 churn). Among FROZEN anchors tarzan was single most-overdue (last tarzan HC T15:05 10-27 = ~25h >> 24h gate; arborist T17:02 10-27 ~23h + treego T22:02 10-27 ~18h + kamloops T00:02 10-28 + belleville T01:02 10-28 all <24h = not due). All three repos `git fetch` + rev-list `0 0` clean, 0 WIP, 0 stranded claude/* (sudbury/fortmac both 2 `[auto]`/24h; tarzan HEAD `1d8f4b9`==origin/main). Content-frozen -> no rebuild.
+
+**Health check** (curl Chrome-UA per `[[ua-required]]`, sandbox-disabled per `[[sandbox-net]]`): **(a)** live `/sitemap.xml` (`[[tarzan-sitemap]]`: this domain serves `/sitemap.xml`) 14 routes **14/14 HTTP 200, 15,126-41,167B all >>5KB** (0 CF home-fallback `[[cf-unknown-home]]` / 0 zero-body-500 `[[cf-500-blind]]` = deploy-state clear across all dynamic routes), **14/14 distinct <title>** (0 cannibalization proxy); control `/this-page-does-not-exist-p0-control-zzz/` -> real HTTP 404 (11,366B "Page not found · Tarzan Trimming", 0 home-mask). **(b)** screenshot skipped (HEAD==origin, 0 source drift, text-based sweep). **(c)** home + `/services/tree-pruning/`: theme-color `#2D4A36`, `/favicon.svg`, phone `(647) 216-1874` + `tel:+16472161874` (= site.json), honest real-business framing "By appointment. Evenings and weekends." (voicemail-honesty N/A, Nathan answers own phone); byte-scan **0 em-dash (U+2014) / 0 en-dash (U+2013) / 0 banned 24-7 phrases** (no 24/7 / around the clock / always available / anytime). **(d/e)** N/A: own-domain not in SHI GSC pipeline (GSC-blind), title-distinctness in (a) is the cannibalization proxy.
+
+**NO-SHIP:** flag-don't-fix (FROZEN); 0 issues / 0 fixes / 0 new MORNING_TASKS (GSC-verify TXT + SKILL.md tarzan ACTIVE->FROZEN/treego-swap drift both durable on file + extensively flagged, re-flag = churn `[[durable-noge]]`). $0 DfS (<$1 cap), 0 site writes, n8n untouched, Supabase 2 read-only REST GET (GSC frontier), ~17 live Chrome-UA curl GET, git 3 read-only fetch + 1 doc commit+push (tarzan repo). No build/deploy/wrangler/CF-purge/IndexNow (HANDOFF.md not in dist). Doc-only commit per `[[noship-commit]]`.
+
+**Anchors:** tarzan P0-FROZEN CLEAN T16:02 10-28; next tarzan health-check eligible ~T16:02 10-29. ACTIVE P0 re-elig ~T02:04/T03:01 10-29; GSC advances past 10-25 ~02:00Z 10-29. Cascade below P0 durably dead (Treegonometry rebrand).
+
 
 ---
 
