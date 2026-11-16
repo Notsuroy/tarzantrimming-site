@@ -1392,6 +1392,22 @@ Both lists were written when three permit guides existed and were never updated 
 **Anchors:** tarzan P0-FROZEN CLEAN T22:02 11-07; next tarzan health-check eligible ~T22:02 11-08 (24h FROZEN cadence). ACTIVE P0 re-elig ~T08:14 11-08 (fortmac) / ~T09:04 11-08 (sudbury). Cascade below P0 durably dead (Treegonometry rebrand; unlock stays human-side: Suroy GSC-TXT verify or Nathan service/pricing decision, then ACTIVE-slot transfer tarzan->treegonometry-site needs Suroy go-ahead).
 
 
+### Cron run 2026-11-16 T12:02 EST (tarzantrimming). Deliverable-cascade walk FULLY FORECLOSED first-hand -> read-only NO-SHIP, doc-only ($0 DfS)
+
+**Pick:** STEP-2 fewest-`[auto]`/24h among the 3 ACTIVE sites -> **tarzan 2** (sudbury 3 / fortmac 3); all 3 clean HEAD==origin/main, 0 WIP (sudbury `7b3800f` / fortmac `418978e` / tarzan `ece51bd`). sudbury + fortmac both P0'd this morning inside their 12h cooldown (sudbury T10:15 re-elig ~T22:15; fortmac T11:06 re-elig ~T23:06) AND their deliverable cascades were walked dry on the static 11-13 GSC frontier within the last day (11-15 T22:08 / T23:07 + this-morning P0s) -> re-walk = HR9/`[[durable-noge]]` churn. tarzan's own P0 ran T09:09 today (`ece51bd`, ~3h, well inside 12h) so the health-audit track is NOT due; this run walks the **deliverable** cascade (distinct class per HR9).
+
+**Cascade foreclosure (first-hand this run, not trust-prior-logs):**
+- **P0** not due (T09:09 today FULLY CLEAN, re-anchors 12h; de-facto FROZEN 24h cadence also not due). No live re-sweep (would repeat <4h, HR9).
+- **P-PIPELINE / P-PIPELINE-AUTO:** foreclosed two ways. (1) **HANDOFF content-freeze** — tarzan is Treegonometry-superseded (2026-08-12), 301 pending, "**do NOT invest new content or citations in tarzantrimming.ca**" (L1402 + memory `[[project_arborist_frozen_tarzan_rebrand]]`), so content phases are directive-forbidden, not merely dry. (2) Pipeline genuinely exhausted (read `blog-pipeline.md` in full): seeded C1 live-as-`/guide/` (dup, SKIP), C2/C5 NULL Canadian demand (durably dead), C3 drafted+live, C4 price-gated Step-E (on file in MORNING_TASKS); 4-city permit corpus COMPLETE with a HARD-STOP on a 5th; EAB/ash re-seed NO-GO (round 3, 2026-08-19, authority-walled SERP). GSC self-feed empty (domain GSC-blind).
+- **P-EXPAND / P-REFRESH / P2-demand:** structurally dead. First-hand Supabase REST (service-role, $0): `seo_keyword_discovered`, `seo_query_daily_kpi`, `seo_page_daily_kpi` all return **0 rows for tarzantrimming.ca** (Domain-property GSC TXT is Suroy-gated + durable, HANDOFF blocker 6a). P2 structural-gap path N/A (both money pages live; `/services/full-tree-removal/` `comingSoon` = Nathan business decision, not a cron fill).
+- **P1 Open Issues:** all Nathan/Suroy-gated (phone-publish confirm, service cities, pricing strategy, hours, tagline, insurance claim, employer name, photos, GSC-verify TXT). The one cron-doable half (GSC scripts wiring) was DONE 2026-07-16. Nothing autonomous-doable.
+- **P3/P4/P5:** on-page/schema/internal-link/CTA axes exhaustively shipped + re-audited CLEAN across ~30 prior runs; P0 swept live clean 3h ago. No genuine un-covered defect; a marginal re-touch on a 301-retiring site = churn, not a deliverable.
+
+**NO-SHIP:** 0 site writes / 0 fixes / 0 new MORNING_TASKS (the SKILL.md tarzan-ACTIVE->FROZEN/treego-swap drift, the GSC-verify TXT unlock, the C4 price call, and the portfolio-cadence decision are ALL durable + extensively on file at MORNING_TASKS L103/L105/L135 — re-flag = churn `[[durable-noge]]`/`[[handoff-strict]]`). $0 DfS (<$1 HR7 cap), n8n 0 writes (0 calls this run; GSC-pull health already re-confirmed active+success at today's T09:09 P0), Supabase 3 read-only REST GETs, git read-only state check + 1 doc commit+push (tarzan repo). No build/deploy/wrangler/CF-purge/IndexNow (HANDOFF.md not in `dist`). Doc-only commit per `[[noship-commit]]`.
+
+**Anchors:** tarzan deliverable-cascade foreclosed T12:02 11-16 (content directive-frozen + GSC-blind). P0 tracks: tarzan re-elig ~T21:09 (12h from T09:09) / de-facto FROZEN 24h ~T09:09 11-17; sudbury ~T22:15; fortmac ~T23:06. Below-P0 cascade durably dead until a human-side unlock lands (Suroy GSC-TXT verify OR Nathan service/price decision), then ACTIVE-slot transfer tarzan->treegonometry-site needs Suroy go-ahead.
+
+
 ---
 
 ## BRAND SUPERSEDED (2026-08-12): Treegonometry is Nathan's final brand
