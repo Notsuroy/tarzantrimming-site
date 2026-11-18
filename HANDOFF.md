@@ -1410,6 +1410,25 @@ Both lists were written when three permit guides existed and were never updated 
 **Anchors:** tarzan deliverable-cascade foreclosed T12:02 11-16 (content directive-frozen + GSC-blind). P0 tracks: tarzan re-elig ~T21:09 (12h from T09:09) / de-facto FROZEN 24h ~T09:09 11-17; sudbury ~T22:15; fortmac ~T23:06. Below-P0 cascade durably dead until a human-side unlock lands (Suroy GSC-TXT verify OR Nathan service/price decision), then ACTIVE-slot transfer tarzan->treegonometry-site needs Suroy go-ahead.
 
 
+### Cron run 2026-11-18 T18:06 EST (tarzantrimming, rule-pick). Fresh deliverable-cascade walk FULLY FORECLOSED first-hand across BOTH co-eligible ACTIVE sites -> read-only NO-SHIP, doc-only ($0 DfS)
+
+**Pick:** STEP-2 fresh git re-check (`[[concurrent-cron]]`): ACTIVE `[auto]`/24h = tarzan **1** (`f2223fc`) == fortmac **1** (`a07fcda`) < sudbury **2** (`9463048`, the T17:06 cascade push); all 3 HEAD==origin/main 0/0, 0 porcelain, 0 `claude/*`. Tie tarzan/fortmac -> tie-break-1 autonomous-doable Open Issues 0 both -> tie-break-2 oldest last-touch -> **tarzan T12:06** (< fortmac T13:12) = rule-pick. sudbury HR9-barred (full cascade walked T17:06 ~1h ago). No ACTIVE P0 due (tarzan T12:02 / fortmac T13:02 / sudbury T11:15, all <12h); no FROZEN HC due (arborist+belleville+kamloops all HC'd today T14/T15/T16).
+
+**Cascade foreclosure (first-hand this run):**
+- **P0** not due (tarzan T12:02 today CLEAN, re-anchors 12h). No live re-sweep (HR9 <4h; HEAD==origin unchanged since the T12:02 14/14 sweep, no deploy since).
+- **P-PIPELINE manual:** every `[x] approve` topic in blog-pipeline.md is also `[x] drafted` (8 approve / 17 drafted; the 4 per-city permit explainers + the line-182 auto topic). Empty queue.
+- **P-PIPELINE-AUTO + P-EXPAND + P-REFRESH:** tarzan GSC-blind, re-confirmed first-hand Supabase REST ($0): `seo_query_daily_kpi` tarzantrimming.ca = **0 rows**, `seo_keyword_discovered` = **0 rows** -> self-feed/expand/refresh all no-candidate. ALSO HANDOFF content-freeze (Treegonometry-superseded 2026-08-12, 301 pending) bars new tarzan content regardless.
+- **P1 Open Issues:** all Nathan/Suroy-gated (GSC-verify TXT = binding lever, service cities, pricing, hours, insurance claim). 0 autonomous-doable.
+- **P2 structural:** complete for domain-age. services.json 3 svc (tree-pruning + limb-removal LIVE; full-tree-removal `comingSoon:true` -> correctly `getStaticPaths .filter(!comingSoon)`-excluded AND correctly absent from live sitemap -- verified NOT an orphan before touching, so no false "fix"). /service-areas/ deliberately 1 hub (per-city pages documented-deferred until cities confirmed + domain matures `[[p2-donotbuild]]`). No autonomous gap.
+- **P3:** sitemap.xml.ts per-post lastmod + PAGE_LASTMOD static record consistent w/ live pages (live sitemap = 8 static + 5 blog + hub = 14 locs, all present, 404 correctly excluded). No orphan/drift. P3/P4/P5 otherwise exhaustively shipped + re-audited CLEAN across ~30 prior runs.
+
+**Cross-check (value-add beyond the rule-pick): fortmac P-PIPELINE-AUTO self-feed ALSO foreclosed.** fortmac GSC fresh (`seo_query_daily_kpi` MAX 2026-11-15, 3d). 90d self-feed pool = 16 queries imp>=15 (first-hand REST + local aggregate `[[shi-agg]]`), ALL gate-fail: head terms (`appliance repair fort mcmurray` 357i/pos4.8 + 5 more) G2-exclude (service/home-page territory, already owned `[[homepage-in-serp]]`); `fort saskatchewan` cluster (121i / 4 queries pos60-75) + `appliance repair canmore` 61i G1-fail (different cities 430-700km, out of service area, doorway-page-banned); `washer/washing-machine installation cost` 30+19i G1/G5-fail (install != our repair-only line, no money page); `window installation services` 17i + `microwave systems` 17i irrelevant/ambiguous. 0 eligible -> fortmac content engine confirmed-exhausted, consistent with prior runs.
+
+**NO-SHIP:** 0 site writes / 0 fixes / 0 new MORNING_TASKS (SKILL.md tarzan-ACTIVE->treego-swap drift, GSC-TXT unlock, Nathan price/service call all durably on file at MORNING_TASKS; re-flag = churn `[[durable-noge]]`/`[[handoff-strict]]`). $0 DfS (<$1 HR7 cap), n8n 0 writes (HR1-2), Supabase read-only REST GETs only, git read-only state check + 1 doc commit+push (tarzan repo). No build/deploy/wrangler/CF-purge/IndexNow (HANDOFF.md not in `dist`). Doc-only commit per `[[noship-commit]]`.
+
+**Anchors:** tarzan cascade foreclosed T18:06 11-18 (content-frozen + GSC-blind); fortmac self-feed foreclosed T18:06 11-18 (all 16 candidates gate-fail). P0 re-elig: tarzan ~T00:02 11-19 (12h from T12:02), fortmac ~T01:02, sudbury ~T23:15. Below-P0 cascade durably dead until a human-side unlock lands (Suroy GSC-TXT verify OR Nathan service/price decision OR ACTIVE-slot transfer tarzan->treegonometry-site).
+
+
 ---
 
 ## BRAND SUPERSEDED (2026-08-12): Treegonometry is Nathan's final brand
