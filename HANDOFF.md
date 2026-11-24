@@ -1472,3 +1472,15 @@ CF Pages `treegonometry`, live). THIS site stays live temporarily.
    treegonometry-site at 301 time (needs Suroy's explicit go-ahead).
 The nathan@tarzantrimming.ca Migadu mailbox stays alive through the transition (it is the
 address his Gmail send-as uses today) until treegonometry email is proven.
+
+### Cron run 2026-11-24 T11:06 EST (tarzantrimming, rule-pick). Genuinely-due P0 health audit FULLY CLEAN (a + deploy-state sweep + c PASS; b skip; d/e N/A GSC-blind) -> read-only NO-SHIP, doc-only ($0 DfS)
+
+**Pick:** STEP-2 git-first all 3 ACTIVE HEAD==origin/main rev-list 0/0, 0 porcelain, 0 `claude/*` -> no WIP to adopt. `[auto]`/24h: sudbury 4 > fortmac 2 == tarzan 2 -> tie fortmac/tarzan; tie-break oldest last-touch = tarzan (T22:08 11-23) over fortmac (freshly walked T10:08 11-24, ~56m ago + 4h same-task cooldown HR9). tarzan P0 **due** (last T22:08 11-23 = ~12.97h >> 12h gate). tarzan content-FROZEN (Treegonometry rebrand, 301 pending, no new content/citations) -> P0 is the only eligible phase and it is due. CLOCK: `date -u`=16:06Z = 11:06 EST (EST/UTC-5 Nov).
+
+**P0 result (FULLY CLEAN):**
+- **(a) curl sweep** — 14 live `sitemap.xml` URLs, Chrome-UA: 14/14 HTTP 200, byte sizes 15,126–41,167 (0 sub-5KB zero-body, 0 HTTP 500), canonical self-match 14/14 (0 CF home-page fallback). The 14-URL set is the full dynamic-route universe, so this also satisfies the mandatory deploy-state sweep. PASS.
+- **(b) screenshots** — skipped (no HTML/style drift this run).
+- **(c) contract** — theme-color `#2D4A36`, `favicon.svg`, title "Tree Pruning & Limb Removal, South Ontario" (niche+region), hero niche/region tokens present, phone **(647) 216-1874** consistent home + /contact/ (`tel:+16472161874`), contact path functional (phone + CF-obfuscated email nathan@tarzantrimming.ca + "by appointment, evenings and weekends" + honest voicemail disclosure), 0 banned "24/7"/"always available". Real-business phone/appointment conversion, no rank-and-rent qf-email/markField quote form (no `/quote/` route) — that contract item N/A by design. PASS.
+- **(d/e) GSC pipeline + cannibalization** — N/A: tarzan is own-domain, 0 rows in `seo_query_daily_kpi` (confirmed this run) = GSC-blind, no KPI/cannibalization data to audit. (fortmac freshness sanity: MAX 11-21, 3-day lag < 4d, pipeline alive.)
+
+**Shipped:** nothing — 0 fixes / 0 flags / 0 new MORNING_TASKS / $0 DfS / 0 n8n-GHL writes (Supabase REST read-only only) / 0 git changes. Re-anchors tarzan 12h P0 at ~T11:06 11-24.
